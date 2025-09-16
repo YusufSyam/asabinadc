@@ -19,8 +19,16 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["poppins", "sans-serif"],
+        "poppins-bold": ["poppins-bold", "sans-serif"],
+        "poppins-light": ["poppins-light", "sans-serif"],
+        "poppins-semibold": ["poppins-semibold", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
+        "roboto-bold": ["roboto-bold", "sans-serif"],
+        "roboto-light": ["roboto-light", "sans-serif"],
+        "roboto-semibold": ["roboto-semibold", "sans-serif"],
         quicksand: ["quicksand", "sans-serif"],
+        "quicksand-semibold": ["quicksand-semibold", "sans-serif"],
+        "quicksand-bold": ["quicksand-bold", "sans-serif"],
       },
       fontSize: {
         xs: 10,

@@ -1,0 +1,1 @@
+export type TTextColor = "orange" | "primary-text" | "magenta" | "burgundy" | "black" | "secondary-text" | "secondary"
