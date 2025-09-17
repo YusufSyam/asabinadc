@@ -12,6 +12,7 @@ export const themeConfig = defineConfig({
         secondary: { value: "#d4d3e7" },
         "primary-text": { value: "#334155" },
         "secondary-text": { value: "#808fa4" },
+        "light-orange": { value: "#F7CBA8" },
       },
       fonts: {
         heading: { value: "poppins, sans-serif" },

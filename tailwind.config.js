@@ -16,6 +16,7 @@ module.exports = {
         secondary: "#d4d3e7",
         "primary-text": "#334155",
         "secondary-text": "#808fa4",
+        "light-orange": "#F7CBA8"
       },
       fontFamily: {
         poppins: ["poppins", "sans-serif"],
@@ -51,6 +52,7 @@ module.exports = {
         3: "0.0025em",
         4: "0.004em",
         5: "0.01em",
+        6: "0.05em",
       },
     },
   },
