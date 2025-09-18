@@ -1,13 +1,15 @@
-import { Text } from "@chakra-ui/react";
+import { Stack, Text } from "@chakra-ui/react";
 import React from "react";
 interface IColoredHeaderText {
   text: string;
   splitStart?: number;
+  subTitle?: string;
 }
 
 const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   text,
   splitStart,
+  subTitle,
 }) => {
   const words = text.split(" ");
   const splitIndex =
@@ -17,14 +19,17 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   const secondPart = words.slice(splitIndex).join(" ");
 
   return (
-    <Text className="font-poppins-bold text-[54px]">
-      <Text as="span" color="burgundy">
-        {firstPart}
-      </Text>{" "}
-      <Text as="span" color="orange">
-        {secondPart}
+    <Stack className="" gapY={0}>
+      <Text className="font-poppins-bold text-[54px]">
+        <Text as="span" color="burgundy">
+          {firstPart}
+        </Text>{" "}
+        <Text as="span" color="orange">
+          {secondPart}
+        </Text>
       </Text>
-    </Text>
+      {subTitle && <Text className="text-secondary-text">{subTitle}</Text>}
+    </Stack>
   );
 };
 

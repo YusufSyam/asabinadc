@@ -5,48 +5,68 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ROUTES from "@/utils/const/routes";
 import HeaderNavbarMenu from "./HeaderNavbarMenu.component";
+import {
+  IconBookFilled,
+  IconGalleryFilled,
+  IconSearchFilledRounded,
+  IconWorkFilled,
+} from "../icons/Icons.component";
+import Link from "next/link";
 
 export interface IHeaderLayout {}
 
 const HeaderLayout: React.FC<IHeaderLayout> = ({}) => {
-//   const pathname = usePathname();
+  //   const pathname = usePathname();
   return (
     <header>
       <HStack className="px-24 py-6 !justify-between w-full">
-        <Group>
-          <div className="">
-            <Image
-              src={iconAsabina}
-              style={{ objectFit: "contain" }}
-              alt="icon asabina"
-              width={54}
-            />
-          </div>
-          <Text className="text-burgundy font-poppins-semibold text-3xl">
-            ASABINA
-          </Text>
-        </Group>
-        <Group className="gap-8">
+        <Link href={ROUTES.HOME}>
+          <Group>
+            <div className="">
+              <Image
+                src={iconAsabina}
+                style={{ objectFit: "contain" }}
+                alt="icon asabina"
+                width={54}
+              />
+            </div>
+            <Text className="text-burgundy font-poppins-semibold text-3xl">
+              ASABINA
+            </Text>
+          </Group>
+        </Link>
+        <Group className="gap-4">
           <HeaderNavbarMenu
+            colorVariant="white"
+            icon={<IconWorkFilled color="orange" />}
             pathname={""}
-            label="Beranda"
-            href={ROUTES.HOME}
-          />
+            href={ROUTES.WORKSHOP}
+          >
+            Workshop
+          </HeaderNavbarMenu>
           <HeaderNavbarMenu
+            colorVariant="white"
+            icon={<IconBookFilled color="orange" />}
             pathname={""}
-            label="Program"
-            href={ROUTES.PROGRAM}
-          />
+            href={ROUTES.SEKELAS}
+          >
+            SEKELAS Asabina
+          </HeaderNavbarMenu>
           <HeaderNavbarMenu
+            colorVariant="white"
+            icon={<IconGalleryFilled color="orange" />}
             pathname={""}
-            label="Galeri Asabina"
             href={ROUTES.GALLERY}
-          />
+          >
+            Galeri
+          </HeaderNavbarMenu>
           <HeaderNavbarMenu
+            icon={<IconSearchFilledRounded color="white" />}
             pathname={""}
-            label="Tentang Kami"
             href={ROUTES.ABOUT}
-          />
+          >
+            Tentang Kami
+          </HeaderNavbarMenu>
         </Group>
       </HStack>
     </header>

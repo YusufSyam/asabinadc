@@ -6,6 +6,10 @@ import HeaderLayout from "@/components/layout/HeaderLayout.component";
 export const metadata: Metadata = {
   title: "Asabina Development Center",
   description: "",
+  icons: {
+    icon: '/assets/images/logo1.png',
+    
+  },
 };
 
 export default function RootLayout({

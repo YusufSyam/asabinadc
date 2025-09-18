@@ -1,6 +1,7 @@
 const ROUTES = {
   HOME: '/',
-  PROGRAM: '/program',
+  WORKSHOP: '/workshop',
+  SEKELAS: '/sekelas',
   ABOUT: '/about-us',
   GALLERY: '/gallery',
 }

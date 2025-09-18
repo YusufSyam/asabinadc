@@ -9,11 +9,17 @@ export interface IAboutUsPage {}
 const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
   return (
     <Stack gapY={"24"} paddingX={"24"} paddingBottom={"24"} className="">
-      '<VStack>
+      '
+      <VStack>
         <ColoredHeaderText text="About Us" />
         <SmallText>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cum quod rerum laboriosam perferendis adipisci voluptate culpa repellat et omnis. Neque hic aliquid sapiente explicabo illo in cumque libero deserunt exercitationem possimus repudiandae nobis tempora necessitatibus, accusamus maxime facilis dolore asperiores quos natus voluptates quasi ex amet incidunt a. Optio!
-            </SmallText>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cum
+          quod rerum laboriosam perferendis adipisci voluptate culpa repellat et
+          omnis. Neque hic aliquid sapiente explicabo illo in cumque libero
+          deserunt exercitationem possimus repudiandae nobis tempora
+          necessitatibus, accusamus maxime facilis dolore asperiores quos natus
+          voluptates quasi ex amet incidunt a. Optio!
+        </SmallText>
       </VStack>
       <VStack gapY={8} className="w-full">
         <ColoredHeaderText text="Our Mission"></ColoredHeaderText>

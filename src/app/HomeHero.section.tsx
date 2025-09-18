@@ -1,12 +1,17 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import {
+  IconBookFilled,
+  IconGalleryOutlined,
   IconGmailFilled,
   IconInstagramFilled,
   IconLinkedinFilled,
   IconListViewFilledRounded,
   IconPersonFilled,
+  IconPersonOutlined,
   IconSearchFilledRounded,
+  IconWhatsappFilled,
   IconWorkFilled,
+  IconWorkOutlined,
 } from "@/components/icons/Icons.component";
 import StrongText from "@/components/text/StrongText.component";
 import {
@@ -95,7 +100,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
               flexWrap={"wrap"}
               className="mr-8 mt-4 mb-2 ml-8 !justify-between "
             >
-              <HeroButton icon={<IconWorkFilled color="white" />}>
+              <HeroButton icon={<IconWorkOutlined color="white" />}>
                 Explore Our Program
               </HeroButton>
               <Group gapX={6} gapY={4}>
@@ -107,13 +112,13 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                 </HeroButton>
                 <HeroButton
                   colorVariant="orange"
-                  icon={<IconPersonFilled color="white" className="p-[1px]" />}
+                  icon={<IconPersonOutlined color="white" />}
                 >
                   Our Team
                 </HeroButton>
                 <HeroButton
                   colorVariant="orange"
-                  icon={<IconListViewFilledRounded color="white" />}
+                  icon={<IconGalleryOutlined color="white" />}
                 >
                   Gallery
                 </HeroButton>
@@ -126,8 +131,8 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
         <GridItem w="100%" className="self-end" minWidth="0">
           <Stack gapY={0}>
             <VStack className="relative self-end " gapX={4}>
-              <Text className="text-white text-2xl font-roboto-semibold tracking-6">
-                Contact Us
+              <Text className="text-white text-2xl font-roboto tracking-6">
+                GET IN TOUCH
               </Text>
               <Group
                 flexWrap={"wrap"}
@@ -136,7 +141,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
               >
                 <IconInstagramFilled color="white" size={33} className="" />
                 <IconLinkedinFilled color="white" size={31} className="" />
-                <IconGmailFilled color="white" size={31} className="" />
+                <IconWhatsappFilled color="white" size={30} className="" />
                 <IconGmailFilled color="white" size={31} className="" />
               </Group>
             </VStack>
