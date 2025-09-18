@@ -36,30 +36,7 @@ export default function Home() {
     <Stack gapY={"24"} paddingX={"24"} paddingBottom={"24"} className="">
       <HomeHeroSection />
       <VStack className=" w-full">
-        <VStack gapY={8} className="w-full">
-          <ColoredHeaderText text="Our Mission"></ColoredHeaderText>
-          <Grid templateColumns="1fr 1fr 1fr" gapX={20} className="w-full  p-4">
-            {/* Kolom Pertama (2/3 dari lebar) */}
-            <GridItem className="bg-white">
-              <MissionCard
-                title="Menyediakan Program pengembangan diri"
-                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
-              />
-            </GridItem>
-            <GridItem className="bg-white">
-              <MissionCard
-                title="Menyediakan Program pengembangan diri"
-                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
-              />
-            </GridItem>
-            <GridItem className="bg-white">
-              <MissionCard
-                title="Menyediakan Program pengembangan diri"
-                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
-              />
-            </GridItem>
-          </Grid>
-        </VStack>
+        
 
         <VStack className="mt-48">
           <Group className="gap-4">

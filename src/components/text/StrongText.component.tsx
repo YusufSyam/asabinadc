@@ -2,11 +2,11 @@ import React from "react";
 import { Text, TextProps } from "@chakra-ui/react";
 import { TTextColor } from "@/utils/const/types";
 
-export interface ISmallText extends TextProps {
+export interface IStrongText extends TextProps {
   color?: TTextColor | TextProps["color"];
 }
 
-const SmallText: React.FC<ISmallText> = ({
+const StrongText: React.FC<IStrongText> = ({
   children,
   color = "primary-text",
   className,
@@ -24,4 +24,4 @@ const SmallText: React.FC<ISmallText> = ({
   );
 };
 
-export default SmallText;
+export default StrongText;
