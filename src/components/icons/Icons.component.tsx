@@ -13,8 +13,8 @@ export const IconColorScheme = {
   white: "#ffffff",
   black: "#000000",
   secondary: "#d4d3e7",
-  "primary-text": "#334155",
-  "secondary-text": "#808fa4",
+  primaryText: "#334155",
+  secondaryText: "#808fa4",
 } as const;
 
 // 👇 ini bikin tipe union dari semua nilai literal:
