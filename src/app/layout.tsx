@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Providers } from "./providers";
 import "./globals.css";
+import HeaderLayout from "@/components/layout/HeaderLayout.component";
 
 export const metadata: Metadata = {
   title: "Asabina Development Center",
@@ -14,8 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
+      <body className="flex flex-col">
+        <Providers>
+          <HeaderLayout />
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );

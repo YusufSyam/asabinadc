@@ -29,40 +29,34 @@ import {
 } from "@/components/icons/Icons.component";
 import HeroButton from "@/components/button/HeroButton.component";
 import HomeHeroSection from "./HomeHero.section";
+import MissionCard from "@/components/card/MissionCard.component";
 
 export default function Home() {
   return (
-    <Stack gapY={"24"} paddingX={"24"} paddingY={"24"} className="">
+    <Stack gapY={"24"} paddingX={"24"} paddingBottom={"24"} className="">
       <HomeHeroSection />
       <VStack className=" w-full">
         <VStack gapY={8} className="w-full">
           <ColoredHeaderText text="Our Mission"></ColoredHeaderText>
-          <Grid
-            templateColumns="1fr 1fr 1fr"
-            gapX={20}
-            className="w-full  p-4"
-          >
+          <Grid templateColumns="1fr 1fr 1fr" gapX={20} className="w-full  p-4">
             {/* Kolom Pertama (2/3 dari lebar) */}
             <GridItem className="bg-white">
-              <VStack gapY={6} className="border py-6 px-8 rounded-xl">
-                <Text className="font-poppins-semibold text-primary-text text-center px-4">
-                  Menyediakan Program pengembangan diri
-                </Text>
-                <SmallText className="text-center">
-                  Untuk mendukung keterampilan pribadi maupun profesional tanpa
-                  memandang latar belakang
-                </SmallText>
-              </VStack>
+              <MissionCard
+                title="Menyediakan Program pengembangan diri"
+                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
+              />
             </GridItem>
             <GridItem className="bg-white">
-              <VStack>
-                <StrongText>Tes</StrongText>
-              </VStack>
+              <MissionCard
+                title="Menyediakan Program pengembangan diri"
+                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
+              />
             </GridItem>
             <GridItem className="bg-white">
-              <VStack>
-                <StrongText>Tes</StrongText>
-              </VStack>
+              <MissionCard
+                title="Menyediakan Program pengembangan diri"
+                description="Untuk mendukung keterampilan pribadi maupun profesional tanpa memandang latar belakang"
+              />
             </GridItem>
           </Grid>
         </VStack>

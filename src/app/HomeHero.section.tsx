@@ -64,7 +64,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                 </StrongText>
               </Stack>
             </Group>
-            <div className="relative rounded-md px-8 py-4 mr-10">
+            <div className="relative rounded-md px-8 py-4">
               <Blockquote.Root
                 variant="plain"
                 colorPalette="white"
@@ -75,14 +75,18 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                 </Float>
                 <Blockquote.Content
                   // cite="Visi Asabina"
-                  className="text-white font-roboto italic text-[17px] text-justify "
+                  className="text-white font-roboto tracking-5 text-[16px] text-justify "
                 >
                   Wadah pengembangan diri yang{" "}
                   <span className="text-light-orange">inklusif</span>,{" "}
                   <span className="text-light-orange">inspiratif</span> dan{" "}
                   <span className="text-light-orange">setara</span> bagi semua
                   kalangan untuk tumbuh dan mencapai potensi terbaik dalam
-                  kehidupan pribadi maupun profesional
+                  kehidupan pribadi maupun profesional.
+                </Blockquote.Content>
+                <Blockquote.Content className="text-white font-roboto tracking-5 text-[16px] text-justify ">
+                  3 Misi utama kami yaitu menyediakan wadah pengembangan diri,
+                  menciptakan ruang inklusif, dan membangun kolaborasi
                 </Blockquote.Content>
               </Blockquote.Root>
             </div>
