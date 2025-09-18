@@ -139,10 +139,10 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                 gapX={6}
                 className="bg-light-orange/50 rounded-full px-6 py-2"
               >
-                <IconInstagramFilled color="white" size={33} className="" />
-                <IconLinkedinFilled color="white" size={31} className="" />
-                <IconWhatsappFilled color="white" size={30} className="" />
-                <IconGmailFilled color="white" size={31} className="" />
+                <IconWhatsappFilled color="white" size={26} className="" />
+                <IconInstagramFilled color="white" size={28} className="" />
+                <IconLinkedinFilled color="white" size={27} className="" />
+                <IconGmailFilled color="white" size={27} className="" />
               </Group>
             </VStack>
           </Stack>

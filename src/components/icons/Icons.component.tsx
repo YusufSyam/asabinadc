@@ -4075,3 +4075,27 @@ export function IconTimeOutlined({
     </svg>
   );
 }
+
+export function IconExclamationMarkOutlined({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 -960 960 960`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M440-400v-360h80v360h-80Zm0 200v-80h80v80h-80Z'
+      fill={color}
+      />
+    </svg>
+  );
+}

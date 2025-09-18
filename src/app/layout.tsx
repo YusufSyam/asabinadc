@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Providers } from "./providers";
 import "./globals.css";
 import HeaderLayout from "@/components/layout/HeaderLayout.component";
+import FooterLayout from "@/components/layout/FooterLayout.component";
 
 export const metadata: Metadata = {
   title: "Asabina Development Center",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Providers>
           <HeaderLayout />
           <main>{children}</main>
+          <FooterLayout />
         </Providers>
       </body>
     </html>

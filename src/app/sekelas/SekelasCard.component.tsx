@@ -13,8 +13,10 @@ import Image from "next/image";
 import StrongText from "@/components/text/StrongText.component";
 import { ST } from "next/dist/shared/lib/utils";
 import {
+  IconExclamationMarkOutlined,
   IconLocationFilled,
   IconLocationOutlined,
+  IconRightArrowTailedOutlinedRounded,
   IconTimeOutlined,
   IconTimerFilled,
 } from "@/components/icons/Icons.component";
@@ -90,9 +92,12 @@ const SekelasCard: React.FC<ISekelasCard> = ({ oprec = false }) => {
               </Group>
             </Stack>
             {oprec && (
-              <div className="mt-2 px-4 py-2 text-center text-md rounded-full bg-magenta text-white">
-                Open recruitment for volunteers!
-              </div>
+              <Group className="mt-2 px-4 py-2 rounded-full bg-magenta ">
+                <IconExclamationMarkOutlined color="white" className="p-[1px] rounded-full border-2 border-white" />
+                <Text className="text-white text-center text-md ">
+                  Open recruitment for volunteers!
+                </Text>
+              </Group>
             )}
           </Stack>
         </GridItem>
