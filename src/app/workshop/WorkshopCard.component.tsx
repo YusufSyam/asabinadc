@@ -12,13 +12,15 @@ import {
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
 
-export interface IWorkshopCard {}
+export interface IWorkshopCard {
+  cardVariant?: "light-orange" | "orange"
+}
 
-const WorkshopCard: React.FC<IWorkshopCard> = ({}) => {
+const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
   return (
     <div className="relative">
       <Stack
-        className="border-2 border-orange p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out"
+        className={`border-2 ${cardVariant=="orange"? "border-orange" : "border-light-orange"}  p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
         gapY={4}
       >
         <Box
@@ -61,7 +63,7 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({}) => {
         </Stack>
       </Stack>
 
-      <div className="w-full h-full absolute -right-2 -bottom-2 bg-orange border border-orange rounded-xl -z-20"></div>
+      <div className={`w-full h-full absolute -right-2 -bottom-2 ${cardVariant=="orange"? "bg-orange border border-orange" : "bg-light-orange border border-light-orange"} rounded-xl -z-20`}></div>
     </div>
   );
 };

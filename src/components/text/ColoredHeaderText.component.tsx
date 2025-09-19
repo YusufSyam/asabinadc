@@ -1,9 +1,9 @@
 import { Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { JSX } from "react";
 interface IColoredHeaderText {
   text: string;
   splitStart?: number;
-  subTitle?: string;
+  subTitle?: string | JSX.Element;
 }
 
 const ColoredHeaderText: React.FC<IColoredHeaderText> = ({

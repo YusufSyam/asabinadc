@@ -11,8 +11,8 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({}) => {
   return (
     <VStack className=" w-full">
       <ColoredHeaderText text="Our Impact" />
-      <Wireframe text="Prestasi/track record asabina selama ini" />
-      {/* <Grid templateColumns={"1fr 1fr 1fr"} gap={8}>
+      {/* <Wireframe text="Prestasi/track record asabina selama ini" /> */}
+      <Grid templateColumns={"1fr 1fr 1fr"} gap={8}>
         <GridItem w={"100%"} className="mt-14">
           <VStack className="self-end">
             <StrongText fontSize={"6xl"}>
@@ -24,7 +24,7 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({}) => {
         <GridItem w={"100%"}>
           <VStack>
             <StrongText fontSize={"8xl"}>
-              100<sup>++</sup>
+              100<sup>+</sup>
             </StrongText>
             <SmallText>Orang terbina</SmallText>
           </VStack>
@@ -37,7 +37,7 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({}) => {
             <SmallText>Panti diajar</SmallText>
           </VStack>
         </GridItem>
-      </Grid> */}
+      </Grid>
     </VStack>
   );
 };

@@ -51,16 +51,16 @@ const Workshop: React.FC<IWorkshop> = ({}) => {
           gap={16} // Jarak antar item
         >
           <GridItem>
-            <WorkshopCard />
+            <WorkshopCard cardVariant="light-orange" />
           </GridItem>
           <GridItem>
-            <WorkshopCard />
+            <WorkshopCard cardVariant="light-orange" />
           </GridItem>
           <GridItem>
-            <WorkshopCard />
+            <WorkshopCard cardVariant="light-orange" />
           </GridItem>
           <GridItem>
-            <WorkshopCard />
+            <WorkshopCard cardVariant="light-orange" />
           </GridItem>
         </Grid>
       </Stack>

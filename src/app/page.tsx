@@ -5,17 +5,14 @@ import { Grid, GridItem, Group, Stack, VStack } from "@chakra-ui/react";
 import HomeHeroSection from "./HomeHero.section";
 import HomeOurImpactSection from "./HomeOurImpact.section";
 import Wireframe from "@/components/Wireframe.component";
+import HomeOurProgramSection from "./HomeOurProgram.section";
 
 export default function Home() {
   return (
-    <Stack gapY={"24"} paddingX={"24"} paddingBottom={"24"} className="">
+    <Stack gapY={"28"} paddingX={"24"} paddingBottom={"24"} className="">
       <HomeHeroSection />
       <HomeOurImpactSection />
-      <VStack>
-        <ColoredHeaderText text="Our Program" />
-        <Wireframe text="Asabina Workshop" />
-        <Wireframe text="Sekelas Asabina" />
-      </VStack>
+      <HomeOurProgramSection />
       <VStack>
         <ColoredHeaderText text="Contact Us" />
 

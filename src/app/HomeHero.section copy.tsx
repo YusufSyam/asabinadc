@@ -34,7 +34,7 @@ export interface IHomeHeroSection {}
 const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
   return (
     <VStack className="relative">
-      <div className="bg-burgundy opacity-95 rounded-xl border border-burgundy overflow-hidden -z-10">
+      <div className="bg-primary-text opacity-95 rounded-xl border-4 border-burgundy overflow-hidden -z-10">
         <Image
           src={heroBgImage}
           style={{ objectFit: "contain" }}
@@ -149,7 +149,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
         </GridItem>
       </Grid>
 
-      <div className="w-full h-full absolute -right-4 -bottom-4 bg-orange/75 border border-orange/75 rounded-xl -z-20"></div>
+      <div className="w-full h-full absolute -right-4 -bottom-4 bg-burgundy border-4 border-burgundy rounded-xl -z-20"></div>
     </VStack>
   );
 };

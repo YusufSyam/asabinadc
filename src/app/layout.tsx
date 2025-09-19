@@ -5,10 +5,10 @@ import HeaderLayout from "@/components/layout/HeaderLayout.component";
 import FooterLayout from "@/components/layout/FooterLayout.component";
 
 export const metadata: Metadata = {
-  title: "Asabina Development Center",
+  title: "ASABINA Development Center",
   description: "",
   icons: {
-    icon: '/assets/images/logo1.png',
+    icon: '/assets/images/web-icon.png',
     
   },
 };
