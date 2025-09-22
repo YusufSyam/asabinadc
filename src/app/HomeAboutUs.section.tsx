@@ -9,7 +9,7 @@ export interface IHomeAboutUsSection {}
 
 const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({}) => {
   return (
-    <VStack gapY={8}>
+    <VStack gapY={10}>
       <Stack className="" gapY={0}>
         <Text className={`font-poppins-bold text-[48px] text-burgundy -ml-12`}>
           Get to Know

@@ -11,6 +11,8 @@ import {
   IconTimerFilled,
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
+import Link from "next/link";
+import ROUTES from "@/utils/const/routes";
 
 export interface IWorkshopCard {
   cardVariant?: "light-orange" | "orange"
@@ -18,7 +20,7 @@ export interface IWorkshopCard {
 
 const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
   return (
-    <div className="relative">
+    <Link className="relative" href={ROUTES.WORKSHOP_DETAIL}>
       <Stack
         className={`border-2 ${cardVariant=="orange"? "border-orange" : "border-light-orange"}  p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
         gapY={4}
@@ -64,7 +66,7 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
       </Stack>
 
       <div className={`w-full h-full absolute -right-2 -bottom-2 ${cardVariant=="orange"? "bg-orange border border-orange" : "bg-light-orange border border-light-orange"} rounded-xl -z-20`}></div>
-    </div>
+    </Link>
   );
 };
 export default WorkshopCard;
