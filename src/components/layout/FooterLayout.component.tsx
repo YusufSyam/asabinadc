@@ -70,7 +70,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
                 <SmallText
                   color={"white"}
                   fontSize={"lg"}
-                  className="font-medium tracking-5 underline underline-offset-4"
+                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   WORKSHOP
                 </SmallText>
@@ -79,7 +79,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
                 <SmallText
                   color={"white"}
                   fontSize={"lg"}
-                  className="font-medium tracking-5 underline underline-offset-4"
+                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   SEKELAS
                 </SmallText>
@@ -88,7 +88,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
                 <SmallText
                   color={"white"}
                   fontSize={"lg"}
-                  className="font-medium tracking-5 underline underline-offset-4"
+                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   GALERI
                 </SmallText>
@@ -97,7 +97,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
                 <SmallText
                   color={"white"}
                   fontSize={"lg"}
-                  className="font-medium tracking-5 underline underline-offset-4"
+                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   TENTANG KAMI
                 </SmallText>

@@ -1,6 +1,7 @@
 import MissionCard from "@/components/card/MissionCard.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
+import Wireframe from "@/components/Wireframe.component";
 import { Stack, VStack, Grid, GridItem } from "@chakra-ui/react";
 import React from "react";
 
@@ -8,7 +9,12 @@ export interface IAboutUsPage {}
 
 const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
   return (
-    <Stack gapY={"24"} paddingX={"24"} paddingBottom={"24"} className="">
+    <Stack
+      gapY={"24"}
+      paddingX={"24"}
+      paddingBottom={"24"}
+      className="border-t-2 border-secondary"
+    >
       '
       <VStack>
         <ColoredHeaderText text="About Us" />
@@ -22,7 +28,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
         </SmallText>
       </VStack>
       <VStack gapY={8} className="w-full">
-        <ColoredHeaderText text="Our Mission"></ColoredHeaderText>
+        <ColoredHeaderText text="Our Vision & Mission"></ColoredHeaderText>
         <Grid templateColumns="1fr 1fr 1fr" gapX={20} className="w-full  p-4">
           {/* Kolom Pertama (2/3 dari lebar) */}
           <GridItem className="bg-white">
@@ -45,6 +51,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </GridItem>
         </Grid>
       </VStack>
+      <Wireframe text={"Di sini section our team"} />
     </Stack>
   );
 };

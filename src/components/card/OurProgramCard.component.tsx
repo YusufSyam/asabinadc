@@ -24,6 +24,9 @@ export interface IOurProgramCard {
   firstTitle: string;
   secondTitle: string;
   href: string;
+  description?: string;
+  target?: string;
+  goal?: string;
 }
 
 const OurProgramCard: React.FC<IOurProgramCard> = ({
@@ -31,6 +34,9 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
   firstTitle,
   secondTitle,
   href,
+  description,
+  goal,
+  target
 }) => {
   return (
     <Link href={href}>
@@ -40,14 +46,14 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
             cardVariant == "burgundy"
               ? "border-burgundy bg-sekelas-bg"
               : "border-orange bg-workshop-bg"
-          } overflow-hidden h-96 w-full p-4 pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
+          } overflow-hidden h-[460px] w-full p-4 pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
           gapY={4}
         >
           <div
             className={`absolute inset-0 bg-gradient-to-t ${
               cardVariant == "burgundy"
                 ? "from-burgundy via-burgundy opacity-80"
-                : "from-orange via-orange opacity-85"
+                : "from-orange via-light-orange opacity-80"
             }  to-transparent rounded-xl`}
           ></div>
           <Stack
@@ -57,15 +63,15 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
           >
             <Stack gapY={0}>
               <StrongText
-                fontSize={"3xl"}
-                color={"white"}
+                fontSize={"4xl"}
+                color={cardVariant == "burgundy" ? "white" : "burgundy"}
                 className="text-center"
               >
                 {firstTitle}
               </StrongText>
               <StrongText
                 fontSize={"3xl"}
-                color={cardVariant == "burgundy" ? "orange" : "burgundy"}
+                color={cardVariant == "burgundy" ? "orange" : "primary-text"}
                 className="text-center -mt-4"
               >
                 {secondTitle}
@@ -73,37 +79,36 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
               <SmallText
                 color={cardVariant == "burgundy" ? "white" : "primary-text"}
                 fontSize={"sm"}
-                className="text-center w-3/4 self-center"
+                className="text-center w-4/5 self-center font-medium"
               >
-                Program pengembangan diri Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Quia, officiis!
+                {description}
               </SmallText>
             </Stack>
-            <Stack gapY={1} paddingX={4}>
+            <Stack gapY={1} paddingX={8} className="">
               <Group>
                 <IconRightArrowRounded
                   size={24}
-                  color={cardVariant == "burgundy" ? "white" : "#334155"}
+                  color={cardVariant == "burgundy" ? "white" : "#331455"}
                 />
                 <SmallText
                   color={cardVariant == "burgundy" ? "white" : "primary-text"}
                   fontSize={"sm"}
-                  className="text-center font-semibold"
+                  className="font-semibold"
                 >
-                  Sasaran: Lulusan Baru dan Pencari Kerja
+                  Sasaran: {target}
                 </SmallText>
               </Group>
               <Group>
                 <IconLoginOutline
                   size={19}
-                  color={cardVariant == "burgundy" ? "white" : "#334155"}
+                  color={cardVariant == "burgundy" ? "white" : "#331455"} className="self-start"
                 />
                 <SmallText
                   color={cardVariant == "burgundy" ? "white" : "primary-text"}
                   fontSize={"sm"}
-                  className="text-center font-semibold"
+                  className="font-semibold ml-1"
                 >
-                  Tujuan: Membekali peserta dengan strategi pencarian kerja
+                  Tujuan: {goal}
                 </SmallText>
               </Group>
             </Stack>
@@ -113,8 +118,8 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
         <div
           className={`w-full h-full absolute -right-2 -bottom-2 ${
             cardVariant == "burgundy"
-              ? "bg-burgundy/95 border-burgundy"
-              : "bg-orange/95 border-orange"
+              ? "bg-secondary/75 border-burgundy"
+              : "bg-secondary/75 border-orange"
           } rounded-xl border-2 -z-20`}
         ></div>
       </div>

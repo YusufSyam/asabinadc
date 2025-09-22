@@ -13,7 +13,7 @@ const Workshop: React.FC<IWorkshop> = ({}) => {
       paddingX={"24"}
       paddingBottom={"24"}
       paddingTop={"12"}
-      className="border-t-2 border-burgundy"
+      className="border-t-2 border-secondary"
     >
       <ColoredHeaderText
         subTitle="Asabina workshop adalah program Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, animi."

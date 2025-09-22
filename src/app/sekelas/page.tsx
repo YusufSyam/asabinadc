@@ -12,8 +12,8 @@ const Sekelas: React.FC<ISekelas> = ({}) => {
       gapY={"12"}
       paddingX={"24"}
       paddingBottom={"24"}
-      paddingTop={"12"}
-      className="border-t-2 border-burgundy"
+      paddingTop={"12"}      className="border-t-2 border-secondary"
+
     >
       <ColoredHeaderText
         subTitle="SEKELAS (Sejenak Kelas) Asabina adalah program Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, animi."
@@ -49,6 +49,18 @@ const Sekelas: React.FC<ISekelas> = ({}) => {
           }}
           gap={16} // Jarak antar item
         >
+          <GridItem>
+            <SekelasCard />
+          </GridItem>
+          <GridItem>
+            <SekelasCard />
+          </GridItem>
+          <GridItem>
+            <SekelasCard />
+          </GridItem>
+          <GridItem>
+            <SekelasCard />
+          </GridItem>
           <GridItem>
             <SekelasCard />
           </GridItem>

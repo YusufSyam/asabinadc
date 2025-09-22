@@ -6,6 +6,7 @@ import HomeHeroSection from "./HomeHero.section";
 import HomeOurImpactSection from "./HomeOurImpact.section";
 import Wireframe from "@/components/Wireframe.component";
 import HomeOurProgramSection from "./HomeOurProgram.section";
+import HomeAboutUsSection from "./HomeAboutUs.section";
 
 export default function Home() {
   return (
@@ -13,11 +14,7 @@ export default function Home() {
       <HomeHeroSection />
       <HomeOurImpactSection />
       <HomeOurProgramSection />
-      <VStack>
-        <ColoredHeaderText text="Contact Us" />
-
-        <Wireframe text="Di sini ada isian nama, email dan pesan" />
-      </VStack>
+      <HomeAboutUsSection />
     </Stack>
   );
 }

@@ -4,12 +4,14 @@ interface IColoredHeaderText {
   text: string;
   splitStart?: number;
   subTitle?: string | JSX.Element;
+  type?: "h1" | "h2"
 }
 
 const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   text,
   splitStart,
   subTitle,
+  type= "h1"
 }) => {
   const words = text.split(" ");
   const splitIndex =
@@ -20,7 +22,7 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
 
   return (
     <Stack className="" gapY={0}>
-      <Text className="font-poppins-bold text-[54px]">
+      <Text className={`font-poppins-bold ${type=="h1"? "text-[54px]" : "text-[48px]"} `}>
         <Text as="span" color="burgundy">
           {firstPart}
         </Text>{" "}

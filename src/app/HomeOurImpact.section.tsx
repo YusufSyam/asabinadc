@@ -10,7 +10,7 @@ export interface IHomeOurImpactSection {}
 const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({}) => {
   return (
     <VStack className=" w-full">
-      <ColoredHeaderText text="Our Impact" />
+      <ColoredHeaderText text="Our Impact" type="h2" />
       {/* <Wireframe text="Prestasi/track record asabina selama ini" /> */}
       <Grid templateColumns={"1fr 1fr 1fr"} gap={8}>
         <GridItem w={"100%"} className="mt-14">
