@@ -1,29 +1,27 @@
 import { Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import DummyImage from "../../../public/assets/images/dummy-profile.JPG";
+import DummyImage from "../../../public/assets/images/dummy-profile.jpg";
 import StrongText from "../text/StrongText.component";
 import SmallText from "../text/SmallText.component";
 import { ITeamProfile } from "@/utils/const/interfaces";
 
-export interface IOurTeamPhotoCard extends ITeamProfile {
-  
-}
+export interface IOurTeamPhotoCard extends ITeamProfile {}
 
 const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
   imageSrc,
   name,
   position,
-  cardVariant="burgundy",
+  cardVariant = "burgundy",
 }) => {
   return (
     <VStack
-      borderColor={cardVariant}
-      className="bg-white p-4 border rounded-xl relative"
+      borderColor={"primary-text"}
+      className="bg-white p-4 border-2 rounded-xl relative"
     >
       <Image
-        src={imageSrc==null? DummyImage : imageSrc}
-        alt="Pemandangan gunung"
+        src={(imageSrc == null ? DummyImage : imageSrc) as string}
+        alt="Team Profile"
         width={0}
         height={0}
         sizes="100vw"
@@ -38,7 +36,7 @@ const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
       </VStack>
       <Stack
         backgroundColor={cardVariant}
-        borderColor={cardVariant}
+        borderColor={"primary-text"}
         className={`w-full h-full absolute -right-2 -bottom-2 
              rounded-xl border-2 -z-20`}
       ></Stack>

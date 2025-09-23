@@ -1,13 +1,13 @@
 import { ITeamProfile } from "./interfaces";
-import azasiImg from "../../../public/assets/images/teams-profile/azasi.JPG";
-import fahmiImg from "../../../public/assets/images/teams-profile/fahmi.JPG";
-import fauzanImg from "../../../public/assets/images/teams-profile/fauzan.JPG";
-import ichaImg from "../../../public/assets/images/teams-profile/icha.JPG";
-import rifkaImg from "../../../public/assets/images/teams-profile/rifka.JPG";
+import azasiImg from "../../../public/assets/images/teams-profile/azasi.jpg";
+import fahmiImg from "../../../public/assets/images/teams-profile/fahmi.jpg";
+import fauzanImg from "../../../public/assets/images/teams-profile/fauzan.jpg";
+import ichaImg from "../../../public/assets/images/teams-profile/icha.jpg";
+import rifkaImg from "../../../public/assets/images/teams-profile/rifka.jpg";
 import rifqiImg from "../../../public/assets/images/teams-profile/rifqi.png";
-import septiImg from "../../../public/assets/images/teams-profile/septi.JPG";
-import shafwanImg from "../../../public/assets/images/teams-profile/shafwan.JPG";
-import yusufImg from "../../../public/assets/images/teams-profile/yusuf.JPG";
+import septiImg from "../../../public/assets/images/teams-profile/septi.jpg";
+import shafwanImg from "../../../public/assets/images/teams-profile/shafwan.jpg";
+import yusufImg from "../../../public/assets/images/teams-profile/yusuf.jpg";
 
 export const CTeamProfile: ITeamProfile[] = [
   {

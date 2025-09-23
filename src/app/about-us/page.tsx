@@ -34,8 +34,15 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
       className="border-t-2 border-secondary"
     >
       '
-      <VStack>
+      <VStack marginX={24}>
         <ColoredHeaderText text="About Us" />
+        <SmallText>
+          Asabina merupakan gabungan kata dari Asa (harapan) yang melambangkan
+          optimisme, impian dan motivasi, sedangkan kata Bina (membangun) yang
+          menggambarkan proses membangun, berkembang dan mencapai tujuan. Nama
+          ini mencerminkan semangat membangun harapan, potensi dan masa depan
+          yang cerah
+        </SmallText>
         <SmallText>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cum
           quod rerum laboriosam perferendis adipisci voluptate culpa repellat et
@@ -147,8 +154,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </Grid>
         </Stack>
       </VStack>
-      <AboutUsOurTeam/>
-      <Wireframe text={"Di sini section our team"} />
+      <AboutUsOurTeam />
     </Stack>
   );
 };
