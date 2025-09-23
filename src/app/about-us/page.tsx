@@ -21,13 +21,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import AboutUsOurTeam from "./AboutUsOurTeam.section";
 
 export interface IAboutUsPage {}
 
 const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
   return (
     <Stack
-      gapY={"24"}
+      gapY={"36"}
       paddingX={"24"}
       paddingBottom={"24"}
       className="border-t-2 border-secondary"
@@ -146,38 +147,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </Grid>
         </Stack>
       </VStack>
-      <VStack>
-        <ColoredHeaderText text="Meet Our Team" type="h2" />
-        <Grid templateColumns="repeat(3, 1fr)" gapX={24} gapY={12}>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-          <GridItem>
-            <OurTeamPhotoCard />
-          </GridItem>
-        </Grid>
-      </VStack>
+      <AboutUsOurTeam/>
       <Wireframe text={"Di sini section our team"} />
     </Stack>
   );
