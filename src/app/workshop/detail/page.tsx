@@ -39,7 +39,7 @@ const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
         <GridItem className="" padding={4}>
           <div className="relative">
             <Stack
-              className={`border-2 border-orange p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
+              className={`border-2 border-orange p-4 pb-6 rounded-xl z-10 bg-white`}
               gapY={4}
             >
               <Box
@@ -112,6 +112,9 @@ const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
           </Stack>
         </GridItem>
       </Grid>
+      <VStack>
+
+      </VStack>
     </VStack>
   );
 };

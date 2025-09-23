@@ -89,10 +89,6 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                   kalangan untuk tumbuh dan mencapai potensi terbaik dalam
                   kehidupan pribadi maupun profesional.
                 </Blockquote.Content>
-                <Blockquote.Content className="text-white font-roboto tracking-5 text-[16px] text-justify ">
-                  3 Misi utama kami yaitu menyediakan wadah pengembangan diri,
-                  menciptakan ruang inklusif, dan membangun kolaborasi
-                </Blockquote.Content>
               </Blockquote.Root>
             </div>
 
