@@ -13,16 +13,29 @@ import {
 import SmallText from "@/components/text/SmallText.component";
 import Link from "next/link";
 import ROUTES from "@/utils/const/routes";
+import { IWorkshopData } from "@/utils/const/interfaces";
+import { formatDateNormal } from "@/utils/function/datefunction";
 
-export interface IWorkshopCard {
-  cardVariant?: "light-orange" | "orange"
+export interface IWorkshopCard extends IWorkshopData {
+  cardVariant?: "light-orange" | "orange";
 }
 
-const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
+const WorkshopCard: React.FC<IWorkshopCard> = ({
+  cardVariant = "orange",
+  workshopName,
+  workshopTitle,
+  speaker,
+  location,
+  date,
+  time,
+  flyerImageSrc,
+}) => {
   return (
     <Link className="relative" href={ROUTES.WORKSHOP_DETAIL}>
       <Stack
-        className={`border-2 ${cardVariant=="orange"? "border-orange" : "border-light-orange"}  p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
+        className={`border-2 ${
+          cardVariant == "orange" ? "border-orange" : "border-light-orange"
+        }  p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out h-full`}
         gapY={4}
       >
         <Box
@@ -34,7 +47,7 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
         >
           {/* 2. Komponen Image */}
           <Image
-            src={dummyImage}
+            src={flyerImageSrc as string}
             alt="card image"
             style={{
               objectFit: "cover", // Kunci agar gambar terpotong, bukan stretch
@@ -43,15 +56,18 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
         </Box>
         <Stack gapY={4} paddingX={1}>
           <Stack gapY={0}>
-            <StrongText fontSize={"xl"}>Asabina Workshop #1</StrongText>
+            <StrongText fontSize={"xl"}>{workshopTitle}</StrongText>
             <Text className="text-secondary-text text-md">
-              Shafwan Zhalifunnas | Azasi Ma’Arif
+              {speaker?.map(
+                (d: string, idx: number) =>
+                  d + (idx >= speaker?.length - 1 ? "" : " | ")
+              )}
             </Text>
           </Stack>
           <Stack gapY={1}>
             <Group>
               <IconLocationOutlined size={22} color="#334155" />
-              <SmallText>Nutrihub Makassar</SmallText>
+              <SmallText>{location}</SmallText>
             </Group>
             <Group>
               <IconTimeOutlined
@@ -59,13 +75,19 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({cardVariant="orange"}) => {
                 color="#334155"
                 className="self-start"
               />
-              <SmallText>18 Maret 2025, 14.00 - 17.00 WITA</SmallText>
+              <SmallText>{formatDateNormal(date)}, {time}</SmallText>
             </Group>
           </Stack>
         </Stack>
       </Stack>
 
-      <div className={`w-full h-full absolute -right-2 -bottom-2 ${cardVariant=="orange"? "bg-orange border border-orange" : "bg-light-orange border border-light-orange"} rounded-xl -z-20`}></div>
+      <div
+        className={`w-full h-full absolute -right-2 -bottom-2 ${
+          cardVariant == "orange"
+            ? "bg-orange border border-orange"
+            : "bg-light-orange border border-light-orange"
+        } rounded-xl -z-20`}
+      ></div>
     </Link>
   );
 };

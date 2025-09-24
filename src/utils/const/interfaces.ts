@@ -6,3 +6,18 @@ export interface ITeamProfile {
   imageSrc: string | String | StaticImageData;
   cardVariant?: "burgundy" | "orange" | "magenta";
 }
+
+export interface IWorkshopData {
+  workshopName: string;
+  workshopTitle: string;
+  location: string;
+  locationDetail: string;
+  date: Date;
+  time: string;
+  description: string;
+  speaker: string[];
+  enrollLink: string | null;
+  documentationLink: string;
+  isUpcoming?: boolean;
+  flyerImageSrc?: string | StaticImageData;
+}

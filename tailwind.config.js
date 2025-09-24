@@ -14,6 +14,7 @@ module.exports = {
         white: "#ffffff",
         black: "#000000",
         secondary: "#d4d3e7",
+        "light-secondary": "#F0F0F0",
         "primary-text": "#334155",
         "secondary-text": "#808fa4",
         "light-orange": "#F7CBA8",
