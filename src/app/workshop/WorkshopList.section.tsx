@@ -42,7 +42,7 @@ const WorkshopListSection: React.FC<IWorkshopListSection> = ({}) => {
             {upcomingWorkshops?.map(
               (workshopData: IWorkshopData, idx: number) => {
                 return (
-                  <GridItem>
+                  <GridItem key={"workshop-" + idx}>
                     <WorkshopCard
                       key={idx}
                       {...workshopData}
@@ -73,7 +73,7 @@ const WorkshopListSection: React.FC<IWorkshopListSection> = ({}) => {
         >
           {pastWorkshops?.map((workshopData: IWorkshopData, idx: number) => {
             return (
-              <GridItem>
+              <GridItem key={"workshop-" + idx}>
                 <WorkshopCard
                   key={idx}
                   {...workshopData}

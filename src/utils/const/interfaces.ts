@@ -10,6 +10,7 @@ export interface ITeamProfile {
 export interface IWorkshopData {
   workshopName: string;
   workshopTitle: string;
+  slug: string;
   location: string;
   locationDetail: string;
   date: Date;

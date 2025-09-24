@@ -17,7 +17,7 @@ const Sekelas: React.FC<ISekelas> = ({}) => {
     >
       <ColoredHeaderText
         subTitle="SEKELAS (Sejenak Kelas) Asabina adalah program Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, animi."
-        text="SEKELAS Asabina"
+        text="SEKELAS ASABINA"
       />
       <Stack gapY={8}>
         <StrongText fontSize={"2xl"}>SEKELAS Aktif</StrongText>

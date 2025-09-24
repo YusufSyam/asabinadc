@@ -22,10 +22,27 @@ import SmallText from "@/components/text/SmallText.component";
 import WorkshopDetailInfoText from "./WorkshopDetailInfoText.component";
 import HeroButton from "@/components/button/HeroButton.component";
 import DetailButton from "@/components/button/DetailButton.component";
+import { CWorkshopData } from "@/utils/const/starterConst";
+import { notFound } from "next/navigation";
+import { formatDateNormal } from "@/utils/function/datefunction";
 
-export interface IWorkshopDetail {}
+type WorkshopDetailPageProps = {
+  params: {
+    slug: string; // Properti 'slug' harus sama dengan nama folder '[slug]'
+  };
+};
 
-const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
+const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
+  const { slug } = params;
+
+  // 1. Cocokkan slug dari URL dengan data workshop menggunakan .find()
+  const workshopData = CWorkshopData.find((ws) => ws.slug === slug);
+
+  // 2. Jika data tidak ditemukan, tampilkan halaman 404 Not Found
+  if (!workshopData) {
+    notFound();
+  }
+
   return (
     <VStack
       gapY={"12"}
@@ -34,7 +51,9 @@ const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
       paddingTop={"12"}
       className="border-t-2 border-secondary"
     >
-      <ColoredHeaderText text={"Test"} subTitle={"Asabina Workshop"} />
+      <div className="w-1/2 text-center">
+        <ColoredHeaderText text={workshopData?.workshopTitle} type="h2" />
+      </div>
       <Grid templateColumns={"5fr 7fr"} className="" gapX={8} marginX={12}>
         <GridItem className="" padding={4}>
           <div className="relative">
@@ -51,7 +70,7 @@ const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
               >
                 {/* 2. Komponen Image */}
                 <Image
-                  src={dummyImage}
+                  src={workshopData?.flyerImageSrc as string}
                   alt="card image"
                   style={{
                     objectFit: "cover", // Kunci agar gambar terpotong, bukan stretch
@@ -69,52 +88,44 @@ const WorkshopDetail: React.FC<IWorkshopDetail> = ({}) => {
           <Stack gapY={6}>
             <Stack>
               <StrongText>Deskripsi</StrongText>
-              <SmallText>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis eius asperiores quis alias recusandae ex autem
-                inventore nam placeat blanditiis ullam in, nesciunt unde
-                molestias quaerat doloremque nobis dolor sapiente dolores
-                temporibus ducimus velit magni. Dignissimos doloribus
-                consequatur ad excepturi autem maiores exercitationem omnis
-                rerum. Pariatur numquam dolorum harum culpa, nulla animi
-                voluptatum nihil iusto, cum nam soluta itaque deserunt vel vero!
-                Facilis aperiam sint ex officiis cumque, incidunt ea modi, porro
-                beatae laudantium repellendus excepturi et hic exercitationem,
-                veritatis tenetur provident dolorum ipsam assumenda ratione rem
-                possimus illo. Incidunt doloribus modi soluta, eaque sapiente
-                minima iusto aperiam quos totam?
-              </SmallText>
+              <SmallText whiteSpace={"pre-line"}>{workshopData?.description}</SmallText>
             </Stack>
             <Grid templateColumns={"1fr 1fr"} marginBottom={2}>
               <GridItem>
                 <WorkshopDetailInfoText
                   label="Lokasi"
-                  value={"Arma Cafe"}
+                  value={workshopData?.location}
                   icon={<IconLocationOutlined size={44} color="#334155" />}
                 />
               </GridItem>
               <GridItem>
-                <WorkshopDetailInfoText
-                  label="Waktu"
-                  value={"Jam 65 subuh"}
-                  icon={<IconTimeOutlined size={42} color="#334155" />}
-                />
+                <Group gapY={0}>
+                  <IconTimeOutlined size={42} color="#334155" />
+                  <Stack gapY={0}>
+                    <StrongText fontSize={"2xl"}>Waktu</StrongText>
+                    <SmallText>
+                      {formatDateNormal(workshopData?.date)}
+                    </SmallText>
+                    <SmallText color={"secondary-text"}>{workshopData?.time}</SmallText>
+                  </Stack>
+                </Group>
               </GridItem>
             </Grid>
-            <DetailButton
-              colorVariant="orange"
-              width={"fit-content"}
-              paddingX={8}
-              icon={<IconSentFilledRounded color="white" />}
-            >
-              Daftar Sekarang!
-            </DetailButton>
+            {workshopData?.isUpcoming && (
+              <DetailButton
+                colorVariant="orange"
+                width={"fit-content"}
+                paddingX={8}
+                icon={<IconSentFilledRounded color="white" />}
+                disabled={!workshopData?.isUpcoming}
+              >
+                Daftar Sekarang!
+              </DetailButton>
+            )}
           </Stack>
         </GridItem>
       </Grid>
-      <VStack>
-
-      </VStack>
+      <VStack></VStack>
     </VStack>
   );
 };

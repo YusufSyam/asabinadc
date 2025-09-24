@@ -23,7 +23,7 @@ const DetailButton: React.FC<DetailButtonProps> = ({
             : "bg-white text-primary-text border-orange"
         } grow rounded-lg border-2  hover:translate-x-1 hover:translate-y-1  ${
           className || ""
-        }`}
+        } disabled:!bg-secondary`}
         {...rest}
       >
         {icon && icon}
@@ -34,7 +34,7 @@ const DetailButton: React.FC<DetailButtonProps> = ({
           colorVariant == "white"
             ? "bg-orange border-orange"
             : "bg-primary-text border-primary-text"
-        }  border-2 rounded-lg -z-20`}
+        }  border-2 rounded-lg -z-20 `}
       ></div>
     </div>
   );

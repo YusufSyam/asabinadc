@@ -20,7 +20,7 @@ const Workshop: React.FC<IWorkshop> = ({}) => {
     >
       <ColoredHeaderText
         subTitle="Asabina workshop adalah program Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, animi."
-        text="Asabina Workshop"
+        text="ASABINA Workshop"
       />
 
       <WorkshopListSection/>  

@@ -76,6 +76,7 @@ export const CWorkshopData: IWorkshopData[] = [
   {
     workshopName: "Workshop membangun website mudah dengan wordpress",
     workshopTitle: "Membangun website dengan Wordpres",
+    slug: "membangun-website-dengan-wordpress",
     location: "Nutrihub Makassar",
     locationDetail:
       "Nutrihub Makassar Jl. Lagaligo No.32, Mangkura, Kec. Ujung Pandang, Kota Makassar, Sulawesi Selatan 90114",
@@ -92,7 +93,8 @@ export const CWorkshopData: IWorkshopData[] = [
   {
     workshopName:
       "🎓 Pelatihan Gratis: Kuasai Spreadsheet dari Nol!\n📊 Belajar Dasar-Dasar & Rumus Penting untuk Dunia Kerja",
-    workshopTitle: "Pelatihan Spreadsheet",
+    workshopTitle: "Spreadsheet: Dasar-Dasar & Rumus Penting untuk Dunia Kerja",
+    slug: "pelatihan-spreadsheet-1",
     location: "Arma Cafe",
     locationDetail:
       "Arma Cafe Jl. Andi Djemma No.55, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90224",
@@ -109,6 +111,7 @@ export const CWorkshopData: IWorkshopData[] = [
   {
     workshopName: "Workshop CV & Linkedin untuk memasuki dunia profesional",
     workshopTitle: "Job Ready in Style: CV & LinkedIn",
+    slug: "job-ready-in-style-cv-and-linkedin",
     location: "Arma Cafe",
     locationDetail:
       "Arma Cafe Jl. Andi Djemma No.55, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90224",
@@ -125,6 +128,7 @@ export const CWorkshopData: IWorkshopData[] = [
   {
     workshopName: "The Aware Self: A Thematic Session on Self-Awareness",
     workshopTitle: "The Aware Self: A thematic session on self-awareness",
+    slug: "the-aware-self",
     location: "Arma Cafe",
     locationDetail:
       "Arma Cafe Jl. Andi Djemma No.55, Banta-Bantaeng, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90224",
@@ -144,7 +148,8 @@ export const CWorkshopData: IWorkshopData[] = [
   {
     workshopName:
       "Canva Playdate🎨✨\nWorkshop Desain Kreatif untuk berbagai kebutuhan (bisnis/kantor/kampus dan lain-lain).\n",
-    workshopTitle: "Canva Playdate",
+    workshopTitle: "Canva Playdate: Dasar-dasar Desain",
+    slug: "canva-playdate-1",
     location: "Saja Cade Alauddin",
     locationDetail:
       "Saja Cafe Jl. Sultan Alauddin, Mangasa, Kec. Tamalate, Kota Makassar, Sulawesi Selatan",

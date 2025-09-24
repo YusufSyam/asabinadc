@@ -22,7 +22,7 @@ export interface IWorkshopCard extends IWorkshopData {
 
 const WorkshopCard: React.FC<IWorkshopCard> = ({
   cardVariant = "orange",
-  workshopName,
+  slug,
   workshopTitle,
   speaker,
   location,
@@ -31,7 +31,7 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({
   flyerImageSrc,
 }) => {
   return (
-    <Link className="relative" href={ROUTES.WORKSHOP_DETAIL}>
+    <Link className="relative" href={`${ROUTES.WORKSHOP}/${slug}`}>
       <Stack
         className={`border-2 ${
           cardVariant == "orange" ? "border-orange" : "border-light-orange"

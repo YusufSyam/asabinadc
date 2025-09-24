@@ -16,10 +16,10 @@ const WorkshopDetailInfoText: React.FC<IWorkshopDetailInfoText> = ({
 }) => {
   return (
     <Group gapY={0}>
-        {icon && icon}
+      {icon && icon}
       <Stack gapY={0}>
         <StrongText fontSize={"2xl"}>{label}</StrongText>
-      <SmallText>{value}</SmallText>
+        <SmallText>{value}</SmallText>
       </Stack>
     </Group>
   );
