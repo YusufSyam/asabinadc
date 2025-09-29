@@ -1,20 +1,16 @@
-import { Box, Group, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import dummyImage from "../../../public/assets/images/dummy-flyer.jpeg";
-import Image from "next/image";
-import StrongText from "@/components/text/StrongText.component";
-import { ST } from "next/dist/shared/lib/utils";
 import {
-  IconLocationFilled,
   IconLocationOutlined,
-  IconTimeOutlined,
-  IconTimerFilled,
+  IconTimeOutlined
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
-import Link from "next/link";
-import ROUTES from "@/utils/const/routes";
+import StrongText from "@/components/text/StrongText.component";
 import { IWorkshopData } from "@/utils/const/interfaces";
+import ROUTES from "@/utils/const/routes";
 import { formatDateNormal } from "@/utils/function/datefunction";
+import { Box, Group, Stack, Text } from "@chakra-ui/react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export interface IWorkshopCard extends IWorkshopData {
   cardVariant?: "light-orange" | "orange";

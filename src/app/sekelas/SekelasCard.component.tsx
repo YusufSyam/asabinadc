@@ -1,31 +1,23 @@
 import {
+  IconExclamationMarkOutlined,
+  IconLocationOutlined,
+  IconTimeOutlined,
+  IconWorkOutlined
+} from "@/components/icons/Icons.component";
+import SmallText from "@/components/text/SmallText.component";
+import StrongText from "@/components/text/StrongText.component";
+import { ISekelasData } from "@/utils/const/interfaces";
+import { formatDateNormal } from "@/utils/function/datefunction";
+import {
   Box,
-  Button,
   Grid,
   GridItem,
   Group,
   Stack,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import React from "react";
-import dummyImage from "../../../public/assets/images/dummy-flyer.jpeg";
 import Image from "next/image";
-import StrongText from "@/components/text/StrongText.component";
-import { ST } from "next/dist/shared/lib/utils";
-import {
-  IconArticleFilledRounded,
-  IconExclamationMarkOutlined,
-  IconInfoOutline,
-  IconLocationFilled,
-  IconLocationOutlined,
-  IconRightArrowTailedOutlinedRounded,
-  IconTimeOutlined,
-  IconTimerFilled,
-  IconWorkOutlined,
-} from "@/components/icons/Icons.component";
-import SmallText from "@/components/text/SmallText.component";
-import { ISekelasData } from "@/utils/const/interfaces";
-import { formatDateNormal } from "@/utils/function/datefunction";
+import React from "react";
 
 export interface ISekelasCard extends ISekelasData {
   oprec?: boolean;
