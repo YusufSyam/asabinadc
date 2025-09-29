@@ -10,6 +10,7 @@ import {
   IconLinkedinFilled,
   IconWhatsappFilled,
 } from "../icons/Icons.component";
+import { WhatsappContacts, InstagramContacts, LinkedinContacts, GmailContacts } from "../Contacts.component";
 
 export interface IFooterLayout {}
 
@@ -42,19 +43,11 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
             >
               GET IN TOUCH
             </SmallText>
-            <Group gapX={8}>
-              <Link href={ROUTES.WORKSHOP}>
-                <IconWhatsappFilled size={30} color="white" className="" />
-              </Link>
-              <Link href={ROUTES.WORKSHOP}>
-                <IconInstagramFilled size={32} color="white" className="" />
-              </Link>
-              <Link href={ROUTES.WORKSHOP}>
-                <IconLinkedinFilled size={30} color="white" className="" />
-              </Link>
-              <Link href={ROUTES.WORKSHOP}>
-                <IconGmailFilled size={31} color="white" className="" />
-              </Link>
+            <Group gapX={6}>
+              <WhatsappContacts />
+              <InstagramContacts />
+              <LinkedinContacts />
+              <GmailContacts />
             </Group>
           </Stack>
           <Stack>

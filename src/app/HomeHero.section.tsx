@@ -28,6 +28,9 @@ import Image from "next/image";
 import React from "react";
 import heroBgImage from "../../public/assets/images/hero-bnw.png";
 import iconAsabina from "../../public/assets/images/logo1.png";
+import Link from "next/link";
+import { CONTACTS_ACTION } from "@/utils/const/contacts";
+import { GmailContacts, InstagramContacts, LinkedinContacts, WhatsappContacts } from "@/components/Contacts.component";
 
 export interface IHomeHeroSection {}
 
@@ -135,10 +138,10 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
                 gapX={6}
                 className="bg-light-orange/50 rounded-full px-6 py-2"
               >
-                <IconWhatsappFilled color="white" size={26} className="" />
-                <IconInstagramFilled color="white" size={28} className="" />
-                <IconLinkedinFilled color="white" size={27} className="" />
-                <IconGmailFilled color="white" size={27} className="" />
+                <WhatsappContacts />
+                <InstagramContacts />
+                <LinkedinContacts />
+                <GmailContacts />
               </Group>
             </VStack>
           </Stack>
