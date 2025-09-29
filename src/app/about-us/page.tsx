@@ -19,9 +19,12 @@ import {
   Float,
   Group,
   Text,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
 import AboutUsOurTeam from "./AboutUsOurTeam.section";
+import Image from "next/image";
+import asabinaLogo from "../../../public/assets/images/logo2.png";
 
 export interface IAboutUsPage {}
 
@@ -31,26 +34,49 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
       gapY={"36"}
       paddingX={"24"}
       paddingBottom={"24"}
+      paddingTop={"16"}
       className="border-t-2 border-secondary"
     >
-      '
       <VStack marginX={24}>
         <ColoredHeaderText text="About Us" />
-        <SmallText>
-          Asabina merupakan gabungan kata dari Asa (harapan) yang melambangkan
-          optimisme, impian dan motivasi, sedangkan kata Bina (membangun) yang
-          menggambarkan proses membangun, berkembang dan mencapai tujuan. Nama
-          ini mencerminkan semangat membangun harapan, potensi dan masa depan
-          yang cerah
-        </SmallText>
-        <SmallText>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos cum
-          quod rerum laboriosam perferendis adipisci voluptate culpa repellat et
-          omnis. Neque hic aliquid sapiente explicabo illo in cumque libero
-          deserunt exercitationem possimus repudiandae nobis tempora
-          necessitatibus, accusamus maxime facilis dolore asperiores quos natus
-          voluptates quasi ex amet incidunt a. Optio!
-        </SmallText>
+        <Grid templateColumns={"8fr 16fr"} marginTop={12}>
+          <GridItem minWidth="0">
+            <Box
+              position="relative"
+              width="100%"
+              height="100%"
+            >
+              <Image
+                src={asabinaLogo}
+                alt="card image"
+                fill // <-- PERBAIKAN UTAMA
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </Box>
+          </GridItem>
+          <GridItem>
+            <Stack gapY={4}>
+              <SmallText className="text-justify">
+                ASABINA merupakan gabungan kata dari Asa (harapan) yang
+                melambangkan optimisme, impian dan motivasi, sedangkan kata Bina
+                (membangun) yang menggambarkan proses membangun, berkembang dan
+                mencapai tujuan. Nama ini mencerminkan semangat membangun
+                harapan, potensi dan masa depan yang cerah
+              </SmallText>
+              <SmallText className="text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                cum quod rerum laboriosam perferendis adipisci voluptate culpa
+                repellat et omnis. Neque hic aliquid sapiente explicabo illo in
+                cumque libero deserunt exercitationem possimus repudiandae nobis
+                tempora necessitatibus, accusamus maxime facilis dolore
+                asperiores quos natus voluptates quasi ex amet incidunt a.
+                Optio!
+              </SmallText>
+            </Stack>
+          </GridItem>
+        </Grid>
       </VStack>
       <VStack gapY={24} className="w-full">
         <ColoredHeaderText

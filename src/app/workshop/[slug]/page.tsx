@@ -14,6 +14,7 @@ import React from "react";
 import StrongText from "@/components/text/StrongText.component";
 import {
   IconLocationOutlined,
+  IconRadarFilledRounded,
   IconSendOutline,
   IconSentFilledRounded,
   IconTimeOutlined,
@@ -25,6 +26,8 @@ import DetailButton from "@/components/button/DetailButton.component";
 import { CWorkshopData } from "@/utils/const/starterConst";
 import { notFound } from "next/navigation";
 import { formatDateNormal } from "@/utils/function/datefunction";
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
 
 type WorkshopDetailPageProps = {
   params: {
@@ -33,12 +36,10 @@ type WorkshopDetailPageProps = {
 };
 
 const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
-  const { slug } = params;
+  const slug = await params.slug;
 
-  // 1. Cocokkan slug dari URL dengan data workshop menggunakan .find()
   const workshopData = CWorkshopData.find((ws) => ws.slug === slug);
 
-  // 2. Jika data tidak ditemukan, tampilkan halaman 404 Not Found
   if (!workshopData) {
     notFound();
   }
@@ -88,29 +89,33 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
           <Stack gapY={6}>
             <Stack>
               <StrongText>Deskripsi</StrongText>
-              <SmallText whiteSpace={"pre-line"}>{workshopData?.description}</SmallText>
+              <SmallText whiteSpace={"pre-line"}>
+                {workshopData?.description}
+              </SmallText>
             </Stack>
-            <Grid templateColumns={"1fr 1fr"} marginBottom={2}>
-              <GridItem>
-                <WorkshopDetailInfoText
-                  label="Lokasi"
-                  value={workshopData?.location}
-                  icon={<IconLocationOutlined size={44} color="#334155" />}
-                />
-              </GridItem>
-              <GridItem>
-                <Group gapY={0}>
-                  <IconTimeOutlined size={42} color="#334155" />
-                  <Stack gapY={0}>
-                    <StrongText fontSize={"2xl"}>Waktu</StrongText>
-                    <SmallText>
-                      {formatDateNormal(workshopData?.date)}
-                    </SmallText>
-                    <SmallText color={"secondary-text"}>{workshopData?.time}</SmallText>
-                  </Stack>
-                </Group>
-              </GridItem>
-            </Grid>
+            <Stack marginBottom={2} gapY={8}>
+              <WorkshopDetailInfoText
+                label="Lokasi"
+                value={workshopData?.locationDetail}
+                icon={<IconLocationOutlined size={48} color="#334155" />}
+              />
+
+              <WorkshopDetailInfoText
+                label="Waktu"
+                value={`${formatDateNormal(workshopData?.date)}, ${
+                  workshopData?.time
+                }`}
+                icon={<IconTimeOutlined size={44} color="#334155" />}
+              />
+              <WorkshopDetailInfoText
+                label="Speaker"
+                value={`${workshopData?.speaker?.map(
+                  (d: string, idx: number) =>
+                    d + (idx >= workshopData?.speaker?.length - 1 ? "" : " ")
+                )}`}
+                icon={<IconRadarFilledRounded size={44} color="#334155" />}
+              />
+            </Stack>
             {workshopData?.isUpcoming && (
               <DetailButton
                 colorVariant="orange"
@@ -125,7 +130,11 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
           </Stack>
         </GridItem>
       </Grid>
-      <VStack></VStack>
+      <VStack>
+        {workshopData?.galleryPhotos && (
+          <RowsPhotoAlbum photos={workshopData?.galleryPhotos} />
+        )}
+      </VStack>
     </VStack>
   );
 };

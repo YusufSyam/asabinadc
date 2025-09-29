@@ -1,7 +1,8 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import { StickerSearch } from "@/components/icons/Stickers.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
-import { Stack, VStack, Text, Group, Grid, GridItem } from "@chakra-ui/react";
+import ROUTES from "@/utils/const/routes";
+import { Stack, VStack, Text, Group, Grid, GridItem, Link } from "@chakra-ui/react";
 import { type } from "os";
 import React from "react";
 
@@ -49,8 +50,10 @@ const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({}) => {
               voluptates. Animi.
             </Text>
             <Group gapX={4} marginTop={4}>
-              <HeroButton colorVariant="white">More About Us</HeroButton>
-              <HeroButton colorVariant="white">More About Us</HeroButton>
+              <Link href={ROUTES?.ABOUT}>
+                <HeroButton colorVariant="white">More About Us</HeroButton>
+              </Link>
+              <HeroButton colorVariant="white">Email Us!</HeroButton>
             </Group>
           </Stack>
         </GridItem>

@@ -1,4 +1,4 @@
-import { ITeamProfile, IWorkshopData } from "./interfaces";
+import { ISekelasData, ITeamProfile, IWorkshopData } from "./interfaces";
 import azasiImg from "../../../public/assets/images/teams-profile/azasi.jpg";
 import fahmiImg from "../../../public/assets/images/teams-profile/fahmi.jpg";
 import fauzanImg from "../../../public/assets/images/teams-profile/fauzan.jpg";
@@ -9,11 +9,95 @@ import septiImg from "../../../public/assets/images/teams-profile/septi.jpg";
 import shafwanImg from "../../../public/assets/images/teams-profile/shafwan.jpg";
 import yusufImg from "../../../public/assets/images/teams-profile/yusuf.jpg";
 
-import flyerWorkshop1 from "../../../public/assets/images/workshop-flyer/flyer-workshop1.jpeg"
-import flyerWorkshop2 from "../../../public/assets/images/workshop-flyer/flyer-workshop2.jpeg"
-import flyerWorkshop3 from "../../../public/assets/images/workshop-flyer/flyer-workshop3.jpeg"
-import flyerWorkshop4 from "../../../public/assets/images/workshop-flyer/flyer-workshop4.jpeg"
-import flyerWorkshop5 from "../../../public/assets/images/workshop-flyer/flyer-workshop5.jpg"
+import flyerWorkshop1 from "../../../public/assets/images/workshop-flyer/flyer-workshop1.jpeg";
+import flyerWorkshop2 from "../../../public/assets/images/workshop-flyer/flyer-workshop2.jpeg";
+import flyerWorkshop3 from "../../../public/assets/images/workshop-flyer/flyer-workshop3.jpeg";
+import flyerWorkshop4 from "../../../public/assets/images/workshop-flyer/flyer-workshop4.jpeg";
+import flyerWorkshop5 from "../../../public/assets/images/workshop-flyer/flyer-workshop5.jpg";
+
+import sekelasImage1 from "../../../public/assets/images/sekelas/sekelas1.jpg";
+import { IGalleryPhoto } from "./interfaces";
+
+const Imgw1_1: IGalleryPhoto = {
+  src: "/assets/images/gallery/w1-1.jpg",
+  width: 2340,
+  height: 1949,
+};
+const Imgw1_2: IGalleryPhoto = {
+  src: "/assets/images/gallery/w1-2.jpg",
+  width: 1607,
+  height: 2009,
+};
+const Imgw1_3: IGalleryPhoto = {
+  src: "/assets/images/gallery/w1-3.jpg",
+  width: 4032,
+  height: 3024,
+};
+const Imgw2_1: IGalleryPhoto = {
+  src: "/assets/images/gallery/w2-1.jpg",
+  width: 1992,
+  height: 1120,
+};
+const Imgw2_2: IGalleryPhoto = {
+  src: "/assets/images/gallery/w2-2.jpg",
+  width: 1992,
+  height: 1120,
+};
+const Imgw2_3: IGalleryPhoto = {
+  src: "/assets/images/gallery/w2-3.jpg",
+  width: 1992,
+  height: 1120,
+};
+const Imgw3_1: IGalleryPhoto = {
+  src: "/assets/images/gallery/w3-1.jpg",
+  width: 1992,
+  height: 1120,
+};
+const Imgw3_2: IGalleryPhoto = {
+  src: "/assets/images/gallery/w3-2.jpg",
+  width: 2856,
+  height: 1607,
+};
+const Imgw3_3: IGalleryPhoto = {
+  src: "/assets/images/gallery/w3-3.jpg",
+  width: 1992,
+  height: 1120,
+};
+const Imgw4_1: IGalleryPhoto = {
+  src: "/assets/images/gallery/w4-1.jpg",
+  width: 2016,
+  height: 1512,
+};
+const Imgw4_2: IGalleryPhoto = {
+  src: "/assets/images/gallery/w4-2.jpg",
+  width: 2016,
+  height: 1512,
+};
+const Imgw4_3: IGalleryPhoto = {
+  src: "/assets/images/gallery/w4-3.jpg",
+  width: 1512,
+  height: 1464,
+};
+const Imgw5_1: IGalleryPhoto = {
+  src: "/assets/images/gallery/w5-1.png",
+  width: 507,
+  height: 670,
+};
+const Imgw5_2: IGalleryPhoto = {
+  src: "/assets/images/gallery/w5-2.png",
+  width: 604,
+  height: 766,
+};
+const Imgw5_3: IGalleryPhoto = {
+  src: "/assets/images/gallery/w5-3.png",
+  width: 600,
+  height: 795,
+};
+const Imgs1_1: IGalleryPhoto = {
+  src: "/assets/images/sekelas/sekelas1.jpg",
+  width: 1512,
+  height: 954,
+};
 
 export const CTeamProfile: ITeamProfile[] = [
   {
@@ -89,6 +173,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop1,
     documentationLink:
       "https://drive.google.com/drive/folders/1pLtX57xNWunOEhdHNHhIwT03AuKBxBuv?usp=sharing",
+      galleryPhotos: [Imgw1_1, Imgw1_2, Imgw1_3]
   },
   {
     workshopName:
@@ -107,6 +192,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop2,
     documentationLink:
       "https://drive.google.com/drive/folders/1Fg7e-ArQPooJxDD8tz9tFa_w7J6Mw19q?usp=sharing",
+      galleryPhotos: [Imgw2_1, Imgw2_2, Imgw2_3]
   },
   {
     workshopName: "Workshop CV & Linkedin untuk memasuki dunia profesional",
@@ -124,6 +210,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop3,
     documentationLink:
       "https://drive.google.com/drive/folders/1tKyEXzH5f86Cs1OtWBxOl2d0p7enaPA7?usp=sharing",
+      galleryPhotos: [Imgw3_1, Imgw3_2, Imgw3_3]
   },
   {
     workshopName: "The Aware Self: A Thematic Session on Self-Awareness",
@@ -144,13 +231,14 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop4,
     documentationLink:
       "https://drive.google.com/drive/folders/1_sFfGf0GL-QSOD_IrnJVvciRrp-2XeyD?usp=sharing",
+      galleryPhotos: [Imgw4_1, Imgw4_2, Imgw4_3]
   },
   {
     workshopName:
       "Canva Playdate🎨✨\nWorkshop Desain Kreatif untuk berbagai kebutuhan (bisnis/kantor/kampus dan lain-lain).\n",
     workshopTitle: "Canva Playdate: Dasar-dasar Desain",
     slug: "canva-playdate-1",
-    location: "Saja Cade Alauddin",
+    location: "Saja Cafe Alauddin",
     locationDetail:
       "Saja Cafe Jl. Sultan Alauddin, Mangasa, Kec. Tamalate, Kota Makassar, Sulawesi Selatan",
     date: new Date(2025, 8, 20),
@@ -166,6 +254,41 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop5,
     documentationLink:
       "https://drive.google.com/drive/folders/1DIRxIbS8kwgUHs2J4WBOI6NteJhEO8wO?usp=sharing",
-      isUpcoming: false
+    isUpcoming: false,
+      galleryPhotos: [Imgw5_1, Imgw5_2, Imgw5_3]
   },
+];
+
+export const CSekelasData: ISekelasData[] = [
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    date: new Date(2025, 9, 4),
+    isUpcoming: true,
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    meetingCount: 1,
+    flyerImageSrc: sekelasImage1,
+    agenda:
+      "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
+  },
+];
+
+
+export const CGalleryPhotos: IGalleryPhoto[] = [
+  Imgw1_1,
+  Imgw5_2,
+  Imgw2_1,
+  Imgw4_2,
+  Imgw5_1,
+  Imgw1_3,
+  Imgw2_2,
+  Imgw2_3,
+  Imgw3_3,
+  Imgw4_1,
+  Imgw4_3,
+  Imgw1_2,
+  Imgw3_1,
+  Imgw3_2,
+  Imgw5_3,
+  Imgs1_1
 ];
