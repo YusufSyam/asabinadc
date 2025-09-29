@@ -1,33 +1,26 @@
+import DetailButton from "@/components/button/DetailButton.component";
+import {
+  IconLocationOutlined,
+  IconRadarFilledRounded,
+  IconSentFilledRounded,
+  IconTimeOutlined
+} from "@/components/icons/Icons.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
+import SmallText from "@/components/text/SmallText.component";
+import StrongText from "@/components/text/StrongText.component";
+import { CWorkshopData } from "@/utils/const/starterConst";
+import { formatDateNormal } from "@/utils/function/datefunction";
 import {
   Box,
   Grid,
   GridItem,
-  Group,
   Stack,
-  VStack,
-  Text,
+  VStack
 } from "@chakra-ui/react";
 import Image from "next/image";
-import dummyImage from "../../../../public/assets/images/dummy-flyer.jpeg";
-import React from "react";
-import StrongText from "@/components/text/StrongText.component";
-import {
-  IconLocationOutlined,
-  IconRadarFilledRounded,
-  IconSendOutline,
-  IconSentFilledRounded,
-  IconTimeOutlined,
-} from "@/components/icons/Icons.component";
-import SmallText from "@/components/text/SmallText.component";
-import WorkshopDetailInfoText from "./WorkshopDetailInfoText.component";
-import HeroButton from "@/components/button/HeroButton.component";
-import DetailButton from "@/components/button/DetailButton.component";
-import { CWorkshopData } from "@/utils/const/starterConst";
 import { notFound } from "next/navigation";
-import { formatDateNormal } from "@/utils/function/datefunction";
-import { RowsPhotoAlbum } from "react-photo-album";
-import "react-photo-album/rows.css";
+import WorkshopDetailGallery from "./WorkshopDetailGallery.section";
+import WorkshopDetailInfoText from "./WorkshopDetailInfoText.component";
 
 type WorkshopDetailPageProps = {
   params: {
@@ -36,7 +29,7 @@ type WorkshopDetailPageProps = {
 };
 
 const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
-  const slug = await params.slug;
+  const { slug } = await params;
 
   const workshopData = CWorkshopData.find((ws) => ws.slug === slug);
 
@@ -51,11 +44,11 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
       paddingBottom={"24"}
       paddingTop={"12"}
       className="border-t-2 border-secondary"
-    >
+    > 
       <div className="w-1/2 text-center">
         <ColoredHeaderText text={workshopData?.workshopTitle} type="h2" />
       </div>
-      <Grid templateColumns={"5fr 7fr"} className="" gapX={8} marginX={12}>
+      <Grid templateColumns={"5fr 7fr"} className="" gapX={8} marginX={12} marginBottom={24}>
         <GridItem className="" padding={4}>
           <div className="relative">
             <Stack
@@ -132,7 +125,7 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
       </Grid>
       <VStack>
         {workshopData?.galleryPhotos && (
-          <RowsPhotoAlbum photos={workshopData?.galleryPhotos} />
+          <WorkshopDetailGallery gallery={workshopData?.galleryPhotos} />
         )}
       </VStack>
     </VStack>

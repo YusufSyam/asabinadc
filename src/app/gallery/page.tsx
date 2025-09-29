@@ -1,21 +1,18 @@
 "use client";
 
-import { Stack, VStack, Text, Box } from "@chakra-ui/react";
-import React, { useState } from "react";
-import galleryHero from "../../../public/assets/images/gallery-hero.png";
-import Image from "next/image";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
-import Wireframe from "@/components/Wireframe.component";
+import SmallText from "@/components/text/SmallText.component";
+import { CGalleryPhotos } from "@/utils/const/starterConst";
+import { Box, Stack, VStack } from "@chakra-ui/react";
+import Image from "next/image";
+import React, { useState } from "react";
 import {
-  ColumnsPhotoAlbum,
-  MasonryPhotoAlbum,
-  RowsPhotoAlbum,
+  MasonryPhotoAlbum
 } from "react-photo-album";
 import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import SmallText from "@/components/text/SmallText.component";
-import { CGalleryPhotos } from "@/utils/const/starterConst";
+import galleryHero from "../../../public/assets/images/gallery-hero.png";
 
 export interface IGalleryPage {}
 
