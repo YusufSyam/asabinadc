@@ -1,25 +1,27 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import { StickerSearch } from "@/components/icons/Stickers.component";
-import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import { CONTACTS_ACTION } from "@/utils/const/contacts";
 import ROUTES from "@/utils/const/routes";
 import {
-  Stack,
-  VStack,
-  Text,
-  Group,
   Grid,
   GridItem,
+  Group,
   Link,
+  Stack,
+  Text,
+  VStack,
 } from "@chakra-ui/react";
-import { type } from "os";
 import React from "react";
 
-export interface IHomeAboutUsSection {}
+export interface IHomeAboutUsSection {
+  refForScroll: React.RefObject<HTMLDivElement | null>;
+}
 
-const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({}) => {
+const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({
+  refForScroll,
+}) => {
   return (
-    <VStack gapY={10}>
+    <VStack gapY={10} ref={refForScroll}>
       <Stack className="" gapY={0}>
         <Text className={`font-poppins-bold text-[48px] text-burgundy -ml-12`}>
           Get to Know

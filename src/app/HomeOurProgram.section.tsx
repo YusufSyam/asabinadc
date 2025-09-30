@@ -1,16 +1,19 @@
 import OurProgramCard from "@/components/card/OurProgramCard.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
-import Wireframe from "@/components/Wireframe.component";
 import ROUTES from "@/utils/const/routes";
 import { Grid, GridItem, VStack } from "@chakra-ui/react";
 import React from "react";
 
-export interface IHomeOurProgramSection {}
+export interface IHomeOurProgramSection {
+  refForScroll: React.RefObject<HTMLDivElement | null>;
+}
 
-const HomeOurProgramSection: React.FC<IHomeOurProgramSection> = ({}) => {
+const HomeOurProgramSection: React.FC<IHomeOurProgramSection> = ({
+  refForScroll,
+}) => {
   return (
-    <VStack gapY={12}>
+    <VStack gapY={12} ref={refForScroll}>
       <VStack>
         <ColoredHeaderText text="Our Program" type="h2" />
         <SmallText className="w-2/3 text-center !text-secondary-text">

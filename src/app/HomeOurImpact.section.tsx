@@ -1,15 +1,18 @@
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
-import Wireframe from "@/components/Wireframe.component";
-import { VStack, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, VStack } from "@chakra-ui/react";
 import React from "react";
 
-export interface IHomeOurImpactSection {}
+export interface IHomeOurImpactSection {
+  refForScroll: React.RefObject<HTMLDivElement | null>;
+}
 
-const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({}) => {
+const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({
+  refForScroll,
+}) => {
   return (
-    <VStack className=" w-full">
+    <VStack className=" w-full" ref={refForScroll}>
       <VStack>
         <ColoredHeaderText text="Our Impact" type="h2" />
         <SmallText color={"secondary-text"}>

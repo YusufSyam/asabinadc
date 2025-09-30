@@ -1,17 +1,14 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import {
-  IconBookFilled,
-  IconGalleryOutlined,
-  IconGmailFilled,
-  IconInstagramFilled,
-  IconLinkedinFilled,
-  IconListViewFilledRounded,
-  IconPersonFilled,
-  IconPersonOutlined,
+  GmailContacts,
+  InstagramContacts,
+  LinkedinContacts,
+  WhatsappContacts,
+} from "@/components/Contacts.component";
+import {
+  IconLeaderboardOutlinedRounded,
   IconSearchFilledRounded,
-  IconWhatsappFilled,
-  IconWorkFilled,
-  IconWorkOutlined,
+  IconWorkOutlined
 } from "@/components/icons/Icons.component";
 import StrongText from "@/components/text/StrongText.component";
 import {
@@ -28,13 +25,18 @@ import Image from "next/image";
 import React from "react";
 import heroBgImage from "../../public/assets/images/hero-bnw.png";
 import iconAsabina from "../../public/assets/images/logo1.png";
-import Link from "next/link";
-import { CONTACTS_ACTION } from "@/utils/const/contacts";
-import { GmailContacts, InstagramContacts, LinkedinContacts, WhatsappContacts } from "@/components/Contacts.component";
 
-export interface IHomeHeroSection {}
+export interface IHomeHeroSection {
+  onScrollTo2: () => void;
+  onScrollTo3: () => void;
+  onScrollTo4: () => void;
+}
 
-const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
+const HomeHeroSection: React.FC<IHomeHeroSection> = ({
+  onScrollTo2,
+  onScrollTo3,
+  onScrollTo4,
+}) => {
   return (
     <VStack className="relative">
       <div className="bg-burgundy opacity-95 rounded-xl border border-burgundy overflow-hidden -z-10">
@@ -99,28 +101,33 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
               flexWrap={"wrap"}
               className="mr-8 mt-4 mb-2 ml-8 !justify-between "
             >
-              <HeroButton icon={<IconWorkOutlined color="white" />}>
+              <HeroButton
+                icon={<IconWorkOutlined color="white" />}
+                onClick={onScrollTo3}
+              >
                 Explore Our Program
               </HeroButton>
               <Group gapX={6} gapY={4}>
                 <HeroButton
                   colorVariant="orange"
                   icon={<IconSearchFilledRounded color="white" />}
+                  onClick={onScrollTo4}
                 >
-                  About Us
+                  Get to Know More
                 </HeroButton>
                 <HeroButton
                   colorVariant="orange"
-                  icon={<IconPersonOutlined color="white" />}
+                  icon={<IconLeaderboardOutlinedRounded color="white" />}
+                  onClick={onScrollTo2}
                 >
-                  Our Team
+                  Our Impact
                 </HeroButton>
-                <HeroButton
+                {/* <HeroButton
                   colorVariant="orange"
                   icon={<IconGalleryOutlined color="white" />}
                 >
                   Gallery
-                </HeroButton>
+                </HeroButton> */}
               </Group>
             </Group>
           </Stack>
