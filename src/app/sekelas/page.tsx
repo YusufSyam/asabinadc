@@ -17,7 +17,7 @@ const Sekelas: React.FC<ISekelas> = ({}) => {
 
     >
       <ColoredHeaderText
-        subTitle="SEKELAS (Sejenak Kelas) Asabina adalah program Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, animi."
+        subTitle="SEKELAS (Sejenak Kelas) Asabina adalah program pendidikan dasar untuk anak-anak di daerah kurang terjangkau"
         text="SEKELAS ASABINA"
       />
       <SekelasListSection />

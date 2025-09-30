@@ -1,8 +1,17 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import { StickerSearch } from "@/components/icons/Stickers.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
+import { CONTACTS_ACTION } from "@/utils/const/contacts";
 import ROUTES from "@/utils/const/routes";
-import { Stack, VStack, Text, Group, Grid, GridItem, Link } from "@chakra-ui/react";
+import {
+  Stack,
+  VStack,
+  Text,
+  Group,
+  Grid,
+  GridItem,
+  Link,
+} from "@chakra-ui/react";
 import { type } from "os";
 import React from "react";
 
@@ -36,24 +45,25 @@ const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({}) => {
               >
                 ASABINA
               </Text>{" "}
-              Development Center merupakan sebuah komunitas Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Laborum, inventore mollitia
-              in, ea ex dolorum praesentium hic ducimus possimus repellat
-              reiciendis doloribus? Vitae architecto et maiores. Ullam, ratione
-              voluptates. Animi.
+              Development Center adalah komunitas non-profit yang berkomitmen
+              menyediakan pendidikan, pelatihan keterampilan, dan pendampingan
+              bagi masyarakat. Bersama, kita membangun masa depan yang lebih
+              inklusif, inspiratif, dan berdaya saing.
             </Text>
             <Text>
-              Development Center merupakan sebuah komunitas Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Laborum, inventore mollitia
-              in, ea ex dolorum praesentium hic ducimus possimus repellat
-              reiciendis doloribus? Vitae architecto et maiores. Ullam, ratione
-              voluptates. Animi.
+              Kami percaya bahwa setiap individu memiliki potensi untuk tumbuh
+              dan berkembang. Melalui program-program yang inklusif, inspiratif,
+              dan kolaboratif, Asabina berkomitmen menjadi wadah bagi siapa saja
+              yang ingin belajar, berbagi, serta bersama-sama menciptakan masa
+              depan yang lebih cerah.
             </Text>
             <Group gapX={4} marginTop={4}>
               <Link href={ROUTES?.ABOUT}>
                 <HeroButton colorVariant="white">More About Us</HeroButton>
               </Link>
-              <HeroButton colorVariant="white">Email Us!</HeroButton>
+              <Link href={CONTACTS_ACTION.EMAIL}>
+                <HeroButton colorVariant="white">Email Us!</HeroButton>
+              </Link>
             </Group>
           </Stack>
         </GridItem>

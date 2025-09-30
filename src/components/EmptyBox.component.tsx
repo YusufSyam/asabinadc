@@ -18,7 +18,7 @@ const EmptyBox: React.FC<IEmptyBox> = ({
   return (
     <Box width={"60%"} className="relative" {...rest}>
       <Group
-        className={`border-2 border-light-secondary  p-12 py-6 rounded-xl z-10 bg-light-secondary ${
+        className={`border-2 border-light-secondary p-12 py-6 rounded-xl z-10 bg-light-secondary ${
           className || ""
         }`}
         gapX={8}

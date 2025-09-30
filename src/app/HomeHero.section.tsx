@@ -148,7 +148,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
         </GridItem>
       </Grid>
 
-      <div className="w-full h-full absolute -right-4 -bottom-4 bg-orange/75 border border-orange/75 rounded-xl -z-20"></div>
+      <div className="w-full h-full absolute -right-2 -bottom-2 bg-orange/75 border border-orange/75 rounded-xl -z-20"></div>
     </VStack>
   );
 };

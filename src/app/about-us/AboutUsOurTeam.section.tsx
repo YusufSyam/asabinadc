@@ -13,11 +13,13 @@ export interface IAboutUsOurTeam {}
 const AboutUsOurTeam: React.FC<IAboutUsOurTeam> = ({}) => {
   const [ourTeamData, setOurTeamData] = useState(CTeamProfile);
   return (
-    <VStack gapY={12} marginBottom={12}>
+    <VStack gapY={16} marginBottom={12}>
       <VStack gapY={0}>
         <ColoredHeaderText text="Meet Our Team" type="h2" />
-        <SmallText color={"secondary-text"}>
-          Asabina Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <SmallText color={"secondary-text"} width={"75%"} textAlign={"center"}>
+          Asabina adalah rumah bagi para individu yang percaya bahwa perubahan
+          bisa dimulai dari tindakan sederhana. Kenali lebih dekat orang-orang
+          di balik program dan kegiatan kami.
         </SmallText>
       </VStack>
       <Grid templateColumns="repeat(3, 1fr)" gapX={16} gapY={24} marginX={20}>

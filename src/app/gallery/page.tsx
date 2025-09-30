@@ -3,12 +3,10 @@
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import { CGalleryPhotos } from "@/utils/const/starterConst";
-import { Box, Stack, VStack } from "@chakra-ui/react";
+import { Blockquote, Box, Float, Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
-import {
-  MasonryPhotoAlbum
-} from "react-photo-album";
+import { MasonryPhotoAlbum } from "react-photo-album";
 import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -38,8 +36,26 @@ const GalleryPage: React.FC<IGalleryPage> = ({}) => {
         <VStack gapY={0}>
           <ColoredHeaderText text="Asabina Gallery" />
           <SmallText color={"secondary-text"}>
-            Lorem ipsum dolor sit amet.
+            Setiap langkah kecil menuju perubahan, kami abadikan sebagai bukti
+            nyata perjalanan bersama
           </SmallText>
+          {/* <Blockquote.Root
+            variant="plain"
+            colorPalette="white"
+            className="z-10"
+            width={"50%"}
+          >
+            <Float placement="top-start" offsetY={2}>
+              <Blockquote.Icon color={"secondary-text"} />
+            </Float>
+            <Blockquote.Content className="text-secondary-text tracking-5 text-[16px] text-justify">
+              Setiap langkah kecil menuju perubahan, kami abadikan sebagai bukti
+              nyata perjalanan bersama. Dokumentasi ini bukan hanya sekadar
+              catatan visual, melainkan refleksi atas komitmen Asabina dalam
+              memberikan akses pendidikan, pelatihan, serta ruang kolaborasi
+              yang inklusif bagi masyarakat
+            </Blockquote.Content>
+          </Blockquote.Root> */}
         </VStack>
       </VStack>
       <Box width={"100%"}>

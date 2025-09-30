@@ -41,11 +41,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
         <ColoredHeaderText text="About Us" />
         <Grid templateColumns={"8fr 16fr"} marginTop={12}>
           <GridItem minWidth="0">
-            <Box
-              position="relative"
-              width="100%"
-              height="100%"
-            >
+            <Box position="relative" width="100%" height="100%">
               <Image
                 src={asabinaLogo}
                 alt="card image"
@@ -59,20 +55,19 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           <GridItem>
             <Stack gapY={4}>
               <SmallText className="text-justify">
-                ASABINA merupakan gabungan kata dari Asa (harapan) yang
-                melambangkan optimisme, impian dan motivasi, sedangkan kata Bina
-                (membangun) yang menggambarkan proses membangun, berkembang dan
-                mencapai tujuan. Nama ini mencerminkan semangat membangun
-                harapan, potensi dan masa depan yang cerah
+                <strong>Asabina Development Center</strong> adalah komunitas
+                non-profit yang berkomitmen menyediakan pendidikan, pelatihan
+                keterampilan, dan pendampingan bagi masyarakat. Bersama, kita
+                membangun masa depan yang lebih inklusif, inspiratif, dan
+                berdaya saing.
               </SmallText>
               <SmallText className="text-justify">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-                cum quod rerum laboriosam perferendis adipisci voluptate culpa
-                repellat et omnis. Neque hic aliquid sapiente explicabo illo in
-                cumque libero deserunt exercitationem possimus repudiandae nobis
-                tempora necessitatibus, accusamus maxime facilis dolore
-                asperiores quos natus voluptates quasi ex amet incidunt a.
-                Optio!
+                Asabina Development Center lahir dari semangat{" "}
+                <strong>Asa</strong> (harapan) dan <strong>Bina</strong>{" "}
+                (membangun). Kami percaya setiap individu memiliki potensi untuk
+                berkembang dan mencapai masa depan yang lebih cerah. Melalui
+                berbagai program pendidikan dan pelatihan, Asabina menjadi ruang
+                inklusif untuk belajar, bertumbuh, dan saling menguatkan.
               </SmallText>
             </Stack>
           </GridItem>

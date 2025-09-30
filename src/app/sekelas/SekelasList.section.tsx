@@ -20,7 +20,7 @@ const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
   return (
     <>
       <Stack gapY={8}>
-        <StrongText fontSize={"2xl"}>SEKELAS Aktif</StrongText>
+        <StrongText fontSize={"2xl"}>SEKELAS yang Akan Datang</StrongText>
         {upcomingSekelas?.length > 0 ? (
           <Grid
             // Kunci utamanya ada di sini
@@ -41,8 +41,8 @@ const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
           </Grid>
         ) : (
           <EmptyBox
-            title="Tidak ada Upcoming Workshop"
-            message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis labore aliquid vitae doloribus amet nisi reiciendis neque perspiciatis ipsa cum."
+            title="Tidak ada jadwal SEKELAS yang akan datang"
+            message="Belum ada jadwal kelas terbaru saat ini. Nantikan informasi berikutnya, karena kami terus menyiapkan program yang relevan dan bermanfaat untuk Anda"
           />
         )}
       </Stack>
@@ -69,7 +69,7 @@ const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
         ) : (
           <EmptyBox
             title="Belum ada kegiatan SEKELAS sebelumnya"
-            message="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis labore aliquid vitae doloribus amet nisi reiciendis neque perspiciatis ipsa cum."
+            message="Belum ada kegiatan sebelumnya saat ini. Nantikan informasi berikutnya, karena kami terus menyiapkan program yang relevan dan bermanfaat untuk Anda"
           />
         )}
       </Stack>

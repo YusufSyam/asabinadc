@@ -118,8 +118,8 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
         <div
           className={`w-full h-full absolute -right-2 -bottom-2 ${
             cardVariant == "burgundy"
-              ? "bg-secondary/75 border-burgundy"
-              : "bg-secondary/75 border-orange"
+              ? "bg-burgundy/75 border-burgundy"
+              : "bg-orange/75 border-orange"
           } rounded-xl border-2 -z-20`}
         ></div>
       </div>

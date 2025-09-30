@@ -15,8 +15,7 @@ const HomeOurProgramSection: React.FC<IHomeOurProgramSection> = ({}) => {
         <ColoredHeaderText text="Our Program" type="h2" />
         <SmallText className="w-2/3 text-center !text-secondary-text">
           ASABINA Development Center memiliki 2 program utama, yaitu ASABINA
-          Workshop dan SEKELAS ASABINA, Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit.
+          Workshop dan SEKELAS ASABINA.
         </SmallText>
       </VStack>
       <Grid
