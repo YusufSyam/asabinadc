@@ -3,7 +3,7 @@ import { Text, TextProps } from "@chakra-ui/react";
 import { TTextColor } from "@/utils/const/types";
 
 export interface ISmallText extends TextProps {
-  color?: TTextColor | TextProps['color'];
+  color?: TTextColor | TextProps["color"];
 }
 
 const SmallText: React.FC<ISmallText> = ({
@@ -16,6 +16,7 @@ const SmallText: React.FC<ISmallText> = ({
     <Text
       color={color}
       className={`tracking-1 ${className || ""}`}
+      fontSize={{ md: "md", base: "sm" }}
       {...rest}
     >
       {children}

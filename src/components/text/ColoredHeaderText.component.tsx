@@ -4,14 +4,14 @@ interface IColoredHeaderText {
   text: string;
   splitStart?: number;
   subTitle?: string | JSX.Element;
-  type?: "h1" | "h2"
+  type?: "h1" | "h2";
 }
 
 const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   text,
   splitStart,
   subTitle,
-  type= "h1"
+  type = "h1",
 }) => {
   const words = text.split(" ");
   const splitIndex =
@@ -21,8 +21,15 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   const secondPart = words.slice(splitIndex).join(" ");
 
   return (
-    <Stack className="" gapY={0}>
-      <Text className={`font-poppins-bold ${type=="h1"? "text-[54px]" : "text-[48px]"} `}>
+    <Stack className="" gapY={{ md: 2, base: 0 }}>
+      <Text
+        className={`font-poppins-bold `}
+        fontSize={{
+          base: "36px",
+          sm: "40px",
+          md: type == "h1" ? "54px" : "48px",
+        }}
+      >
         <Text as="span" color="burgundy">
           {firstPart}
         </Text>{" "}
@@ -30,7 +37,15 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
           {secondPart}
         </Text>
       </Text>
-      {subTitle && <Text className="text-secondary-text">{subTitle}</Text>}
+      {subTitle && (
+        <Text
+          fontSize={{ md: "md", base: "sm" }}
+          marginTop={{ md: -2, base: "-2px" }}
+          className="text-secondary-text"
+        >
+          {subTitle}
+        </Text>
+      )}
     </Stack>
   );
 };

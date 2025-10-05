@@ -13,36 +13,36 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({
 }) => {
   return (
     <VStack className=" w-full" ref={refForScroll}>
-      <VStack>
+      <VStack gapY={{ md: 2, base: 0 }}>
         <ColoredHeaderText text="Our Impact" type="h2" />
-        <SmallText color={"secondary-text"}>
+        <SmallText color={"secondary-text"} textAlign={"center"}>
           Jejak kontribusi kami dalam membangun harapan dan masa depan
         </SmallText>
       </VStack>
       {/* <Wireframe text="Prestasi/track record asabina selama ini" /> */}
-      <Grid templateColumns={"1fr 1fr 1fr"} gap={8}>
-        <GridItem w={"100%"} className="mt-14">
+      <Grid templateColumns={"1fr 1fr 1fr"} gap={{md:8, base:4}} alignItems={"end"}>
+        <GridItem w={"100%"}>
           <VStack className="self-end">
-            <StrongText fontSize={"6xl"}>
+            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>
               5<sup>+</sup>
             </StrongText>
-            <SmallText>Workshop terlaksana</SmallText>
+            <SmallText textAlign={"center"}>Workshop terlaksana</SmallText>
           </VStack>
         </GridItem>
-        <GridItem w={"100%"}>
-          <VStack>
-            <StrongText fontSize={"8xl"}>
+        <GridItem w={"100%"} className="">
+          <VStack className="self-end">
+            <StrongText fontSize={{ base: "7xl", md: "8xl" }}>
               100<sup>+</sup>
             </StrongText>
             <SmallText>Orang terbina</SmallText>
           </VStack>
         </GridItem>
-        <GridItem w={"100%"} className="mt-14">
+        <GridItem w={"100%"}>
           <VStack className="self-end">
-            <StrongText fontSize={"6xl"}>
+            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>
               10<sup>+</sup>
             </StrongText>
-            <SmallText>Total Jam Ajar</SmallText>
+            <SmallText textAlign={"center"}>Total Jam Ajar</SmallText>
           </VStack>
         </GridItem>
       </Grid>
