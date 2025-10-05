@@ -46,7 +46,7 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
             cardVariant == "burgundy"
               ? "border-burgundy bg-sekelas-bg"
               : "border-orange bg-workshop-bg"
-          } overflow-hidden h-[460px] w-full p-4 pb-6 md:pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
+          } overflow-hidden h-[400px] md:h-[460px] w-full p-4 pb-6 md:pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-1 hover:translate-y-1 lg:hover:translate-x-2 lg:hover:translate-y-2  duration-200 ease-in-out`}
           gapY={4}
         >
           <div
@@ -63,14 +63,14 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
           >
             <Stack gapY={0}>
               <StrongText
-                fontSize={{md:"4xl", base:"3xl"}}
+                fontSize={{ md: "4xl", base: "3xl" }}
                 color={cardVariant == "burgundy" ? "white" : "burgundy"}
                 className="text-center"
               >
                 {firstTitle}
               </StrongText>
               <StrongText
-                fontSize={{md:"3xl", base:"2xl"}}
+                fontSize={{ md: "3xl", base: "2xl" }}
                 color={cardVariant == "burgundy" ? "orange" : "primary-text"}
                 className="text-center -mt-2 md:-mt-4"
               >
@@ -84,8 +84,12 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
                 {description}
               </SmallText>
             </Stack>
-            <Stack gapY={{md:1, base:2}} paddingX={{ md: 8, base: 4 }} className="">
-              <Group>
+            <Stack
+              gapY={{ md: 1, base: 2 }}
+              paddingX={{ md: 8, base: 4 }}
+              className=""
+            >
+              <Group display={{ sm: "flex", base: "none" }}>
                 <IconRightArrowRounded
                   size={24}
                   color={cardVariant == "burgundy" ? "white" : "#331455"}
@@ -99,7 +103,7 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
                   Sasaran: {target}
                 </SmallText>
               </Group>
-              <Group>
+              <Group display={{ sm: "flex", base: "none" }}>
                 <IconLoginOutline
                   size={19}
                   color={cardVariant == "burgundy" ? "white" : "#331455"}
@@ -118,7 +122,7 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
         </Stack>
 
         <div
-          className={`w-full h-full absolute -right-2 -bottom-2 ${
+          className={`w-full h-full absolute -right-1 -bottom-1 lg:-right-2 lg:-bottom-2  ${
             cardVariant == "burgundy"
               ? "bg-burgundy/75 border-burgundy"
               : "bg-orange/75 border-orange"

@@ -1,8 +1,13 @@
 import ROUTES from "@/utils/const/routes";
-import { Group, Stack } from "@chakra-ui/react";
+import { Flex, Group, Stack } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import { GmailContacts, InstagramContacts, LinkedinContacts, WhatsappContacts } from "../Contacts.component";
+import {
+  GmailContacts,
+  InstagramContacts,
+  LinkedinContacts,
+  WhatsappContacts,
+} from "../Contacts.component";
 import SmallText from "../text/SmallText.component";
 import StrongText from "../text/StrongText.component";
 
@@ -10,29 +15,64 @@ export interface IFooterLayout {}
 
 const FooterLayout: React.FC<IFooterLayout> = ({}) => {
   return (
-    <Stack 
-        paddingX={{ base: "8", md: "12", lg: "24" }} className="bg-burgundy !pt-8 !pb-2">
-      <Group justify={"space-between"}>
-        <Stack gap={4} className="self-start">
-          <StrongText color={"white"} fontSize={"7xl"} className="-mt-4">
+    <Stack
+      paddingX={{ base: "8", md: "12", lg: "24" }}
+      className="bg-burgundy !pt-8 !pb-2"
+    >
+      <Flex
+        justify={"space-between"}
+        flexDir={{
+          md: "row",
+          base: "column",
+        }}
+        gapY={8}
+      >
+        <Stack gap={4} className="self-start w-full md:w-fit">
+          <StrongText
+            color={"white"}
+            fontSize={{
+              base: "4xl",
+              xl: "7xl",
+              lg: "6xl",
+              md: "4xl",
+              sm: "6xl",
+            }}
+            className="-mt-4"
+            textAlign={{
+              md: "start",
+              base: "center",
+            }}
+          >
             ASABINA
           </StrongText>
           <StrongText
             color={"orange"}
-            mt={"-10"}
-            fontSize={"3xl"}
+            mt={{ lg: "-10", md: "-6", sm: "-8", base: "-4" }}
+            lineHeight={{ base: 1, lg: 1.5 }}
+            fontSize={{ base: "xl", lg: "3xl", md: "2xl" }}
             className="font-poppins"
+            textAlign={{
+              md: "start",
+              base: "center",
+            }}
           >
             DEVELOPMENT CENTER
           </StrongText>
-          <SmallText className="!text-white">
+          <SmallText
+            className="!text-white"
+            mt={{ base: -2, sm: 0 }}
+            textAlign={{
+              md: "start",
+              base: "center",
+            }}
+          >
             Makassar, South Sulawesi, Indonesia
           </SmallText>
         </Stack>
         <Stack gapY={8}>
           <Stack>
             <SmallText
-              fontSize={"lg"}
+              fontSize={{ lg: "lg", base: "md" }}
               color={"white"}
               className="font-poppins-semibold tracking-5"
             >
@@ -47,17 +87,20 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
           </Stack>
           <Stack>
             <SmallText
-              fontSize={"lg"}
+              fontSize={{ lg: "lg", base: "md" }}
               color={"white"}
               className="font-poppins-semibold tracking-5"
             >
               MENU
             </SmallText>
-            <Group gapX={8}>
+            <Group
+              gapX={{ lg: 8, md: 4, base: 6 }}
+              flexWrap={{ base: "wrap", md: "nowrap" }}
+            >
               <Link href={ROUTES.WORKSHOP}>
                 <SmallText
                   color={"white"}
-                  fontSize={"lg"}
+                  fontSize={{ lg: "lg", base: "md" }}
                   className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   WORKSHOP
@@ -66,7 +109,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
               <Link href={ROUTES.SEKELAS}>
                 <SmallText
                   color={"white"}
-                  fontSize={"lg"}
+                  fontSize={{ lg: "lg", base: "md" }}
                   className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   SEKELAS
@@ -75,7 +118,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
               <Link href={ROUTES.GALLERY}>
                 <SmallText
                   color={"white"}
-                  fontSize={"lg"}
+                  fontSize={{ lg: "lg", base: "md" }}
                   className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
                 >
                   GALERI
@@ -84,8 +127,8 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
               <Link href={ROUTES.ABOUT}>
                 <SmallText
                   color={"white"}
-                  fontSize={"lg"}
-                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out"
+                  fontSize={{ lg: "lg", base: "md" }}
+                  className="font-medium tracking-5 underline underline-offset-4 hover:text-orange duration-300 ease-in-out text-center"
                 >
                   TENTANG KAMI
                 </SmallText>
@@ -93,7 +136,7 @@ const FooterLayout: React.FC<IFooterLayout> = ({}) => {
             </Group>
           </Stack>
         </Stack>
-      </Group>
+      </Flex>
       <SmallText className="!text-white text-center border-t border-white py-4 mt-4">
         © 2025 Asabina Development Centre. All rights reserved.
       </SmallText>
