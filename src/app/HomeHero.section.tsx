@@ -59,7 +59,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
           paddingTop={{ base: "8", sm: "20", md: "32", lg: "44" }}
           paddingBottom={{ base: "4", sm: "4", md: "6", lg: "6" }}
           paddingX={{ base: "4", sm: "4", md: "6", lg: "8" }}
-          className="!w-full overflow-hidden bg-hero-bg bg-cover rounded-xl"
+          className="overflow-hidden bg-hero-bg bg-cover rounded-xl"
         >
           {/* Kolom Pertama (2/3 dari lebar) */}
           <GridItem w="100%" className="">
@@ -76,14 +76,20 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                 <Stack>
                   <StrongText
                     color={"white"}
-                    fontSize={{ base: "6xl", xl: "7xl", lg: "6xl", md: "4xl", sm:"6xl" }}
+                    fontSize={{
+                      base: "xl",
+                      xl: "7xl",
+                      lg: "6xl",
+                      md: "4xl",
+                      sm: "6xl",
+                    }}
                   >
                     ASABINA
                   </StrongText>
                   <StrongText
                     color={"white"}
-                    mt={{base: -4, sm:-4 , lg:-6}}
-                    className="font-poppins" 
+                    mt={{ base: -4, sm: -4, lg: -6 }}
+                    className="font-poppins"
                     lineHeight={1}
                     fontSize={{ base: "xl", lg: "4xl", md: "4xl" }}
                   >
@@ -91,7 +97,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                   </StrongText>
                 </Stack>
               </Group>
-              <div className="relative rounded-md px-4 lg:px-8 py-4">
+              <div className="relative rounded-md px-2 md:px-4 lg:px-8 py-4">
                 <Blockquote.Root
                   variant="plain"
                   colorPalette="white"
@@ -117,7 +123,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
               <Group
                 flexWrap={"wrap"}
                 gapY={4}
-                className="mr-8 mt-4 mb-2 ml-8 !justify-between "
+                className="mr-8 mt-0 md:mt-4 mb-2 ml-8 !justify-between "
               >
                 <HeroButton
                   icon={<IconWorkOutlined color="white" />}
@@ -125,7 +131,8 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                 >
                   Explore Our Program
                 </HeroButton>
-                <Group gapX={{ lg: 6, base: 4 }} gapY={4}>
+                <Group gapX={{ lg: 6, base: 4 }} gapY={4} 
+                flexWrap={"wrap"}>
                   <HeroButton
                     colorVariant="orange"
                     icon={<IconChartOutlined color="white" />}
@@ -158,7 +165,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                 className="relative self-start pl-8 md:self-end flex-row md:flex-col"
                 gapX={4}
               >
-                <Text className="text-white text-xl font-roboto tracking-6 text-center self-center">
+                <Text className="text-white text-xl font-roboto tracking-6 text-center self-center hidden sm:block">
                   GET IN TOUCH
                 </Text>
                 <Group
