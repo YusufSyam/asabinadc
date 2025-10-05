@@ -16,13 +16,22 @@ const AboutUsOurTeam: React.FC<IAboutUsOurTeam> = ({}) => {
     <VStack gapY={16} marginBottom={12}>
       <VStack gapY={0}>
         <ColoredHeaderText text="Meet Our Team" type="h2" />
-        <SmallText color={"secondary-text"} width={"75%"} textAlign={"center"}>
+        <SmallText
+          color={"secondary-text"}
+          width={{ md: "75%", base: "full" }}
+          textAlign={"center"}
+        >
           Asabina adalah rumah bagi para individu yang percaya bahwa perubahan
           bisa dimulai dari tindakan sederhana. Kenali lebih dekat orang-orang
           di balik program dan kegiatan kami.
         </SmallText>
       </VStack>
-      <Grid templateColumns="repeat(3, 1fr)" gapX={16} gapY={24} marginX={20}>
+      <Grid
+        templateColumns={{ md: "repeat(3, 1fr)", base: "repeat(2, 1fr)" }}
+        gapX={{ xl: 16, lg: 12, sm: 12, base: 8 }}
+        gapY={{ xl: 24, lg: 20, md: 16, base: 12 }}
+        marginX={{ xl: 20, lg: 0, md: 4, base: 4 }}
+      >
         {ourTeamData?.map((teamData: ITeamProfile, idx: number) => {
           return (
             <GridItem key={idx}>

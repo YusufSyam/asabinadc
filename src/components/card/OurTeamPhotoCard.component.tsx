@@ -17,7 +17,7 @@ const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
   return (
     <VStack
       borderColor={"primary-text"}
-      className="bg-white p-4 border-2 rounded-xl relative"
+      className="bg-white p-4 border-2 rounded-xl relative h-full"
     >
       <Image
         src={(imageSrc == null ? DummyImage : imageSrc) as string}
@@ -27,9 +27,9 @@ const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
         sizes="100vw"
         style={{ width: "100%", height: "auto", borderRadius: "16px" }}
       />
-      <VStack gapY={0}>
-        <StrongText fontSize={"2xl"}>{name}</StrongText>
-        <SmallText fontSize={"lg"} color={"secondary-text"}>
+      <VStack gapY={1} marginTop={1}>
+        <StrongText fontSize={{lg:"2xl", base:"xl"}} textAlign={"center"} lineHeight={1.25}>{name}</StrongText>
+        <SmallText fontSize={{lg:"lg", base:"md"}} color={"secondary-text"} textAlign={"center"} lineHeight={1.25}>
           {" "}
           {position}
         </SmallText>

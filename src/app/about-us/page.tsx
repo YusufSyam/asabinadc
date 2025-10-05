@@ -31,25 +31,31 @@ export interface IAboutUsPage {}
 const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
   return (
     <Stack
-      gapY={"36"}
+      gapY={{ lg: 36, md: 32, sm: 28, base: 24 }}
       paddingX={{ base: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       paddingTop={"16"}
       className="border-t-2 border-secondary"
     >
-      <VStack marginX={24}>
+      <VStack marginX={{ base: "0", md: "12", lg: "0", xl: "24" }}>
         <ColoredHeaderText text="About Us" />
-        <Grid templateColumns={"8fr 16fr"} marginTop={12}>
-          <GridItem minWidth="0">
+        <Grid
+          templateColumns={{ xl: "8fr 16fr", lg: "11fr 13fr", base: "1fr" }}
+          marginTop={{ md: 12, base: 4 }}
+          gapY={8}
+          gapX={4}
+        >
+          <GridItem className="h-56 lg:h-full">
             <Box position="relative" width="100%" height="100%">
               <Image
                 src={asabinaLogo}
                 alt="card image"
-                fill // <-- PERBAIKAN UTAMA
+                fill
                 style={{
                   objectFit: "contain",
                 }}
               />
+              <Text color={"white"}>.</Text>
             </Box>
           </GridItem>
           <GridItem>
@@ -73,20 +79,30 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </GridItem>
         </Grid>
       </VStack>
-      <VStack gapY={24} className="w-full">
+      <VStack gapY={{ lg: 24, base: 16 }} className="w-full ">
         <ColoredHeaderText
-          text=" Vision, Mission & Values"
+          text="Vision, Mission & Values"
           splitStart={3}
           type="h2"
+          textAlign="center"
         />
-        <Stack gapY={20}>
-          <Grid templateColumns={"5fr 19fr"} marginX={44} gapX={12}>
+        <Stack gapY={20} className="">
+          <Grid
+            templateColumns={{ md: "5fr 19fr", base: "1fr" }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            gapX={12}
+          >
             <GridItem className="w-full flex">
               <StickerVision size={160} className="mx-auto self-center" />
             </GridItem>
-            <GridItem>
+            <GridItem width={"fit-content"}>
               <Stack>
-                <StrongText fontSize={"3xl"}>Our Vision</StrongText>
+                <StrongText
+                  fontSize={"3xl"}
+                  textAlign={{ md: "start", base: "center" }}
+                >
+                  Our Vision
+                </StrongText>
                 <SmallText>
                   Visi kami adalah untuk menjadi wadah pengembangan diri yang
                   inklusif, inspiratif dan setara bagi semua kalangan untuk
@@ -96,13 +112,21 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
               </Stack>
             </GridItem>
           </Grid>
-          <Grid templateColumns={"5fr 19fr"} marginX={44} gapX={12}>
+          <Grid
+            templateColumns={{ md: "5fr 19fr", base: "1fr" }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            gapX={12}
+          >
             <GridItem className="w-full flex">
               <StickerMission size={136} className="mx-auto self-center" />
             </GridItem>
             <GridItem>
               <Stack>
-                <StrongText fontSize={"3xl"} className="">
+                <StrongText
+                  fontSize={"3xl"}
+                  className=""
+                  textAlign={{ md: "start", base: "center" }}
+                >
                   Our Mission
                 </StrongText>
                 <Stack>
@@ -125,13 +149,22 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
               </Stack>
             </GridItem>
           </Grid>
-          <Grid templateColumns={"5fr 19fr"} marginX={44} gapX={12}>
+          <Grid
+            templateColumns={{ md: "5fr 19fr", base: "1fr" }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            gapX={12}
+          >
             <GridItem className="w-full flex">
               <StickerValues size={160} className="mx-auto self-center" />
             </GridItem>
             <GridItem>
               <Stack>
-                <StrongText fontSize={"3xl"}>Our Values</StrongText>
+                <StrongText
+                  fontSize={"3xl"}
+                  textAlign={{ md: "start", base: "center" }}
+                >
+                  Our Values
+                </StrongText>
                 <Stack gapY={4}>
                   <SmallText>
                     <Text
