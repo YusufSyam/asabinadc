@@ -1742,7 +1742,7 @@ export function IconCloseOutline({
     <svg
       width={size + `px`}
       height={size + `px`}
-      viewBox={`0 0 12 13`}
+      viewBox={`0 0 14 15`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       onClick={onClick}
@@ -4094,6 +4094,54 @@ export function IconExclamationMarkOutlined({
     >
       <path
       d='M440-400v-360h80v360h-80Zm0 200v-80h80v80h-80Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function IconMenuOutlined({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 -960 960 960`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z'
+      fill={color}
+      />
+    </svg>
+  );
+}
+
+export function IconChartOutlined({
+  size = 24,
+  color = 'black',
+  onClick,
+  className
+}: IFluentProps) {
+  return (
+    <svg
+      width={size+`px`}
+      height={size+`px`}
+      viewBox={`0 -960 960 960`}
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      onClick={onClick}
+      className={className}
+    >
+      <path
+      d='M640-160v-280h160v280H640Zm-240 0v-640h160v640H400Zm-240 0v-440h160v440H160Z'
       fill={color}
       />
     </svg>

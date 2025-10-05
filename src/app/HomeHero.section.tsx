@@ -6,9 +6,10 @@ import {
   WhatsappContacts,
 } from "@/components/Contacts.component";
 import {
+  IconChartOutlined,
   IconLeaderboardOutlinedRounded,
   IconSearchFilledRounded,
-  IconWorkOutlined
+  IconWorkOutlined,
 } from "@/components/icons/Icons.component";
 import StrongText from "@/components/text/StrongText.component";
 import {
@@ -38,7 +39,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
   onScrollTo4,
 }) => {
   return (
-    <VStack className="relative">
+    <VStack className="relative overflow-hidden">
       <div className="bg-burgundy opacity-95 rounded-xl border border-burgundy overflow-hidden -z-10">
         <Image
           src={heroBgImage}
@@ -51,7 +52,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
       <Grid
         templateColumns="2fr 1fr"
         gap={0}
-        className="absolute bottom-8 w-full px-8 "
+        className="absolute bottom-8 w-full px-8 overflow-hidden"
       >
         {/* Kolom Pertama (2/3 dari lebar) */}
         <GridItem w="100%">
@@ -110,17 +111,17 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
               <Group gapX={6} gapY={4}>
                 <HeroButton
                   colorVariant="orange"
+                  icon={<IconChartOutlined color="white" />}
+                  onClick={onScrollTo2}
+                >
+                  Our Impact
+                </HeroButton>
+                <HeroButton
+                  colorVariant="orange"
                   icon={<IconSearchFilledRounded color="white" />}
                   onClick={onScrollTo4}
                 >
                   Get to Know More
-                </HeroButton>
-                <HeroButton
-                  colorVariant="orange"
-                  icon={<IconLeaderboardOutlinedRounded color="white" />}
-                  onClick={onScrollTo2}
-                >
-                  Our Impact
                 </HeroButton>
                 {/* <HeroButton
                   colorVariant="orange"
