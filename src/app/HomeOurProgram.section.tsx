@@ -16,15 +16,15 @@ const HomeOurProgramSection: React.FC<IHomeOurProgramSection> = ({
     <VStack gapY={12} ref={refForScroll}>
       <VStack>
         <ColoredHeaderText text="Our Program" type="h2" />
-        <SmallText className="w-2/3 text-center !text-secondary-text">
+        <SmallText className="w-full md:w-2/3 text-center !text-secondary-text">
           ASABINA Development Center memiliki 2 program utama, yaitu ASABINA
           Workshop dan SEKELAS ASABINA.
         </SmallText>
       </VStack>
       <Grid
-        templateColumns={"1fr 1fr"}
-        gapX={12}
-        paddingX={24}
+        templateColumns={{lg:"1fr 1fr", base:"1fr"}}
+        gapY={{lg:12, base:6}}
+        paddingX={{ lg: 24, md: 16, sm: 8, base: 4 }}
         className="w-full"
       >
         <GridItem minWidth="0">

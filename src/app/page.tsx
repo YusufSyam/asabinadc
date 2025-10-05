@@ -24,7 +24,7 @@ export default function Home() {
   };
   return (
     <Stack
-      gapY={"28"}
+      gapY={{md:"28", base:"24"}}
       paddingX={{ base: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       className=""

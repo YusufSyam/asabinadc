@@ -46,7 +46,7 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
             cardVariant == "burgundy"
               ? "border-burgundy bg-sekelas-bg"
               : "border-orange bg-workshop-bg"
-          } overflow-hidden h-[460px] w-full p-4 pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
+          } overflow-hidden h-[460px] w-full p-4 pb-6 md:pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out`}
           gapY={4}
         >
           <div
@@ -79,12 +79,12 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
               <SmallText
                 color={cardVariant == "burgundy" ? "white" : "primary-text"}
                 fontSize={"sm"}
-                className="text-center w-4/5 self-center font-medium"
+                className="text-center w-full md:w-4/5 self-center font-medium"
               >
                 {description}
               </SmallText>
             </Stack>
-            <Stack gapY={1} paddingX={8} className="">
+            <Stack gapY={1} paddingX={{md:8,base:4}} className="">
               <Group>
                 <IconRightArrowRounded
                   size={24}
