@@ -17,6 +17,7 @@ const DetailButton: React.FC<DetailButtonProps> = ({
     <div className="relative flex">
       <Button
         variant={"solid"}
+        fontSize={{ md: "md", base: "sm" }}
         className={`px-6 ${
           colorVariant == "orange"
             ? "bg-orange text-white border-primary-text"

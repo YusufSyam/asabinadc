@@ -23,8 +23,8 @@ const HomeOurProgramSection: React.FC<IHomeOurProgramSection> = ({
       </VStack>
       <Grid
         templateColumns={{lg:"1fr 1fr", base:"1fr"}}
-        gapY={{lg:12, base:6}}
-        paddingX={{ lg: 24, md: 16, sm: 8, base: 4 }}
+        gap={{xl:12, lg:6, md:6, base:6}}
+        paddingX={{ xl:24, lg: 10, md: 16, sm: 8, base: 4 }}
         className="w-full"
       >
         <GridItem minWidth="0">

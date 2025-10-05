@@ -36,7 +36,7 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
   href,
   description,
   goal,
-  target
+  target,
 }) => {
   return (
     <Link href={href}>
@@ -63,16 +63,16 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
           >
             <Stack gapY={0}>
               <StrongText
-                fontSize={"4xl"}
+                fontSize={{md:"4xl", base:"3xl"}}
                 color={cardVariant == "burgundy" ? "white" : "burgundy"}
                 className="text-center"
               >
                 {firstTitle}
               </StrongText>
               <StrongText
-                fontSize={"3xl"}
+                fontSize={{md:"3xl", base:"2xl"}}
                 color={cardVariant == "burgundy" ? "orange" : "primary-text"}
-                className="text-center -mt-4"
+                className="text-center -mt-2 md:-mt-4"
               >
                 {secondTitle}
               </StrongText>
@@ -84,16 +84,17 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
                 {description}
               </SmallText>
             </Stack>
-            <Stack gapY={1} paddingX={{md:8,base:4}} className="">
+            <Stack gapY={{md:1, base:2}} paddingX={{ md: 8, base: 4 }} className="">
               <Group>
                 <IconRightArrowRounded
                   size={24}
                   color={cardVariant == "burgundy" ? "white" : "#331455"}
+                  className=" hidden md:block"
                 />
                 <SmallText
                   color={cardVariant == "burgundy" ? "white" : "primary-text"}
                   fontSize={"sm"}
-                  className="font-semibold"
+                  className="font-normal md:font-medium"
                 >
                   Sasaran: {target}
                 </SmallText>
@@ -101,12 +102,13 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
               <Group>
                 <IconLoginOutline
                   size={19}
-                  color={cardVariant == "burgundy" ? "white" : "#331455"} className="self-start"
+                  color={cardVariant == "burgundy" ? "white" : "#331455"}
+                  className="self-start hidden md:block"
                 />
                 <SmallText
                   color={cardVariant == "burgundy" ? "white" : "primary-text"}
                   fontSize={"sm"}
-                  className="font-semibold ml-1"
+                  className="font-normal md:font-medium md:ml-1"
                 >
                   Tujuan: {goal}
                 </SmallText>

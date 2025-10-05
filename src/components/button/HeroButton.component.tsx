@@ -17,6 +17,7 @@ const HeroButton: React.FC<HeroButtonProps> = ({
     <div className="relative flex">
       <Button
         paddingX={{ base: 4, md: 6 }}
+        fontSize={{ md: "md", base: "sm" }}
         variant={"solid"}
         className={`${
           colorVariant == "orange"

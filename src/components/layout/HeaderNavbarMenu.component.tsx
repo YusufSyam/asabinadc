@@ -25,6 +25,7 @@ const HeaderNavbarMenu: React.FC<IHeaderNavbarMenu> = ({
         <Button
           variant={"solid"}
           paddingX={{ base: 4, md: 4, lg: 6 }}
+        fontSize={{ md: "md", base: "sm" }}
           className={`${
             colorVariant == "orange"
               ? "bg-orange text-white border-primary-text"

@@ -23,22 +23,41 @@ const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({
   return (
     <VStack gapY={10} ref={refForScroll}>
       <Stack className="" gapY={0}>
-        <Text className={`font-poppins-bold text-[48px] text-burgundy -ml-12`}>
+        <Text
+          fontSize={{
+            base: "36px",
+            sm: "40px",
+            md: "48px",
+          }}
+          className={`font-poppins-bold text-[48px] text-burgundy text-center`}
+        >
           Get to Know
         </Text>
         <Text
-          className={`font-poppins-bold text-[48px] text-orange text-end -mr-12 -mt-2`}
+          fontSize={{
+            base: "36px",
+            sm: "40px",
+            md: "48px",
+          }}
+          marginTop={-2}
+          className={`font-poppins-bold text-[48px] text-orange text-center`}
         >
           More About Us !
         </Text>
       </Stack>
-      <Grid templateColumns={"5fr 7fr"} className="mx-24" gapX={8}>
-        <GridItem className="flex justify-end">
-          <StickerSearch size={360} className=" " />
+      <Grid
+        templateColumns={{ md: "5fr 7fr", base: "1fr" }}
+        marginX={{ md: "24", sm: "8", base: "4" }}
+        className=""
+        gapX={8}
+      >
+        <GridItem className="flex justify-center md:justify-end">
+          <StickerSearch size={360} className="hidden md:block" />
+          <StickerSearch size={240} className="block md:hidden" />
         </GridItem>
         <GridItem>
           <Stack className="text-justify" gapY={4}>
-            <Text>
+            <Text fontSize={{ md: "md", base: "sm" }}>
               <Text
                 as={"span"}
                 color={"burgundy"}
@@ -52,7 +71,7 @@ const HomeAboutUsSection: React.FC<IHomeAboutUsSection> = ({
               bagi masyarakat. Bersama, kita membangun masa depan yang lebih
               inklusif, inspiratif, dan berdaya saing.
             </Text>
-            <Text>
+            <Text fontSize={{ md: "md", base: "sm" }}>
               Kami percaya bahwa setiap individu memiliki potensi untuk tumbuh
               dan berkembang. Melalui program-program yang inklusif, inspiratif,
               dan kolaboratif, Asabina berkomitmen menjadi wadah bagi siapa saja
