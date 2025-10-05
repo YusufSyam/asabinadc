@@ -57,7 +57,8 @@ module.exports = {
       },
       backgroundImage: {
         "workshop-bg": "url('/assets/images/workshop-card.jpg')",
-        "sekelas-bg": "url('/assets/images/sekelas-card.jpg')"
+        "sekelas-bg": "url('/assets/images/sekelas-card.jpg')",
+        "hero-bg": "url('/assets/images/hero-bnw.png')"
       },
     },
   },
