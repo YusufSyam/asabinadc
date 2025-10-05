@@ -11,6 +11,7 @@ import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import galleryHero from "../../../public/assets/images/gallery-hero.png";
+import galleryHeroSmall from "../../../public/assets/images/hero2.png";
 
 export interface IGalleryPage {}
 
@@ -19,23 +20,30 @@ const GalleryPage: React.FC<IGalleryPage> = ({}) => {
 
   return (
     <Stack
-      gapY={"24"}
+      gapY={{ md: "28", base: "12" }}
       paddingX={{ base: "8", md: "12", lg: "24" }}
-      paddingBottom={"24"}
+      paddingBottom={"40"}
       paddingTop={"12"}
       className="border-t-2 border-secondary"
     >
-      <VStack marginTop={12}>
-        <div className="mb-12">
+      <VStack>
+        <div className="mb-12 hidden md:block">
           <Image
             src={galleryHero}
             style={{ objectFit: "contain" }}
             alt="Gallery Hero"
           />
         </div>
+        <div className="mb-12 md:hidden block">
+          <Image
+            src={galleryHeroSmall}
+            style={{ objectFit: "contain" }}
+            alt="Gallery Hero"
+          />
+        </div>
         <VStack gapY={0}>
           <ColoredHeaderText text="Asabina Gallery" />
-          <SmallText color={"secondary-text"}>
+          <SmallText color={"secondary-text"} textAlign={"center"}>
             Setiap langkah kecil menuju perubahan, kami abadikan sebagai bukti
             nyata perjalanan bersama
           </SmallText>
