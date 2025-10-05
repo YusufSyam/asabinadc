@@ -23,7 +23,12 @@ export default function Home() {
     }
   };
   return (
-    <Stack gapY={"28"} paddingX={"24"} paddingBottom={"24"} className="">
+    <Stack
+      gapY={"28"}
+      paddingX={{ base: "8", md: "12", lg: "24" }}
+      paddingBottom={"24"}
+      className=""
+    >
       <HomeHeroSection
         onScrollTo2={() => handleScrollToSection(section2Ref)}
         onScrollTo3={() => handleScrollToSection(section3Ref)}

@@ -9,7 +9,7 @@ const Workshop: React.FC<IWorkshop> = ({}) => {
   return (
     <Stack
       gapY={"12"}
-      paddingX={"24"}
+      paddingX={{ base: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       paddingTop={"12"}
       className="border-t-2 border-secondary"

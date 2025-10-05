@@ -1,19 +1,10 @@
 "use client";
 
 import { Box, Stack } from "@chakra-ui/react";
-import React, { JSX, useState } from "react";
+import React, { JSX, useEffect, useState } from "react";
 import HeroButton from "../button/HeroButton.component";
-import {
-  IconBookFilled,
-  IconCloseOutline,
-  IconGalleryFilled,
-  IconMenuOutlined,
-  IconSearchFilledRounded,
-  IconWorkFilled,
-} from "../icons/Icons.component";
-import ROUTES from "@/utils/const/routes";
-import HeaderNavbarMenu from "./HeaderNavbarMenu.component";
-import { div } from "framer-motion/client";
+import { IconCloseOutline, IconMenuOutlined } from "../icons/Icons.component";
+import { usePathname } from "next/navigation";
 
 export interface IHeaderMobileNavbar {
   menus: JSX.Element;
@@ -21,6 +12,12 @@ export interface IHeaderMobileNavbar {
 
 const HeaderMobileNavbar: React.FC<IHeaderMobileNavbar> = ({ menus }) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsMenuOpened(false);
+  }, [pathname]);
   return (
     <Box display={{ base: "block", md: "none" }} className="relative">
       <HeroButton

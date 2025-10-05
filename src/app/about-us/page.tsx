@@ -32,7 +32,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
   return (
     <Stack
       gapY={"36"}
-      paddingX={"24"}
+      paddingX={{ base: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       paddingTop={"16"}
       className="border-t-2 border-secondary"

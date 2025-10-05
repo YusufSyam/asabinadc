@@ -1,22 +1,17 @@
-import { Group, Stack } from "@chakra-ui/react";
-import React from "react";
-import StrongText from "../text/StrongText.component";
-import SmallText from "../text/SmallText.component";
-import Link from "next/link";
 import ROUTES from "@/utils/const/routes";
-import {
-  IconGmailFilled,
-  IconInstagramFilled,
-  IconLinkedinFilled,
-  IconWhatsappFilled,
-} from "../icons/Icons.component";
-import { WhatsappContacts, InstagramContacts, LinkedinContacts, GmailContacts } from "../Contacts.component";
+import { Group, Stack } from "@chakra-ui/react";
+import Link from "next/link";
+import React from "react";
+import { GmailContacts, InstagramContacts, LinkedinContacts, WhatsappContacts } from "../Contacts.component";
+import SmallText from "../text/SmallText.component";
+import StrongText from "../text/StrongText.component";
 
 export interface IFooterLayout {}
 
 const FooterLayout: React.FC<IFooterLayout> = ({}) => {
   return (
-    <Stack className="bg-burgundy px-24 !pt-8 !pb-2">
+    <Stack 
+        paddingX={{ base: "8", md: "12", lg: "24" }} className="bg-burgundy !pt-8 !pb-2">
       <Group justify={"space-between"}>
         <Stack gap={4} className="self-start">
           <StrongText color={"white"} fontSize={"7xl"} className="-mt-4">

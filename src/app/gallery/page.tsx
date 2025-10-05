@@ -20,7 +20,7 @@ const GalleryPage: React.FC<IGalleryPage> = ({}) => {
   return (
     <Stack
       gapY={"24"}
-      paddingX={"24"}
+      paddingX={{ base: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       paddingTop={"12"}
       className="border-t-2 border-secondary"
