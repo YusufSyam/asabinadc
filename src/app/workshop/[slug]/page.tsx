@@ -16,17 +16,14 @@ import { notFound } from "next/navigation";
 import WorkshopDetailGallery from "./WorkshopDetailGallery.section";
 import WorkshopDetailInfoText from "./WorkshopDetailInfoText.component";
 
-type WorkshopDetailPageProps = {
-  params: {
-    slug: string; // Properti 'slug' harus sama dengan nama folder '[slug]'
-  };
-};
-
-const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
-  const { slug } = await params;
+export default async function WorkshopDetail({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; // 👈 HARUS di-await
 
   const workshopData = CWorkshopData.find((ws) => ws.slug === slug);
-
   if (!workshopData) {
     notFound();
   }
@@ -124,7 +121,13 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
               <WorkshopDetailInfoText
                 label="Lokasi"
                 value={workshopData?.locationDetail}
-                icon={<IconLocationOutlined size={48} color="#334155" className="hidden sm:block" />}
+                icon={
+                  <IconLocationOutlined
+                    size={48}
+                    color="#334155"
+                    className="hidden sm:block"
+                  />
+                }
               />
 
               <WorkshopDetailInfoText
@@ -132,7 +135,13 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
                 value={`${formatDateNormal(workshopData?.date)}, ${
                   workshopData?.time
                 }`}
-                icon={<IconTimeOutlined size={44} color="#334155" className="hidden sm:block" />}
+                icon={
+                  <IconTimeOutlined
+                    size={44}
+                    color="#334155"
+                    className="hidden sm:block"
+                  />
+                }
               />
               <WorkshopDetailInfoText
                 label="Speaker"
@@ -140,7 +149,13 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
                   (d: string, idx: number) =>
                     d + (idx >= workshopData?.speaker?.length - 1 ? "" : " ")
                 )}`}
-                icon={<IconRadarFilledRounded size={44} color="#334155" className="hidden sm:block" />}
+                icon={
+                  <IconRadarFilledRounded
+                    size={44}
+                    color="#334155"
+                    className="hidden sm:block"
+                  />
+                }
               />
             </Stack>
             {workshopData?.isUpcoming && (
@@ -164,5 +179,4 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
       </VStack>
     </VStack>
   );
-};
-export default WorkshopDetail;
+}

@@ -267,7 +267,7 @@ export const CWorkshopData: IWorkshopData[] = [
 export const CSekelasData: ISekelasData[] = [
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 10, 4),
+    date: new Date(2025, 9, 4),
     isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
@@ -278,7 +278,7 @@ export const CSekelasData: ISekelasData[] = [
   },
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 10, 11),
+    date: new Date(2025, 9, 11),
     isUpcoming: true,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
