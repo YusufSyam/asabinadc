@@ -271,6 +271,28 @@ export const CSekelasData: ISekelasData[] = [
     agenda:
       "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
   },
+  // {
+  //   sekelasName: "Kelas Je'ne Ci'nong",
+  //   date: new Date(2025, 9, 4),
+  //   isUpcoming: true,
+  //   location: "Je'ne Ci'nong",
+  //   locationDetail: "Je'ne Ci'nong",
+  //   meetingCount: 1,
+  //   flyerImageSrc: sekelasImage1,
+  //   agenda:
+  //     "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
+  // },
+  // {
+  //   sekelasName: "Kelas Je'ne Ci'nong",
+  //   date: new Date(2025, 9, 4),
+  //   isUpcoming: true,
+  //   location: "Je'ne Ci'nong",
+  //   locationDetail: "Je'ne Ci'nong",
+  //   meetingCount: 1,
+  //   flyerImageSrc: sekelasImage1,
+  //   agenda:
+  //     "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
+  // },
 ];
 
 

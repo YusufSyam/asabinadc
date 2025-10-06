@@ -2,20 +2,13 @@ import {
   IconExclamationMarkOutlined,
   IconLocationOutlined,
   IconTimeOutlined,
-  IconWorkOutlined
+  IconWorkOutlined,
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
 import { ISekelasData } from "@/utils/const/interfaces";
 import { formatDateNormal } from "@/utils/function/datefunction";
-import {
-  Box,
-  Grid,
-  GridItem,
-  Group,
-  Stack,
-  Text
-} from "@chakra-ui/react";
+import { Box, Grid, GridItem, Group, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 
@@ -37,24 +30,44 @@ const SekelasCard: React.FC<ISekelasCard> = ({
   return (
     <div className="relative h-full">
       <Grid
-        // Kunci utamanya ada di sini
-        templateColumns={"1fr 1fr"}
+        templateColumns={{
+          sm: "1fr 1fr",
+          base: "1fr",
+        }}
         gap={4} // Jarak antar item
         className="border-2 h-full border-burgundy p-4 pb-6 rounded-xl z-10 bg-white cursor-default hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out"
         gapY={4}
       >
-        <GridItem minWidth="0">
+        <GridItem width={"full"}>
           <Box
-            position="relative"
-            width="100%"
-            height="100%"
+            display={{ base: "block", sm: "none" }}
             overflow="hidden"
             borderRadius="lg"
           >
             <Image
               src={flyerImageSrc as string}
               alt="card image"
-              fill // <-- PERBAIKAN UTAMA
+              height={140}
+              width={9999}
+              style={{
+                objectFit: "cover",
+              }}
+              // Menambahkan sizes adalah praktik terbaik untuk performa dengan 'fill'
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Box>
+          <Box
+            position="relative"
+            width="100%"
+            height="100%"
+            overflow="hidden"
+            borderRadius="lg"
+            display={{ base: "none", sm: "block" }}
+          >
+            <Image
+              src={flyerImageSrc as string}
+              alt="card image"
+              fill
               style={{
                 objectFit: "cover",
               }}
@@ -74,7 +87,11 @@ const SekelasCard: React.FC<ISekelasCard> = ({
             <Stack gapY={2}>
               <Grid templateColumns={"3fr 21fr"}>
                 <GridItem minWidth={0}>
-                  <IconLocationOutlined size={22} color="#334155" className="mx-auto self-start  mt-[4px]" />
+                  <IconLocationOutlined
+                    size={22}
+                    color="#334155"
+                    className="mx-auto self-start  mt-[4px]"
+                  />
                 </GridItem>
                 <GridItem minWidth={0}>
                   <Stack gapY={0}>

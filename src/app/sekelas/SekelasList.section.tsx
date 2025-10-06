@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import StrongText from "@/components/text/StrongText.component";
 import { Stack, Grid, GridItem } from "@chakra-ui/react";
@@ -23,13 +23,21 @@ const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
         <StrongText fontSize={"2xl"}>SEKELAS yang Akan Datang</StrongText>
         {upcomingSekelas?.length > 0 ? (
           <Grid
-            // Kunci utamanya ada di sini
             templateColumns={{
-              base: "repeat(1, 1fr)", // 1 kolom di layar mobile
-              md: "repeat(2, 1fr)", // 2 kolom di layar tablet
-              lg: "repeat(2, 1fr)", // 4 kolom di layar desktop
+              base: "repeat(1, 1fr)",
+              md: "repeat(1, 1fr)",
+              lg: "repeat(2, 1fr)",
             }}
-            gap={16} // Jarak antar item
+            gapX={{
+              lg: 12,
+              md: 8,
+              sm: 4,
+              base: 4,
+            }}
+            gapY={{
+              md: 16,
+              base: 8,
+            }}
           >
             {upcomingSekelas?.map((sekelas: ISekelasData, idx: number) => {
               return (
@@ -50,13 +58,21 @@ const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
         <StrongText fontSize={"2xl"}>SEKELAS sebelumnya</StrongText>
         {pastSekelas?.length > 0 ? (
           <Grid
-            // Kunci utamanya ada di sini
             templateColumns={{
-              base: "repeat(1, 1fr)", // 1 kolom di layar mobile
-              md: "repeat(2, 1fr)", // 2 kolom di layar tablet
-              lg: "repeat(2, 1fr)", // 4 kolom di layar desktop
+              base: "repeat(1, 1fr)",
+              lg: "repeat(2, 1fr)",
+              xl: "repeat(2, 1fr)",
             }}
-            gap={16} // Jarak antar item
+            gapX={{
+              lg: 12,
+              md: 8,
+              sm: 4,
+              base: 4,
+            }}
+            gapY={{
+              md: 16,
+              base: 8,
+            }}
           >
             {pastSekelas?.map((sekelas: ISekelasData, idx: number) => {
               return (
