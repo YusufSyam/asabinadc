@@ -267,7 +267,7 @@ export const CWorkshopData: IWorkshopData[] = [
 export const CSekelasData: ISekelasData[] = [
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 9, 4),
+    date: new Date(2025, 10, 4),
     isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
@@ -275,6 +275,17 @@ export const CSekelasData: ISekelasData[] = [
     flyerImageSrc: sekelasImage1,
     agenda:
       "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    date: new Date(2025, 10, 11),
+    isUpcoming: true,
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    meetingCount: 2,
+    flyerImageSrc: sekelasImage2,
+    agenda:
+      "Kelas menghitung dan bahasa inggris",
   },
   // {
   //   sekelasName: "Kelas Je'ne Ci'nong",
