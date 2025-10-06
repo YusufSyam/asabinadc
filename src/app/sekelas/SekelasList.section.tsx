@@ -1,17 +1,17 @@
 "use client";
 
+import EmptyBox from "@/components/EmptyBox.component";
 import StrongText from "@/components/text/StrongText.component";
-import { Stack, Grid, GridItem } from "@chakra-ui/react";
+import { ISekelasData } from "@/utils/const/interfaces";
+import { CSekelasData } from "@/utils/const/starterConst";
+import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import SekelasCard from "./SekelasCard.component";
-import { CSekelasData } from "@/utils/const/starterConst";
-import { ISekelasData } from "@/utils/const/interfaces";
-import EmptyBox from "@/components/EmptyBox.component";
 
 export interface ISekelasListSection {}
 
 const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
-  const [sekelasData, setSekelasData] = useState<ISekelasData[]>(CSekelasData);
+  const [sekelasData] = useState<ISekelasData[]>(CSekelasData);
 
   const upcomingSekelas = sekelasData.filter((sekelas) => sekelas.isUpcoming);
 

@@ -16,6 +16,11 @@ import flyerWorkshop4 from "../../../public/assets/images/workshop-flyer/flyer-w
 import flyerWorkshop5 from "../../../public/assets/images/workshop-flyer/flyer-workshop5.jpg";
 
 import sekelasImage1 from "../../../public/assets/images/sekelas/sekelas1.jpg";
+import sekelasImage2 from "../../../public/assets/images/sekelas/sekelas2.jpg";
+import sekelasImage3 from "../../../public/assets/images/sekelas/sekelas3.jpg";
+import sekelasImage4 from "../../../public/assets/images/sekelas/sekelas4.jpg";
+import sekelasImage5 from "../../../public/assets/images/sekelas/sekelas5.jpg";
+
 import { IGalleryPhoto } from "./interfaces";
 
 const Imgw1_1: IGalleryPhoto = {
@@ -263,7 +268,7 @@ export const CSekelasData: ISekelasData[] = [
   {
     sekelasName: "Kelas Je'ne Ci'nong",
     date: new Date(2025, 9, 4),
-    isUpcoming: true,
+    isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
     meetingCount: 1,
@@ -300,17 +305,21 @@ export const CGalleryPhotos: IGalleryPhoto[] = [
   Imgw1_1,
   Imgw5_2,
   Imgw2_1,
+  sekelasImage4,
   Imgw4_2,
   Imgw5_1,
   Imgw1_3,
   Imgw2_2,
   Imgw2_3,
+  sekelasImage5,
   Imgw3_3,
   Imgw4_1,
   Imgw4_3,
   Imgw1_2,
   Imgw3_1,
+  sekelasImage2,
   Imgw3_2,
   Imgw5_3,
-  Imgs1_1
+  sekelasImage3,
+  Imgs1_1,
 ];

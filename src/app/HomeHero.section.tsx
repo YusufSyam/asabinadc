@@ -1,8 +1,8 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import {
   GmailContacts,
-  LinkedinContacts,
-  WhatsappContacts,
+  InstagramContacts,
+  WhatsappContacts
 } from "@/components/Contacts.component";
 import {
   IconChartOutlined,
@@ -183,8 +183,8 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                   <HeroButton colorVariant="white">
                     <IconGmailFilled  color="orange" />
                   </HeroButton> */}
-                  {/* <InstagramContacts /> */}
-                  <LinkedinContacts />
+                  <InstagramContacts />
+                  {/* <LinkedinContacts /> */}
                   <GmailContacts />
                 </Group>
               </Flex>
