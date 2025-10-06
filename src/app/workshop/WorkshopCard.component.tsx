@@ -1,13 +1,21 @@
 import {
   IconLocationOutlined,
-  IconTimeOutlined
+  IconTimeOutlined,
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
 import { IWorkshopData } from "@/utils/const/interfaces";
 import ROUTES from "@/utils/const/routes";
 import { formatDateNormal } from "@/utils/function/datefunction";
-import { Box, Group, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  Group,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -28,54 +36,81 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({
 }) => {
   return (
     <Link className="relative" href={`${ROUTES.WORKSHOP}/${slug}`}>
-      <Stack
+      <Grid
+        templateColumns={{
+          base: "1fr",
+          sm: "11fr 13fr",
+          md: "1fr",
+        }}
         className={`border-2 ${
           cardVariant == "orange" ? "border-orange" : "border-light-orange"
         }  p-4 pb-6 rounded-xl z-10 bg-white cursor-pointer hover:translate-x-2 hover:translate-y-2 duration-200 ease-in-out h-full`}
         gapY={4}
+        gapX={4}
       >
-        <Box
-          position="relative"
-          width="100%"
-          height="320px"
-          overflow="hidden"
-          borderRadius="lg"
+        <GridItem
+          maxHeight={{
+            base: "none",
+            sm: 240,
+            md: "none",
+          }}
+          overflow={"Hidden"}
         >
-          {/* 2. Komponen Image */}
-          <Image
-            src={flyerImageSrc as string}
-            alt="card image"
-            style={{
-              objectFit: "cover", // Kunci agar gambar terpotong, bukan stretch
-            }}
-          />
-        </Box>
-        <Stack gapY={4} paddingX={1}>
-          <Stack gapY={0}>
-            <StrongText fontSize={"xl"}>{workshopTitle}</StrongText>
-            <Text className="text-secondary-text text-md">
-              {speaker?.map(
-                (d: string, idx: number) =>
-                  d + (idx >= speaker?.length - 1 ? "" : " | ")
-              )}
-            </Text>
+          <Box
+            position="relative"
+            width="100%"
+            height="320px"
+            overflow="hidden"
+            borderRadius="lg"
+          >
+            {/* 2. Komponen Image */}
+            <Image
+              src={flyerImageSrc as string}
+              alt="card image"
+              style={{
+                objectFit: "cover", // Kunci agar gambar terpotong, bukan stretch
+              }}
+            />
+          </Box>
+        </GridItem>
+        <GridItem>
+          <Stack gapY={4} paddingX={1} paddingTop={{ base: 2, md: 0 }}>
+            <Stack gapY={0}>
+              <StrongText
+                fontSize={{
+                  md: "xl",
+                  sm: "lg",
+                  base: "md",
+                }}
+              >
+                {workshopTitle}
+              </StrongText>
+              <Text className="text-secondary-text text-md">
+                {speaker?.map(
+                  (d: string, idx: number) =>
+                    d + (idx >= speaker?.length - 1 ? "" : " | ")
+                )}
+              </Text>
+            </Stack>
+            <Stack gapY={1}>
+              <Group>
+                <IconLocationOutlined size={22} color="#334155" />
+                <SmallText>{location}</SmallText>
+              </Group>
+              <Group>
+                <IconTimeOutlined
+                  size={22}
+                  color="#334155"
+                  className="self-start"
+                />
+                <SmallText>
+                  {formatDateNormal(date)}, {time}
+                </SmallText>
+              </Group>
+            </Stack>
           </Stack>
-          <Stack gapY={1}>
-            <Group>
-              <IconLocationOutlined size={22} color="#334155" />
-              <SmallText>{location}</SmallText>
-            </Group>
-            <Group>
-              <IconTimeOutlined
-                size={22}
-                color="#334155"
-                className="self-start"
-              />
-              <SmallText>{formatDateNormal(date)}, {time}</SmallText>
-            </Group>
-          </Stack>
-        </Stack>
-      </Stack>
+        </GridItem>
+      </Grid>
 
       <div
         className={`w-full h-full absolute -right-2 -bottom-2 ${

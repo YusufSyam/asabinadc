@@ -5,7 +5,7 @@ interface IColoredHeaderText {
   splitStart?: number;
   subTitle?: string | JSX.Element;
   type?: "h1" | "h2";
-  textAlign?:"start" | "center"
+  textAlign?: "start" | "center";
 }
 
 const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
@@ -13,7 +13,7 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
   splitStart,
   subTitle,
   type = "h1",
-  textAlign="start"
+  textAlign = "start",
 }) => {
   const words = text.split(" ");
   const splitIndex =
@@ -32,6 +32,8 @@ const ColoredHeaderText: React.FC<IColoredHeaderText> = ({
           md: type == "h1" ? "54px" : "48px",
         }}
         textAlign={textAlign}
+        lineHeight={{ md: 1.5, base: 1.1 }}
+        marginBottom={{md:0, base:2}}
       >
         <Text as="span" color="burgundy">
           {firstPart}

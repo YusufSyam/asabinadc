@@ -28,18 +28,26 @@ const WorkshopListSection: React.FC<IWorkshopListSection> = ({}) => {
         <StrongText fontSize={"2xl"}>Workshop yang Akan Datang</StrongText>
         {upcomingWorkshops?.length > 0 ? (
           <Grid
-            // Kunci utamanya ada di sini
             templateColumns={{
-              base: "repeat(1, 1fr)", // 1 kolom di layar mobile
-              md: "repeat(2, 1fr)", // 2 kolom di layar tablet
-              lg: "repeat(3, 1fr)", // 4 kolom di layar desktop
+              base: "repeat(1, 1fr)",
+              lg: "repeat(2, 1fr)",
+              xl: "repeat(3, 1fr)",
             }}
-            gap={16} // Jarak antar item
+            gapX={{
+              lg: 12,
+              md: 8,
+              sm: 4,
+              base: 4,
+            }}
+            gapY={{
+              md: 16,
+              base: 8,
+            }}
           >
             {upcomingWorkshops?.map(
               (workshopData: IWorkshopData, idx: number) => {
                 return (
-                  <GridItem key={"workshop-" + idx}>
+                  <GridItem key={"upcoming-workshop-" + idx}>
                     <WorkshopCard
                       key={idx}
                       {...workshopData}
@@ -61,11 +69,20 @@ const WorkshopListSection: React.FC<IWorkshopListSection> = ({}) => {
         <StrongText fontSize={"2xl"}>Workshop Sebelumnya</StrongText>
         <Grid
           templateColumns={{
-            base: "repeat(1, 1fr)", // 1 kolom di layar mobile
-            md: "repeat(2, 1fr)", // 2 kolom di layar tablet
-            lg: "repeat(3, 1fr)", // 4 kolom di layar desktop
+            base: "repeat(1, 1fr)",
+            lg: "repeat(2, 1fr)",
+            xl: "repeat(3, 1fr)",
           }}
-          gap={16} // Jarak antar item
+          gapX={{
+            lg: 12,
+            md: 8,
+            sm: 4,
+            base: 4,
+          }}
+          gapY={{
+            md: 16,
+            base: 8,
+          }}
         >
           {pastWorkshops?.map((workshopData: IWorkshopData, idx: number) => {
             return (

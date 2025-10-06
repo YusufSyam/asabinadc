@@ -169,7 +169,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                   GET IN TOUCH
                 </Text>
                 <Group
-                  flexWrap={"wrap"}
+                  flexWrap={"no-wrap"}
                   gapX={{ lg: 6, base: 4 }}
                   className="bg-light-orange/50 rounded-full px-6 py-2"
                 >

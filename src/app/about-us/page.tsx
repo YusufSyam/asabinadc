@@ -1,5 +1,3 @@
-import MissionCard from "@/components/card/MissionCard.component";
-import OurTeamPhotoCard from "@/components/card/OurTeamPhotoCard.component";
 import {
   StickerMission,
   StickerValues,
@@ -9,22 +7,11 @@ import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import OurMissionText from "@/components/text/OurMissionText.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
-import Wireframe from "@/components/Wireframe.component";
-import {
-  Stack,
-  VStack,
-  Grid,
-  GridItem,
-  Blockquote,
-  Float,
-  Group,
-  Text,
-  Box,
-} from "@chakra-ui/react";
-import React from "react";
-import AboutUsOurTeam from "./AboutUsOurTeam.section";
+import { Box, Grid, GridItem, Stack, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
+import React from "react";
 import asabinaLogo from "../../../public/assets/images/logo2.png";
+import AboutUsOurTeam from "./AboutUsOurTeam.section";
 
 export interface IAboutUsPage {}
 
@@ -89,7 +76,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
         <Stack gapY={20} className="">
           <Grid
             templateColumns={{ md: "5fr 19fr", base: "1fr" }}
-            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 4, base: 0 }}
             gapX={12}
           >
             <GridItem className="w-full flex">
@@ -103,7 +90,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
                 >
                   Our Vision
                 </StrongText>
-                <SmallText>
+                <SmallText textAlign={{ md: "start", base: "center" }}>
                   Visi kami adalah untuk menjadi wadah pengembangan diri yang
                   inklusif, inspiratif dan setara bagi semua kalangan untuk
                   tumbuh dan mencapai potensi terbaik dalam kehidupan pribadi
@@ -114,7 +101,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </Grid>
           <Grid
             templateColumns={{ md: "5fr 19fr", base: "1fr" }}
-            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 4, base: 0 }}
             gapX={12}
           >
             <GridItem className="w-full flex">
@@ -151,7 +138,7 @@ const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
           </Grid>
           <Grid
             templateColumns={{ md: "5fr 19fr", base: "1fr" }}
-            marginX={{ xl: 44, lg: 32, md: 20, sm: 12, base: 8 }}
+            marginX={{ xl: 44, lg: 32, md: 20, sm: 4, base: 0 }}
             gapX={12}
           >
             <GridItem className="w-full flex">
