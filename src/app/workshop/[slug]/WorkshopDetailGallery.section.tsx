@@ -4,8 +4,8 @@ import StrongText from "@/components/text/StrongText.component";
 import { IGalleryPhoto } from "@/utils/const/interfaces";
 import { Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { RowsPhotoAlbum } from "react-photo-album";
-import "react-photo-album/rows.css";
+import { MasonryPhotoAlbum } from "react-photo-album";
+import "react-photo-album/masonry.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
@@ -20,7 +20,13 @@ const WorkshopDetailGallery: React.FC<IWorkshopDetailGallery> = ({
   return (
     <Stack gapY={12}>
       <StrongText className="text-center">Galeri Workshop</StrongText>
-      <RowsPhotoAlbum
+      <MasonryPhotoAlbum
+        columns={(containerWidth) => {
+          if (containerWidth < 400) return 1;
+          if (containerWidth < 900) return 2;
+          return 3;
+        }}
+        skeleton
         photos={gallery}
         onClick={({ index: currentIndex }) => setIndex(currentIndex)}
       />

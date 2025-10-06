@@ -69,7 +69,11 @@ const GalleryPage: React.FC<IGalleryPage> = ({}) => {
       <Box width={"100%"}>
         <MasonryPhotoAlbum
           photos={CGalleryPhotos}
-          columns={3}
+          columns={(containerWidth) => {
+            if (containerWidth < 400) return 1;
+            if (containerWidth < 900) return 2;
+            return 3;
+          }}
           skeleton
           padding={0}
           spacing={4}

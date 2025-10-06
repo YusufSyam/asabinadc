@@ -3,20 +3,14 @@ import {
   IconLocationOutlined,
   IconRadarFilledRounded,
   IconSentFilledRounded,
-  IconTimeOutlined
+  IconTimeOutlined,
 } from "@/components/icons/Icons.component";
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
 import { CWorkshopData } from "@/utils/const/starterConst";
 import { formatDateNormal } from "@/utils/function/datefunction";
-import {
-  Box,
-  Grid,
-  GridItem,
-  Stack,
-  VStack
-} from "@chakra-ui/react";
+import { Box, Grid, GridItem, Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import WorkshopDetailGallery from "./WorkshopDetailGallery.section";
@@ -40,24 +34,51 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
   return (
     <VStack
       gapY={"12"}
-      paddingX={"24"}
+      paddingX={{ base: "8", md: "12", lg: "12", xl: "24" }}
       paddingBottom={"24"}
       paddingTop={"12"}
       className="border-t-2 border-secondary"
-    > 
-      <div className="w-1/2 text-center">
-        <ColoredHeaderText text={workshopData?.workshopTitle} type="h2" />
-      </div>
-      <Grid templateColumns={"5fr 7fr"} className="" gapX={8} marginX={12} marginBottom={24}>
-        <GridItem className="" padding={4}>
+    >
+      <Box
+        width={{
+          lg: "1/2",
+          sm: "90%",
+          base: "100%",
+        }}
+        className="text-center"
+      >
+        <ColoredHeaderText
+          text={workshopData?.workshopTitle}
+          type="h2"
+          textAlign="center"
+        />
+      </Box>
+      <Grid
+        templateColumns={{
+          lg: "5fr 7fr",
+          base: "1fr",
+        }}
+        className=""
+        gapX={8}
+        gapY={6}
+        marginX={{
+          lg: "12",
+          md: "10",
+          sm: "6",
+          base: "4",
+        }}
+        marginBottom={24}
+      >
+        <GridItem className="flex justify-center h-fit" padding={4}>
           <div className="relative">
             <Stack
-              className={`border-2 border-orange p-4 pb-6 rounded-xl z-10 bg-white`}
+              className={`border-2 border-orange p-4 pb-6 rounded-xl z-10 bg-white w-fit`}
               gapY={4}
             >
               <Box
                 position="relative"
                 width="100%"
+                maxWidth={"500px"}
                 height="100%"
                 overflow="hidden"
                 borderRadius="lg"
@@ -73,15 +94,28 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
               </Box>
             </Stack>
 
-            <div
-              className={`w-full h-full absolute -right-2 -bottom-2 bg-orange border border-orange rounded-xl -z-20`}
-            ></div>
+            <Box
+              className={`w-full max-w-[522px] h-full absolute -bottom-2 bg-orange border border-orange rounded-xl -z-20`}
+              left={{
+                lg: "2",
+                md: "6",
+                sm: "2",
+                base: "2",
+              }}
+            ></Box>
           </div>
         </GridItem>
         <GridItem padding={2}>
           <Stack gapY={6}>
             <Stack>
-              <StrongText>Deskripsi</StrongText>
+              <StrongText
+                textAlign={{
+                  lg: "start",
+                  base: "center",
+                }}
+              >
+                Deskripsi
+              </StrongText>
               <SmallText whiteSpace={"pre-line"}>
                 {workshopData?.description}
               </SmallText>
@@ -90,7 +124,7 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
               <WorkshopDetailInfoText
                 label="Lokasi"
                 value={workshopData?.locationDetail}
-                icon={<IconLocationOutlined size={48} color="#334155" />}
+                icon={<IconLocationOutlined size={48} color="#334155" className="hidden sm:block" />}
               />
 
               <WorkshopDetailInfoText
@@ -98,7 +132,7 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
                 value={`${formatDateNormal(workshopData?.date)}, ${
                   workshopData?.time
                 }`}
-                icon={<IconTimeOutlined size={44} color="#334155" />}
+                icon={<IconTimeOutlined size={44} color="#334155" className="hidden sm:block" />}
               />
               <WorkshopDetailInfoText
                 label="Speaker"
@@ -106,7 +140,7 @@ const WorkshopDetail = async ({ params }: WorkshopDetailPageProps) => {
                   (d: string, idx: number) =>
                     d + (idx >= workshopData?.speaker?.length - 1 ? "" : " ")
                 )}`}
-                icon={<IconRadarFilledRounded size={44} color="#334155" />}
+                icon={<IconRadarFilledRounded size={44} color="#334155" className="hidden sm:block" />}
               />
             </Stack>
             {workshopData?.isUpcoming && (

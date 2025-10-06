@@ -15,7 +15,11 @@ const StrongText: React.FC<IStrongText> = ({
   return (
     <Text
       color={color}
-      fontSize={"4xl"}
+      fontSize={{
+        md:"4xl",
+        sm:"3xl",
+        base:"2xl"
+      }}
       className={`font-poppins-semibold tracking-5 ${className || ""}`}
       {...rest}
     >

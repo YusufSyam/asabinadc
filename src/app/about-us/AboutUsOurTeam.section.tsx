@@ -11,11 +11,11 @@ import React, { useState } from "react";
 export interface IAboutUsOurTeam {}
 
 const AboutUsOurTeam: React.FC<IAboutUsOurTeam> = ({}) => {
-  const [ourTeamData, setOurTeamData] = useState(CTeamProfile);
+  const [ourTeamData] = useState(CTeamProfile);
   return (
     <VStack gapY={16} marginBottom={12}>
       <VStack gapY={0}>
-        <ColoredHeaderText text="Meet Our Team" type="h2" />
+        <ColoredHeaderText text="Meet Our Team" type="h2" textAlign="center" />
         <SmallText
           color={"secondary-text"}
           width={{ md: "75%", base: "full" }}
@@ -27,7 +27,11 @@ const AboutUsOurTeam: React.FC<IAboutUsOurTeam> = ({}) => {
         </SmallText>
       </VStack>
       <Grid
-        templateColumns={{ md: "repeat(3, 1fr)", base: "repeat(2, 1fr)" }}
+        templateColumns={{
+          md: "repeat(3, 1fr)",
+          sm: "repeat(2, 1fr)",
+          base: "repeat(1, 1fr)",
+        }}
         gapX={{ xl: 16, lg: 12, sm: 12, base: 8 }}
         gapY={{ xl: 24, lg: 20, md: 16, base: 12 }}
         marginX={{ xl: 20, lg: 0, md: 4, base: 4 }}
