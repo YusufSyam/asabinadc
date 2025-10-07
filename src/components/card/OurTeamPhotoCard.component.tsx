@@ -2,7 +2,6 @@ import { ITeamProfile } from "@/utils/const/interfaces";
 import { Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
-import DummyImage from "../../../public/assets/images/dummy-profile.jpg";
 import SmallText from "../text/SmallText.component";
 import StrongText from "../text/StrongText.component";
 
@@ -18,7 +17,7 @@ const OurTeamPhotoCard: React.FC<ITeamProfile> = ({
       className="bg-white p-4 border-2 rounded-xl relative h-full"
     >
       <Image
-        src={(imageSrc == null ? DummyImage : imageSrc) as string}
+        src={(imageSrc) as string}
         alt="Team Profile"
         width={0}
         height={0}

@@ -1,25 +1,25 @@
 import { ISekelasData, ITeamProfile, IWorkshopData } from "./interfaces";
-import azasiImg from "../../../public/assets/images/teams-profile/azasi.jpg";
-import fahmiImg from "../../../public/assets/images/teams-profile/fahmi.jpg";
-import fauzanImg from "../../../public/assets/images/teams-profile/fauzan.jpg";
-import ichaImg from "../../../public/assets/images/teams-profile/icha.jpg";
-import rifkaImg from "../../../public/assets/images/teams-profile/rifka.jpg";
-import rifqiImg from "../../../public/assets/images/teams-profile/rifqi.png";
-import septiImg from "../../../public/assets/images/teams-profile/septi.jpg";
-import shafwanImg from "../../../public/assets/images/teams-profile/shafwan.jpg";
-import yusufImg from "../../../public/assets/images/teams-profile/yusuf.jpg";
+import azasiImg from "@/../public/assets/images/teams-profile/azasi.jpg";
+import fahmiImg from "@/../public/assets/images/teams-profile/fahmi.jpg";
+import fauzanImg from "@/../public/assets/images/teams-profile/fauzan.jpg";
+import ichaImg from "@/../public/assets/images/teams-profile/icha.jpg";
+import rifkaImg from "@/../public/assets/images/teams-profile/rifka.jpg";
+import rifqiImg from "@/../public/assets/images/teams-profile/rifqi.png";
+import septiImg from "@/../public/assets/images/teams-profile/septi.jpg";
+import shafwanImg from "@/../public/assets/images/teams-profile/shafwan.jpg";
+import yusufImg from "@/../public/assets/images/teams-profile/yusuf.jpg";
 
-import flyerWorkshop1 from "../../../public/assets/images/workshop-flyer/flyer-workshop1.jpeg";
-import flyerWorkshop2 from "../../../public/assets/images/workshop-flyer/flyer-workshop2.jpeg";
-import flyerWorkshop3 from "../../../public/assets/images/workshop-flyer/flyer-workshop3.jpeg";
-import flyerWorkshop4 from "../../../public/assets/images/workshop-flyer/flyer-workshop4.jpeg";
-import flyerWorkshop5 from "../../../public/assets/images/workshop-flyer/flyer-workshop5.jpg";
+import flyerWorkshop1 from "@/../public/assets/images/workshop-flyer/flyer-workshop1.jpeg";
+import flyerWorkshop2 from "@/../public/assets/images/workshop-flyer/flyer-workshop2.jpeg";
+import flyerWorkshop3 from "@/../public/assets/images/workshop-flyer/flyer-workshop3.jpeg";
+import flyerWorkshop4 from "@/../public/assets/images/workshop-flyer/flyer-workshop4.jpeg";
+import flyerWorkshop5 from "@/../public/assets/images/workshop-flyer/flyer-workshop5.jpg";
 
-import sekelasImage1 from "../../../public/assets/images/sekelas/sekelas1.jpg";
-import sekelasImage2 from "../../../public/assets/images/sekelas/sekelas2.jpg";
-import sekelasImage3 from "../../../public/assets/images/sekelas/sekelas3.jpg";
-import sekelasImage4 from "../../../public/assets/images/sekelas/sekelas4.jpg";
-import sekelasImage5 from "../../../public/assets/images/sekelas/sekelas5.jpg";
+import sekelasImage1 from "@/../public/assets/images/sekelas/sekelas1.jpg";
+import sekelasImage2 from "@/../public/assets/images/sekelas/sekelas2.jpg";
+import sekelasImage3 from "@/../public/assets/images/sekelas/sekelas3.jpg";
+import sekelasImage4 from "@/../public/assets/images/sekelas/sekelas4.jpg";
+import sekelasImage5 from "@/../public/assets/images/sekelas/sekelas5.jpg";
 
 import { IGalleryPhoto } from "./interfaces";
 
