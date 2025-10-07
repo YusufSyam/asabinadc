@@ -9,12 +9,11 @@ import ROUTES from "@/utils/const/routes";
 import { formatDateNormal } from "@/utils/function/datefunction";
 import {
   Box,
-  Flex,
   Grid,
   GridItem,
   Group,
   Stack,
-  Text,
+  Text
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";

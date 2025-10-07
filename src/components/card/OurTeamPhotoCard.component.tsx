@@ -1,14 +1,12 @@
+import { ITeamProfile } from "@/utils/const/interfaces";
 import { Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import DummyImage from "../../../public/assets/images/dummy-profile.jpg";
-import StrongText from "../text/StrongText.component";
 import SmallText from "../text/SmallText.component";
-import { ITeamProfile } from "@/utils/const/interfaces";
+import StrongText from "../text/StrongText.component";
 
-export interface IOurTeamPhotoCard extends ITeamProfile {}
-
-const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
+const OurTeamPhotoCard: React.FC<ITeamProfile> = ({
   imageSrc,
   name,
   position,
@@ -28,8 +26,19 @@ const OurTeamPhotoCard: React.FC<IOurTeamPhotoCard> = ({
         style={{ width: "100%", height: "auto", borderRadius: "16px" }}
       />
       <VStack gapY={1} marginTop={1}>
-        <StrongText fontSize={{lg:"2xl", base:"xl"}} textAlign={"center"} lineHeight={1.25}>{name}</StrongText>
-        <SmallText fontSize={{lg:"lg", base:"md"}} color={"secondary-text"} textAlign={"center"} lineHeight={1.25}>
+        <StrongText
+          fontSize={{ lg: "2xl", base: "xl" }}
+          textAlign={"center"}
+          lineHeight={1.25}
+        >
+          {name}
+        </StrongText>
+        <SmallText
+          fontSize={{ lg: "lg", base: "md" }}
+          color={"secondary-text"}
+          textAlign={"center"}
+          lineHeight={1.25}
+        >
           {" "}
           {position}
         </SmallText>

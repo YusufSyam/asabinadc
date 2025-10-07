@@ -22,10 +22,8 @@ const SekelasCard: React.FC<ISekelasCard> = ({
   sekelasName,
   location,
   flyerImageSrc,
-  isUpcoming,
   meetingCount,
   agenda,
-  slug,
 }) => {
   return (
     <div className="relative h-full">

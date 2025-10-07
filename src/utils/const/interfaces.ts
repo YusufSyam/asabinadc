@@ -4,7 +4,7 @@ import { Photo } from "react-photo-album";
 export interface ITeamProfile {
   name: string;
   position: string;
-  imageSrc: string | String | StaticImageData;
+  imageSrc: string | StaticImageData;
   cardVariant?: "burgundy" | "orange" | "magenta";
 }
 

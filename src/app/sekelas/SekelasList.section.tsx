@@ -8,9 +8,7 @@ import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import SekelasCard from "./SekelasCard.component";
 
-export interface ISekelasListSection {}
-
-const SekelasListSection: React.FC<ISekelasListSection> = ({}) => {
+const SekelasListSection = () => {
   const [sekelasData] = useState<ISekelasData[]>(CSekelasData);
 
   const upcomingSekelas = sekelasData.filter((sekelas) => sekelas.isUpcoming);

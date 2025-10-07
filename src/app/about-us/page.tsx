@@ -13,9 +13,7 @@ import React from "react";
 import asabinaLogo from "../../../public/assets/images/logo2.png";
 import AboutUsOurTeam from "./AboutUsOurTeam.section";
 
-export interface IAboutUsPage {}
-
-const AboutUsPage: React.FC<IAboutUsPage> = ({}) => {
+const AboutUsPage = () => {
   return (
     <Stack
       gapY={{ lg: 36, md: 32, sm: 28, base: 24 }}

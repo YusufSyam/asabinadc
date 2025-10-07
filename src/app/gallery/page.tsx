@@ -3,7 +3,7 @@
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import { CGalleryPhotos } from "@/utils/const/starterConst";
-import { Blockquote, Box, Float, Stack, VStack } from "@chakra-ui/react";
+import { Box, Stack, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import React, { useState } from "react";
 import { MasonryPhotoAlbum } from "react-photo-album";
@@ -13,9 +13,7 @@ import "yet-another-react-lightbox/styles.css";
 import galleryHero from "../../../public/assets/images/gallery-hero.png";
 import galleryHeroSmall from "../../../public/assets/images/hero2.png";
 
-export interface IGalleryPage {}
-
-const GalleryPage: React.FC<IGalleryPage> = ({}) => {
+const GalleryPage = () => {
   const [index, setIndex] = useState(-1);
 
   return (

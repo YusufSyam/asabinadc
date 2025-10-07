@@ -8,9 +8,7 @@ import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import React, { useState } from "react";
 import WorkshopCard from "./WorkshopCard.component";
 
-export interface IWorkshopListSection {}
-
-const WorkshopListSection: React.FC<IWorkshopListSection> = ({}) => {
+const WorkshopListSection = () => {
   const [workshopData] = useState<IWorkshopData[]>(CWorkshopData);
 
   const upcomingWorkshops = workshopData.filter(

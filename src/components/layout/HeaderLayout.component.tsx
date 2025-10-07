@@ -1,41 +1,28 @@
+import ROUTES from "@/utils/const/routes";
 import {
-  Box,
-  Button,
   Group,
   HStack,
-  Menu,
-  Portal,
-  Show,
-  Stack,
-  Text,
+  Text
 } from "@chakra-ui/react";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import iconAsabina from "../../../public/assets/images/logo1.png";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import ROUTES from "@/utils/const/routes";
-import HeaderNavbarMenu from "./HeaderNavbarMenu.component";
 import {
   IconBookFilled,
   IconGalleryFilled,
-  IconMenuOutlined,
   IconSearchFilledRounded,
-  IconWorkFilled,
+  IconWorkFilled
 } from "../icons/Icons.component";
-import Link from "next/link";
-import HeroButton from "../button/HeroButton.component";
 import HeaderMobileNavbar from "./HeaderMobileNavbar.component";
+import HeaderNavbarMenu from "./HeaderNavbarMenu.component";
 
-export interface IHeaderLayout {}
-
-const HeaderLayout: React.FC<IHeaderLayout> = ({}) => {
-  //   const pathname = usePathname();
+const HeaderLayout = () => {
   const menus = (
     <>
       <HeaderNavbarMenu
         colorVariant="white"
         icon={<IconWorkFilled color="orange" />}
-        pathname={""}
         href={ROUTES.WORKSHOP}
       >
         Workshop
@@ -43,7 +30,6 @@ const HeaderLayout: React.FC<IHeaderLayout> = ({}) => {
       <HeaderNavbarMenu
         colorVariant="white"
         icon={<IconBookFilled color="orange" />}
-        pathname={""}
         href={ROUTES.SEKELAS}
       >
         SEKELAS
@@ -51,14 +37,12 @@ const HeaderLayout: React.FC<IHeaderLayout> = ({}) => {
       <HeaderNavbarMenu
         colorVariant="white"
         icon={<IconGalleryFilled color="orange" />}
-        pathname={""}
         href={ROUTES.GALLERY}
       >
         Galeri
       </HeaderNavbarMenu>
       <HeaderNavbarMenu
         icon={<IconSearchFilledRounded color="white" />}
-        pathname={""}
         href={ROUTES.ABOUT}
       >
         <div className="block md:hidden lg:block">Tentang Kami</div>

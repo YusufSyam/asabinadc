@@ -10,9 +10,7 @@ import {
 const animationClass =
   "cursor-pointer hover:translate-x-[2px] hover:-translate-y-[2px] duration-300 ease-in-out";
 
-export interface IContactsComp {}
-
-export const WhatsappContacts: React.FC<IContactsComp> = ({}) => {
+export const WhatsappContacts = () => {
   return (
     <Link href={CONTACTS_ACTION.WHATSAPP} target="_blank">
       <IconWhatsappFilled
@@ -24,7 +22,7 @@ export const WhatsappContacts: React.FC<IContactsComp> = ({}) => {
   );
 };
 
-export const LinkedinContacts: React.FC<IContactsComp> = ({}) => {
+export const LinkedinContacts = ({}) => {
   return (
     <Link href={CONTACTS_ACTION.LINKEDIN}>
       <IconLinkedinFilled
@@ -36,7 +34,7 @@ export const LinkedinContacts: React.FC<IContactsComp> = ({}) => {
   );
 };
 
-export const GmailContacts: React.FC<IContactsComp> = ({}) => {
+export const GmailContacts = ({}) => {
   return (
     <Link href={CONTACTS_ACTION.EMAIL} target="_blank">
       <IconGmailFilled
@@ -48,7 +46,7 @@ export const GmailContacts: React.FC<IContactsComp> = ({}) => {
   );
 };
 
-export const InstagramContacts: React.FC<IContactsComp> = ({}) => {
+export const InstagramContacts = ({}) => {
   return (
     <Link href={CONTACTS_ACTION.INSTAGRAM} target="_blank">
       <IconInstagramFilled

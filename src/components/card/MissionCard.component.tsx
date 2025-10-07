@@ -1,6 +1,5 @@
-import { VStack, Text } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 import React from "react";
-import SmallText from "../text/StrongText.component";
 
 export interface IMissionCard {
     title: string;

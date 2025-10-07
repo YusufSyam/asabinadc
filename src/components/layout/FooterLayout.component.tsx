@@ -11,9 +11,7 @@ import {
 import SmallText from "../text/SmallText.component";
 import StrongText from "../text/StrongText.component";
 
-export interface IFooterLayout {}
-
-const FooterLayout: React.FC<IFooterLayout> = ({}) => {
+const FooterLayout = () => {
   return (
     <Stack
       paddingX={{ base: "8", md: "12", lg: "24" }}

@@ -1,23 +1,12 @@
-import { Box, Group, Stack, Text, VStack } from "@chakra-ui/react";
-import React from "react";
-import dummyImage from "../../../public/assets/images/workshop-card.jpg";
-import Image from "next/image";
-import StrongText from "@/components/text/StrongText.component";
-import { ST } from "next/dist/shared/lib/utils";
 import {
-  IconChangeCircleOutlined,
-  IconExpandOutlinedRounded,
-  IconLocationFilled,
-  IconLocationOutlined,
   IconLoginOutline,
-  IconPrecisionManufacturingFilledRounded,
-  IconRightArrowNoTail,
-  IconRightArrowRounded,
-  IconTimeOutlined,
-  IconTimerFilled,
+  IconRightArrowRounded
 } from "@/components/icons/Icons.component";
 import SmallText from "@/components/text/SmallText.component";
+import StrongText from "@/components/text/StrongText.component";
+import { Group, Stack } from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
 
 export interface IOurProgramCard {
   cardVariant?: "burgundy" | "orange";

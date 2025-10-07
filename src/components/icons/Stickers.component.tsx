@@ -2,8 +2,6 @@ import { IFluentProps } from "./Icons.component";
 
 export function StickerSearch({
   size = 24,
-  color = "black",
-  onClick,
   className,
 }: IFluentProps) {
   return (
@@ -100,8 +98,6 @@ export function StickerSearch({
 
 export function StickerVision({
   size = 24,
-  color = "black",
-  onClick,
   className,
 }: IFluentProps) {
   return (
@@ -198,8 +194,6 @@ export function StickerVision({
 
 export function StickerMission({
   size = 24,
-  color = "black",
-  onClick,
   className,
 }: IFluentProps) {
   return (
@@ -290,8 +284,6 @@ export function StickerMission({
 
 export function StickerValues({
   size = 24,
-  color = "black",
-  onClick,
   className,
 }: IFluentProps) {
   return (
@@ -361,8 +353,6 @@ export function StickerValues({
 
 export function StickerEmpty({
   size = 24,
-  color = "black",
-  onClick,
   className,
 }: IFluentProps) {
   return (

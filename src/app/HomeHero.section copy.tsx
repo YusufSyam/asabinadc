@@ -1,17 +1,13 @@
 import HeroButton from "@/components/button/HeroButton.component";
 import {
-  IconBookFilled,
   IconGalleryOutlined,
   IconGmailFilled,
   IconInstagramFilled,
   IconLinkedinFilled,
-  IconListViewFilledRounded,
-  IconPersonFilled,
   IconPersonOutlined,
   IconSearchFilledRounded,
   IconWhatsappFilled,
-  IconWorkFilled,
-  IconWorkOutlined,
+  IconWorkOutlined
 } from "@/components/icons/Icons.component";
 import StrongText from "@/components/text/StrongText.component";
 import {
@@ -29,9 +25,7 @@ import React from "react";
 import heroBgImage from "../../public/assets/images/hero-bnw.png";
 import iconAsabina from "../../public/assets/images/logo1.png";
 
-export interface IHomeHeroSection {}
-
-const HomeHeroSection: React.FC<IHomeHeroSection> = ({}) => {
+const HomeHeroSection = ()=> {
   return (
     <VStack className="relative">
       <div className="bg-primary-text opacity-95 rounded-xl border-4 border-burgundy overflow-hidden -z-10">

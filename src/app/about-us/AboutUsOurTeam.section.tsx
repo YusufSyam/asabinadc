@@ -5,12 +5,10 @@ import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import { ITeamProfile } from "@/utils/const/interfaces";
 import { CTeamProfile } from "@/utils/const/starterConst";
-import { VStack, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Grid, GridItem, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
-export interface IAboutUsOurTeam {}
-
-const AboutUsOurTeam: React.FC<IAboutUsOurTeam> = ({}) => {
+const AboutUsOurTeam = () => {
   const [ourTeamData] = useState(CTeamProfile);
   return (
     <VStack gapY={16} marginBottom={12}>

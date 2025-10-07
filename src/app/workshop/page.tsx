@@ -3,9 +3,8 @@ import { Stack } from "@chakra-ui/react";
 import React from "react";
 import WorkshopListSection from "./WorkshopList.section";
 
-export interface IWorkshop {}
 
-const Workshop: React.FC<IWorkshop> = ({}) => {
+const Workshop = () => {
   return (
     <Stack
       gapY={"12"}

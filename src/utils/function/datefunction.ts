@@ -21,7 +21,7 @@ export function formatDate(inputDate: Date) {
 }
 
 // yyyy-mm-dd ke Date
-export function parseDatePost(dateString: String) {
+export function parseDatePost(dateString: string) {
   if (dateString == "") {
     return new Date();
   }
@@ -106,7 +106,7 @@ export function formatDateToHHMM(date?: Date): string {
     const minutes = date.getMinutes().toString().padStart(2, "0");
     return `${hours}:${minutes}`;
   } catch (error) {
-    return "";
+    return `${error}`;
   }
 }
 

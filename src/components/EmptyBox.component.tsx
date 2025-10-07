@@ -1,4 +1,4 @@
-import { Box, BoxProps, Grid, GridItem, Group, Stack } from "@chakra-ui/react";
+import { Box, BoxProps, Grid, GridItem, Stack } from "@chakra-ui/react";
 import React from "react";
 import { StickerEmpty } from "./icons/Stickers.component";
 import SmallText from "./text/SmallText.component";

@@ -4,21 +4,18 @@ import React, { JSX } from "react";
 
 export interface IHeaderNavbarMenu extends ButtonProps {
   href?: string;
-  pathname?: string;
   colorVariant?: "orange" | "white";
   icon?: JSX.Element;
 }
 
 const HeaderNavbarMenu: React.FC<IHeaderNavbarMenu> = ({
   href = "#",
-  pathname = "",
   colorVariant = "orange",
   icon,
   children,
   className,
   ...rest
 }) => {
-  const isActive = pathname == href;
   return (
     <Link href={href}>
       <div className="relative flex">
