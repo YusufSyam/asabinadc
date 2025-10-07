@@ -1,25 +1,26 @@
 import { ISekelasData, ITeamProfile, IWorkshopData } from "./interfaces";
-import azasiImg from "@/../public/assets/images/teams-profile/azasi.jpg";
-import fahmiImg from "@/../public/assets/images/teams-profile/fahmi.jpg";
-import fauzanImg from "@/../public/assets/images/teams-profile/fauzan.jpg";
-import ichaImg from "@/../public/assets/images/teams-profile/icha.jpg";
-import rifkaImg from "@/../public/assets/images/teams-profile/rifka.jpg";
-import rifqiImg from "@/../public/assets/images/teams-profile/rifqi.png";
-import septiImg from "@/../public/assets/images/teams-profile/septi.jpg";
-import shafwanImg from "@/../public/assets/images/teams-profile/shafwan.jpg";
-import yusufImg from "@/../public/assets/images/teams-profile/yusuf.jpg";
 
-import flyerWorkshop1 from "@/../public/assets/images/workshop-flyer/flyer-workshop1.jpeg";
-import flyerWorkshop2 from "@/../public/assets/images/workshop-flyer/flyer-workshop2.jpeg";
-import flyerWorkshop3 from "@/../public/assets/images/workshop-flyer/flyer-workshop3.jpeg";
-import flyerWorkshop4 from "@/../public/assets/images/workshop-flyer/flyer-workshop4.jpeg";
-import flyerWorkshop5 from "@/../public/assets/images/workshop-flyer/flyer-workshop5.jpg";
+const azasiImg= "/assets/images/teams-profile/azasi.jpg";
+const fahmiImg= "/assets/images/teams-profile/fahmi.jpg";
+const fauzanImg= "/assets/images/teams-profile/fauzan.jpg";
+const ichaImg= "/assets/images/teams-profile/icha.jpg";
+const rifkaImg= "/assets/images/teams-profile/rifka.jpg";
+const rifqiImg= "/assets/images/teams-profile/rifqi.png";
+const septiImg= "/assets/images/teams-profile/septi.jpg";
+const shafwanImg= "/assets/images/teams-profile/shafwan.jpg";
+const yusufImg= "/assets/images/teams-profile/yusuf.jpg";
 
-import sekelasImage1 from "@/../public/assets/images/sekelas/sekelas1.jpg";
-import sekelasImage2 from "@/../public/assets/images/sekelas/sekelas2.jpg";
-import sekelasImage3 from "@/../public/assets/images/sekelas/sekelas3.jpg";
-import sekelasImage4 from "@/../public/assets/images/sekelas/sekelas4.jpg";
-import sekelasImage5 from "@/../public/assets/images/sekelas/sekelas5.jpg";
+const flyerWorkshop1= "/assets/images/workshop-flyer/flyer-workshop1.jpeg";
+const flyerWorkshop2= "/assets/images/workshop-flyer/flyer-workshop2.jpeg";
+const flyerWorkshop3= "/assets/images/workshop-flyer/flyer-workshop3.jpeg";
+const flyerWorkshop4= "/assets/images/workshop-flyer/flyer-workshop4.jpeg";
+const flyerWorkshop5= "/assets/images/workshop-flyer/flyer-workshop5.jpg";
+
+const sekelasImage1= "/assets/images/sekelas/sekelas1.jpg";
+const sekelasImage2= "/assets/images/sekelas/sekelas2.jpg";
+const sekelasImage3= "/assets/images/sekelas/sekelas3.jpg";
+const sekelasImage4= "/assets/images/sekelas/sekelas4.jpg";
+const sekelasImage5= "/assets/images/sekelas/sekelas5.jpg";
 
 import { IGalleryPhoto } from "./interfaces";
 
@@ -99,9 +100,29 @@ const Imgw5_3: IGalleryPhoto = {
   height: 795,
 };
 const Imgs1_1: IGalleryPhoto = {
-  src: "/assets/images/sekelas/sekelas1.jpg",
+  src: sekelasImage1,
   width: 1512,
   height: 954,
+};
+const Imgs1_2: IGalleryPhoto = {
+  src: sekelasImage2,
+  width: 2016,
+  height: 1134,
+};
+const Imgs1_3: IGalleryPhoto = {
+  src: sekelasImage3,
+  width: 1134,
+  height: 2016,
+};
+const Imgs1_4: IGalleryPhoto = {
+  src: sekelasImage4,
+  width: 1134,
+  height: 2016,
+};
+const Imgs1_5: IGalleryPhoto = {
+  src: sekelasImage5,
+  width: 1134,
+  height: 2016,
 };
 
 export const CTeamProfile: ITeamProfile[] = [
@@ -316,21 +337,21 @@ export const CGalleryPhotos: IGalleryPhoto[] = [
   Imgw1_1,
   Imgw5_2,
   Imgw2_1,
-  sekelasImage4,
+  Imgs1_4,
   Imgw4_2,
   Imgw5_1,
   Imgw1_3,
   Imgw2_2,
   Imgw2_3,
-  sekelasImage5,
+  Imgs1_5,
   Imgw3_3,
   Imgw4_1,
   Imgw4_3,
   Imgw1_2,
   Imgw3_1,
-  sekelasImage2,
+  Imgs1_2,
   Imgw3_2,
   Imgw5_3,
-  sekelasImage3,
+  Imgs1_3,
   Imgs1_1,
 ];
