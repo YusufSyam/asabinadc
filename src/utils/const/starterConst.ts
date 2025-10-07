@@ -1,14 +1,14 @@
 import { ISekelasData, ITeamProfile, IWorkshopData } from "./interfaces";
 
-const azasiImg= "/assets/images/teams-profile/azasi.jpg";
-const fahmiImg= "/assets/images/teams-profile/fahmi.jpg";
-const fauzanImg= "/assets/images/teams-profile/fauzan.jpg";
-const ichaImg= "/assets/images/teams-profile/icha.jpg";
-const rifkaImg= "/assets/images/teams-profile/rifka.jpg";
+const azasiImg= "/assets/images/teams-profile/azasi.JPG";
+const fahmiImg= "/assets/images/teams-profile/fahmi.JPG";
+const fauzanImg= "/assets/images/teams-profile/fauzan.JPG";
+const ichaImg= "/assets/images/teams-profile/icha.JPG";
+const rifkaImg= "/assets/images/teams-profile/rifka.JPG";
 const rifqiImg= "/assets/images/teams-profile/rifqi.png";
-const septiImg= "/assets/images/teams-profile/septi.jpg";
-const shafwanImg= "/assets/images/teams-profile/shafwan.jpg";
-const yusufImg= "/assets/images/teams-profile/yusuf.jpg";
+const septiImg= "/assets/images/teams-profile/septi.JPG";
+const shafwanImg= "/assets/images/teams-profile/shafwan.JPG";
+const yusufImg= "/assets/images/teams-profile/yusuf.JPG";
 
 const flyerWorkshop1= "/assets/images/workshop-flyer/flyer-workshop1.jpeg";
 const flyerWorkshop2= "/assets/images/workshop-flyer/flyer-workshop2.jpeg";
