@@ -151,7 +151,7 @@ export const CTeamProfile: ITeamProfile[] = [
     position: "Head of Media & Publications",
   },
   {
-    name: "Fahmi",
+    name: "Muh. Dzulfahmi H.",
     imageSrc: fahmiImg,
     cardVariant: "burgundy",
     position: "Head of Knowledge & Education",
