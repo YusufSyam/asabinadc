@@ -14,7 +14,7 @@ import StrongText from "../text/StrongText.component";
 const FooterLayout = () => {
   return (
     <Stack
-      paddingX={{ base: "8", md: "12", lg: "24" }}
+      paddingX={{ base: "6", sm:"8", md: "12", lg: "24" }}
       className="bg-burgundy !pt-8 !pb-2"
     >
       <Flex

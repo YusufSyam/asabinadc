@@ -31,9 +31,9 @@ export default async function WorkshopDetail({
   return (
     <VStack
       gapY={"12"}
-      paddingX={{ base: "8", md: "12", lg: "12", xl: "24" }}
+      paddingX={{ base: "6", md: "12", lg: "12", xl: "24" }}
       paddingBottom={"24"}
-      paddingTop={"12"}
+      paddingTop={{ base: "8", sm: "12" }}
       className="border-t-2 border-secondary"
     >
       <Box
@@ -102,7 +102,7 @@ export default async function WorkshopDetail({
             ></Box>
           </div>
         </GridItem>
-        <GridItem padding={2}>
+        <GridItem padding={{ base: 0, sm: 2 }}>
           <Stack gapY={6}>
             <Stack>
               <StrongText

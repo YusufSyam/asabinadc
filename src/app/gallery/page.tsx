@@ -19,9 +19,9 @@ const GalleryPage = () => {
   return (
     <Stack
       gapY={{ md: "28", base: "12" }}
-      paddingX={{ base: "8", md: "12", lg: "24" }}
+      paddingX={{ base: "6", sm:"8", md: "12", lg: "24" }}
       paddingBottom={"40"}
-      paddingTop={"12"}
+      paddingTop={{base:"8", sm:"12"}}
       className="border-t-2 border-secondary"
     >
       <VStack>
@@ -40,7 +40,7 @@ const GalleryPage = () => {
           />
         </div>
         <VStack gapY={0}>
-          <ColoredHeaderText text="Asabina Gallery" />
+          <ColoredHeaderText text="Asabina Gallery" textAlign="center" />
           <SmallText color={"secondary-text"} textAlign={"center"}>
             Setiap langkah kecil menuju perubahan, kami abadikan sebagai bukti
             nyata perjalanan bersama
@@ -68,7 +68,7 @@ const GalleryPage = () => {
         <MasonryPhotoAlbum
           photos={CGalleryPhotos}
           columns={(containerWidth) => {
-            if (containerWidth < 400) return 1;
+            if (containerWidth < 200) return 1;
             if (containerWidth < 900) return 2;
             return 3;
           }}

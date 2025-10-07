@@ -2,7 +2,7 @@ import HeroButton from "@/components/button/HeroButton.component";
 import {
   GmailContacts,
   InstagramContacts,
-  WhatsappContacts
+  WhatsappContacts,
 } from "@/components/Contacts.component";
 import {
   IconChartOutlined,
@@ -12,6 +12,7 @@ import {
 import StrongText from "@/components/text/StrongText.component";
 import {
   Blockquote,
+  Box,
   Flex,
   Float,
   Grid,
@@ -70,40 +71,52 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                     src={iconAsabina}
                     style={{ objectFit: "contain" }}
                     alt="icon asabina"
+                    className="hidden sm:block"
                     width={180}
+                  />
+                  <Image
+                    src={iconAsabina}
+                    style={{ objectFit: "contain" }}
+                    alt="icon asabina"
+                    className="block sm:hidden"
+                    width={140}
                   />
                 </div>
                 <Stack>
                   <StrongText
                     color={"white"}
                     fontSize={{
-                      base: "xl",
+                      base: "2xl",
                       xl: "7xl",
                       lg: "6xl",
                       md: "4xl",
-                      sm: "6xl",
+                      sm: "5xl",
                     }}
                   >
                     ASABINA
                   </StrongText>
                   <StrongText
                     color={"white"}
-                    mt={{ base: -4, sm: -4, lg: -6 }}
+                    mt={{ base: -3, sm: -4, lg: -6 }}
                     className="font-poppins"
                     lineHeight={1}
-                    fontSize={{ base: "xl", lg: "4xl", md: "4xl" }}
+                    fontSize={{ base: "lg", lg: "4xl", md: "4xl" }}
                   >
                     DEVELOPMENT CENTER
                   </StrongText>
                 </Stack>
               </Group>
-              <div className="relative rounded-md px-2 md:px-4 lg:px-8 py-4">
+              <div className="relative rounded-md px-0 md:px-4 lg:px-8 py-4">
                 <Blockquote.Root
                   variant="plain"
                   colorPalette="white"
                   className="z-10"
                 >
-                  <Float placement="top-start" offsetY="2">
+                  <Float
+                    display={{ base: "none", md: "block" }}
+                    placement="top-start"
+                    offsetY="2"
+                  >
                     <Blockquote.Icon color={"white"} />
                   </Float>
                   <Blockquote.Content
@@ -120,41 +133,63 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
                 </Blockquote.Root>
               </div>
 
-              <Group
-                flexWrap={"wrap"}
-                gapY={4}
-                className="mr-8 mt-0 md:mt-4 mb-2 ml-8 !justify-between "
-              >
-                <HeroButton
-                  icon={<IconWorkOutlined color="white" />}
-                  onClick={onScrollTo3}
+              <Box className="mx-2 md:mx-8 mt-0 md:mt-4 mb-2">
+                <Group
+                  display={{ base: "none", sm: "flex" }}
+                  flexWrap={"wrap"}
+                  gapY={4}
+                  className="!justify-between "
                 >
-                  Explore Our Program
-                </HeroButton>
-                <Group gapX={{ lg: 6, base: 4 }} gapY={4} 
-                flexWrap={"wrap"}>
+                  <HeroButton
+                    icon={<IconWorkOutlined color="white" />}
+                    onClick={onScrollTo3}
+                  >
+                    Explore Our Program
+                  </HeroButton>
+                  <Group gapX={{ lg: 6, base: 4 }} gapY={4} flexWrap={"wrap"}>
+                    <HeroButton
+                      colorVariant="orange"
+                      icon={<IconChartOutlined color="white" />}
+                      onClick={onScrollTo2}
+                    >
+                      Our Impact
+                    </HeroButton>
+                    <HeroButton
+                      colorVariant="orange"
+                      icon={<IconSearchFilledRounded color="white" />}
+                      onClick={onScrollTo4}
+                    >
+                      Get to Know More
+                    </HeroButton>
+                  </Group>
+                </Group>
+                <Group
+                  flexWrap={"wrap"}
+                  gapY={2}
+                  display={{ base: "flex", sm: "none" }}
+                >
+                  <HeroButton
+                    icon={<IconWorkOutlined color="white" />}
+                    onClick={onScrollTo3}
+                  >
+                    Program
+                  </HeroButton>
                   <HeroButton
                     colorVariant="orange"
                     icon={<IconChartOutlined color="white" />}
                     onClick={onScrollTo2}
                   >
-                    Our Impact
+                    Impact
                   </HeroButton>
                   <HeroButton
                     colorVariant="orange"
                     icon={<IconSearchFilledRounded color="white" />}
                     onClick={onScrollTo4}
                   >
-                    Get to Know More
+                    More
                   </HeroButton>
-                  {/* <HeroButton
-                  colorVariant="orange"
-                  icon={<IconGalleryOutlined color="white" />}
-                >
-                  Gallery
-                </HeroButton> */}
                 </Group>
-              </Group>
+              </Box>
             </Stack>
           </GridItem>
 
@@ -162,7 +197,7 @@ const HomeHeroSection: React.FC<IHomeHeroSection> = ({
           <GridItem className="self-end " minWidth="0">
             <Stack gapY={0}>
               <Flex
-                className="relative self-start pl-8 md:self-end flex-row md:flex-col"
+                className="relative self-start pl-2 md:pl-8 md:self-end flex-row md:flex-col"
                 gapX={4}
               >
                 <Text className="text-white text-xl font-roboto tracking-6 text-center self-center hidden sm:block">

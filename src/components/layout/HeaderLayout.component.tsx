@@ -1,9 +1,5 @@
 import ROUTES from "@/utils/const/routes";
-import {
-  Group,
-  HStack,
-  Text
-} from "@chakra-ui/react";
+import { Group, HStack, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +8,7 @@ import {
   IconBookFilled,
   IconGalleryFilled,
   IconSearchFilledRounded,
-  IconWorkFilled
+  IconWorkFilled,
 } from "../icons/Icons.component";
 import HeaderMobileNavbar from "./HeaderMobileNavbar.component";
 import HeaderNavbarMenu from "./HeaderNavbarMenu.component";
@@ -52,20 +48,30 @@ const HeaderLayout = () => {
   return (
     <header>
       <HStack
-        paddingX={{ base: "8", md: "12", lg: "24" }}
-        className="py-6 !justify-between w-full"
+        paddingX={{ base: "4", sm: "8", md: "12", lg: "24" }}
+        className="!justify-between w-full"
+        paddingBottom={{ base: 4, sm: 6 }}
+        paddingTop={{ base: 5, sm: 6 }}
       >
         <Link href={ROUTES.HOME}>
-          <Group>
+          <Group gapX={{ base: "1", sm: "2" }} className="align-middle">
             <div className="">
               <Image
                 src={iconAsabina}
                 style={{ objectFit: "contain" }}
                 alt="icon asabina"
                 width={54}
+                className="hidden sm:block"
+              />
+              <Image
+                src={iconAsabina}
+                style={{ objectFit: "contain" }}
+                alt="icon asabina"
+                width={46}
+                className="block sm:hidden"
               />
             </div>
-            <Text className="text-burgundy font-poppins-semibold text-3xl">
+            <Text className="text-burgundy font-poppins-semibold text-2xl sm:text-3xl">
               ASABINA
             </Text>
           </Group>

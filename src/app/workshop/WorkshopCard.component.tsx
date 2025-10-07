@@ -62,13 +62,13 @@ const WorkshopCard: React.FC<IWorkshopCard> = ({
             overflow="hidden"
             borderRadius="lg"
           >
-            {/* 2. Komponen Image */}
             <Image
               src={flyerImageSrc as string}
               alt="card image"
               style={{
-                objectFit: "cover", // Kunci agar gambar terpotong, bukan stretch
+                objectFit: "cover",
               }}
+
             />
           </Box>
         </GridItem>

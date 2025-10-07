@@ -31,10 +31,10 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
     <Link href={href}>
       <div className="relative w-full ">
         <Stack
-          className={`border-2 ${
+          className={`${
             cardVariant == "burgundy"
-              ? "border-burgundy bg-sekelas-bg"
-              : "border-orange bg-workshop-bg"
+              ? " bg-sekelas-bg"
+              : " bg-workshop-bg"
           } overflow-hidden h-[400px] md:h-[460px] w-full p-4 pb-6 md:pb-8 rounded-xl justify-end z-10 bg-cover cursor-pointer hover:translate-x-1 hover:translate-y-1 lg:hover:translate-x-2 lg:hover:translate-y-2  duration-200 ease-in-out`}
           gapY={4}
         >
@@ -113,8 +113,8 @@ const OurProgramCard: React.FC<IOurProgramCard> = ({
         <div
           className={`w-full h-full absolute -right-1 -bottom-1 lg:-right-2 lg:-bottom-2  ${
             cardVariant == "burgundy"
-              ? "bg-burgundy/75 border-burgundy"
-              : "bg-orange/75 border-orange"
+              ? "bg-secondary border-secondary"
+              : "bg-secondary border-secondary"
           } rounded-xl border-2 -z-20`}
         ></div>
       </div>

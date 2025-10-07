@@ -1,7 +1,7 @@
 import ColoredHeaderText from "@/components/text/ColoredHeaderText.component";
 import SmallText from "@/components/text/SmallText.component";
 import StrongText from "@/components/text/StrongText.component";
-import { Grid, GridItem, VStack } from "@chakra-ui/react";
+import { Grid, GridItem, Group, VStack } from "@chakra-ui/react";
 import React from "react";
 
 export interface IHomeOurImpactSection {
@@ -20,12 +20,15 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({
         </SmallText>
       </VStack>
       {/* <Wireframe text="Prestasi/track record asabina selama ini" /> */}
-      <Grid templateColumns={"1fr 1fr 1fr"} gap={{md:8, base:4}} alignItems={"end"}>
+      <Grid
+        templateColumns={"1fr 1fr 1fr"}
+        gap={{ md: 8, base: 4 }}
+        alignItems={"end"}
+        display={{ sm: "grid", base: "none" }}
+      >
         <GridItem w={"100%"}>
           <VStack className="self-end">
-            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>
-              5<sup>+</sup>
-            </StrongText>
+            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>5</StrongText>
             <SmallText textAlign={"center"}>Workshop terlaksana</SmallText>
           </VStack>
         </GridItem>
@@ -45,6 +48,36 @@ const HomeOurImpactSection: React.FC<IHomeOurImpactSection> = ({
             <SmallText textAlign={"center"}>Total Jam Ajar</SmallText>
           </VStack>
         </GridItem>
+      </Grid>
+
+      {/* Small */}
+      <Grid
+        templateColumns={"1fr"}
+        gapY={{ md: 8, base: 4 }}
+        alignItems={"end"}
+        display={{ base: "grid", sm: "none" }}
+        width={"full"}
+      >
+        <GridItem w={"100%"}>
+          <VStack className="self-end" gapY={0}>
+            <StrongText fontSize={{ base: "6xl", md: "8xl" }}>
+              100<sup>+</sup>
+            </StrongText>
+            <SmallText>Orang terbina</SmallText>
+          </VStack>
+        </GridItem>
+        <Group justify={"center"} gapX={"8"} width={"full"}>
+          <VStack className="self-end">
+            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>5</StrongText>
+            <SmallText textAlign={"center"}>Workshop</SmallText>
+          </VStack>
+          <VStack className="self-end">
+            <StrongText fontSize={{ base: "5xl", md: "6xl" }}>
+              10<sup>+</sup>
+            </StrongText>
+            <SmallText textAlign={"center"}>Total Jam Ajar</SmallText>
+          </VStack>
+        </Group>
       </Grid>
     </VStack>
   );

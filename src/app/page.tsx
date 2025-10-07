@@ -24,8 +24,8 @@ export default function Home() {
   };
   return (
     <Stack
-      gapY={{md:"28", base:"24"}}
-      paddingX={{ base: "8", md: "12", lg: "24" }}
+      gapY={{ md: "28", base: "24" }}
+      paddingX={{ base: "4", sm: "8", md: "12", lg: "24" }}
       paddingBottom={"24"}
       className=""
     >
@@ -34,9 +34,11 @@ export default function Home() {
         onScrollTo3={() => handleScrollToSection(section3Ref)}
         onScrollTo4={() => handleScrollToSection(section4Ref)}
       />
-      <HomeOurImpactSection refForScroll={section2Ref} />
-      <HomeOurProgramSection refForScroll={section3Ref} />
-      <HomeAboutUsSection refForScroll={section4Ref} />
+      <Stack gapY={{ md: "28", base: "24" }} paddingX={{ base: 2, sm: 0 }}>
+        <HomeOurImpactSection refForScroll={section2Ref} />
+        <HomeOurProgramSection refForScroll={section3Ref} />
+        <HomeAboutUsSection refForScroll={section4Ref} />
+      </Stack>
     </Stack>
   );
 }
