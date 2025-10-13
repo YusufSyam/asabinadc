@@ -21,6 +21,8 @@ const sekelasImage2= "/assets/images/sekelas/sekelas2.jpg";
 const sekelasImage3= "/assets/images/sekelas/sekelas3.jpg";
 const sekelasImage4= "/assets/images/sekelas/sekelas4.jpg";
 const sekelasImage5= "/assets/images/sekelas/sekelas5.jpg";
+const sekelasImage6= "/assets/images/sekelas/sekelas6.jpg";
+const sekelasImage7= "/assets/images/sekelas/sekelas7.jpg";
 
 import { IGalleryPhoto } from "./interfaces";
 
@@ -300,13 +302,24 @@ export const CSekelasData: ISekelasData[] = [
   {
     sekelasName: "Kelas Je'ne Ci'nong",
     date: new Date(2025, 9, 11),
-    isUpcoming: true,
+    isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
     meetingCount: 2,
     flyerImageSrc: sekelasImage2,
     agenda:
       "Kelas menghitung dan bahasa inggris",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    date: new Date(2025, 9, 18),
+    isUpcoming: true,
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    meetingCount: 3,
+    flyerImageSrc: sekelasImage7,
+    agenda:
+      "Kelas menulis dan bahasa inggris",
   },
   // {
   //   sekelasName: "Kelas Je'ne Ci'nong",
