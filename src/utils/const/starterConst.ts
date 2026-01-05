@@ -1,29 +1,34 @@
 import { ISekelasData, ITeamProfile, IWorkshopData } from "./interfaces";
 
-const azasiImg= "/assets/images/teams-profile/azasi.JPG";
-const fahmiImg= "/assets/images/teams-profile/fahmi.JPG";
-const fauzanImg= "/assets/images/teams-profile/fauzan.JPG";
-const ichaImg= "/assets/images/teams-profile/icha.JPG";
-const rifkaImg= "/assets/images/teams-profile/rifka.JPG";
-const rifqiImg= "/assets/images/teams-profile/rifqi.png";
-const septiImg= "/assets/images/teams-profile/septi.JPG";
-const shafwanImg= "/assets/images/teams-profile/shafwan.JPG";
-const yusufImg= "/assets/images/teams-profile/yusuf.JPG";
+const azasiImg = "/assets/images/teams-profile/azasi.JPG";
+const fahmiImg = "/assets/images/teams-profile/fahmi.JPG";
+const fauzanImg = "/assets/images/teams-profile/fauzan.JPG";
+const ichaImg = "/assets/images/teams-profile/icha.JPG";
+const rifkaImg = "/assets/images/teams-profile/rifka.JPG";
+const rifqiImg = "/assets/images/teams-profile/rifqi.png";
+const septiImg = "/assets/images/teams-profile/septi.JPG";
+const shafwanImg = "/assets/images/teams-profile/shafwan.JPG";
+const yusufImg = "/assets/images/teams-profile/yusuf.JPG";
 
-const flyerWorkshop1= "/assets/images/workshop-flyer/flyer-workshop1.jpeg";
-const flyerWorkshop2= "/assets/images/workshop-flyer/flyer-workshop2.jpeg";
-const flyerWorkshop3= "/assets/images/workshop-flyer/flyer-workshop3.jpeg";
-const flyerWorkshop4= "/assets/images/workshop-flyer/flyer-workshop4.jpeg";
-const flyerWorkshop5= "/assets/images/workshop-flyer/flyer-workshop5.jpg";
+const flyerWorkshop1 = "/assets/images/workshop-flyer/flyer-workshop1.jpeg";
+const flyerWorkshop2 = "/assets/images/workshop-flyer/flyer-workshop2.jpeg";
+const flyerWorkshop3 = "/assets/images/workshop-flyer/flyer-workshop3.jpeg";
+const flyerWorkshop4 = "/assets/images/workshop-flyer/flyer-workshop4.jpeg";
+const flyerWorkshop5 = "/assets/images/workshop-flyer/flyer-workshop5.jpg";
 
-const sekelasImage1= "/assets/images/sekelas/sekelas1.jpg";
-const sekelasImage2= "/assets/images/sekelas/sekelas2.jpg";
-const sekelasImage3= "/assets/images/sekelas/sekelas3.jpg";
-const sekelasImage4= "/assets/images/sekelas/sekelas4.jpg";
-const sekelasImage5= "/assets/images/sekelas/sekelas5.jpg";
-const sekelasImage6= "/assets/images/sekelas/sekelas6.jpg";
-const sekelasImage7= "/assets/images/sekelas/sekelas7.jpg";
-const sekelasImage8= "/assets/images/sekelas/sekelas8.jpg";
+const sekelasImage1 = "/assets/images/sekelas/sekelas1.jpg";
+const sekelasImage2 = "/assets/images/sekelas/sekelas2.jpg";
+const sekelasImage3 = "/assets/images/sekelas/sekelas3.jpg";
+const sekelasImage4 = "/assets/images/sekelas/sekelas4.jpg";
+const sekelasImage5 = "/assets/images/sekelas/sekelas5.jpg";
+const sekelasImage6 = "/assets/images/sekelas/sekelas6.jpg";
+const sekelasImage7 = "/assets/images/sekelas/sekelas7.jpg";
+const sekelasImage8 = "/assets/images/sekelas/sekelas8.jpg";
+const sekelasImage9 = "/assets/images/sekelas/sekelas9.jpg";
+const sekelasImage10 = "/assets/images/sekelas/sekelas10.jpg";
+const sekelasImage11 = "/assets/images/sekelas/sekelas11.jpg";
+const sekelasImage12 = "/assets/images/sekelas/sekelas12.jpg";
+const sekelasImage13 = "/assets/images/sekelas/sekelas13.jpg";
 
 import { IGalleryPhoto } from "./interfaces";
 
@@ -202,7 +207,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop1,
     documentationLink:
       "https://drive.google.com/drive/folders/1pLtX57xNWunOEhdHNHhIwT03AuKBxBuv?usp=sharing",
-      galleryPhotos: [Imgw1_1, Imgw1_2, Imgw1_3]
+    galleryPhotos: [Imgw1_1, Imgw1_2, Imgw1_3],
   },
   {
     workshopName:
@@ -221,7 +226,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop2,
     documentationLink:
       "https://drive.google.com/drive/folders/1Fg7e-ArQPooJxDD8tz9tFa_w7J6Mw19q?usp=sharing",
-      galleryPhotos: [Imgw2_1, Imgw2_2, Imgw2_3]
+    galleryPhotos: [Imgw2_1, Imgw2_2, Imgw2_3],
   },
   {
     workshopName: "Workshop CV & Linkedin untuk memasuki dunia profesional",
@@ -239,7 +244,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop3,
     documentationLink:
       "https://drive.google.com/drive/folders/1tKyEXzH5f86Cs1OtWBxOl2d0p7enaPA7?usp=sharing",
-      galleryPhotos: [Imgw3_1, Imgw3_2, Imgw3_3]
+    galleryPhotos: [Imgw3_1, Imgw3_2, Imgw3_3],
   },
   {
     workshopName: "The Aware Self: A Thematic Session on Self-Awareness",
@@ -260,7 +265,7 @@ export const CWorkshopData: IWorkshopData[] = [
     flyerImageSrc: flyerWorkshop4,
     documentationLink:
       "https://drive.google.com/drive/folders/1_sFfGf0GL-QSOD_IrnJVvciRrp-2XeyD?usp=sharing",
-      galleryPhotos: [Imgw4_1, Imgw4_2, Imgw4_3]
+    galleryPhotos: [Imgw4_1, Imgw4_2, Imgw4_3],
   },
   {
     workshopName:
@@ -284,17 +289,18 @@ export const CWorkshopData: IWorkshopData[] = [
     documentationLink:
       "https://drive.google.com/drive/folders/1DIRxIbS8kwgUHs2J4WBOI6NteJhEO8wO?usp=sharing",
     isUpcoming: false,
-      galleryPhotos: [Imgw5_1, Imgw5_2, Imgw5_3]
+    galleryPhotos: [Imgw5_1, Imgw5_2, Imgw5_3],
   },
 ];
+
 
 export const CSekelasData: ISekelasData[] = [
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 9, 4),
-    isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    date: new Date(2025, 9, 4),
     meetingCount: 1,
     flyerImageSrc: sekelasImage1,
     agenda:
@@ -302,72 +308,125 @@ export const CSekelasData: ISekelasData[] = [
   },
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 9, 11),
-    isUpcoming: false,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    date: new Date(2025, 9, 11),
     meetingCount: 2,
     flyerImageSrc: sekelasImage2,
-    agenda:
-      "Kelas menghitung dan bahasa inggris",
+    agenda: "Kelas menghitung dan bahasa inggris",
   },
   {
     sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
     date: new Date(2025, 9, 18),
-    isUpcoming: false,
-    location: "Je'ne Ci'nong",
-    locationDetail: "Je'ne Ci'nong",
     meetingCount: 3,
-    flyerImageSrc: sekelasImage6,
-    agenda:
-      "Kelas menulis dan membaca",
+    flyerImageSrc: sekelasImage3,
+    agenda: "Kelas menulis dan membaca",
   },
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 9, 25),
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
     isUpcoming: false,
-    location: "Je'ne Ci'nong",
-    locationDetail: "Je'ne Ci'nong",
+    date: new Date(2025, 9, 25),
     meetingCount: 4,
-    flyerImageSrc: sekelasImage7,
-    agenda:
-      "Kelas bahasa inggris",
+    flyerImageSrc: sekelasImage4,
+    agenda: "Kelas bahasa inggris",
   },
   {
     sekelasName: "Kelas Je'ne Ci'nong",
-    date: new Date(2025, 10, 1),
-    isUpcoming: true,
     location: "Je'ne Ci'nong",
     locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
     meetingCount: 5,
-    flyerImageSrc: sekelasImage8,
-    agenda:
-      "Kelas Kreatif",
+    date: new Date(2025, 10, 1),
+    flyerImageSrc: sekelasImage5,
+    agenda: "Kelas Kreatif",
   },
-  // {
-  //   sekelasName: "Kelas Je'ne Ci'nong",
-  //   date: new Date(2025, 9, 4),
-  //   isUpcoming: true,
-  //   location: "Je'ne Ci'nong",
-  //   locationDetail: "Je'ne Ci'nong",
-  //   meetingCount: 1,
-  //   flyerImageSrc: sekelasImage1,
-  //   agenda:
-  //     "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
-  // },
-  // {
-  //   sekelasName: "Kelas Je'ne Ci'nong",
-  //   date: new Date(2025, 9, 4),
-  //   isUpcoming: true,
-  //   location: "Je'ne Ci'nong",
-  //   locationDetail: "Je'ne Ci'nong",
-  //   meetingCount: 1,
-  //   flyerImageSrc: sekelasImage1,
-  //   agenda:
-  //     "Pengenalan diri, ASABINA dan program sekelas, serta pendataan para calon siswa",
-  // },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 6,
+    date: new Date(2025, 11, 8),
+    flyerImageSrc: sekelasImage6,
+    agenda: "Kelas Berhitung",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 7,
+    date: new Date(2025, 11, 15),
+    flyerImageSrc: sekelasImage7,
+    agenda: "Kelas Membaca",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 8,
+    date: new Date(2025, 11, 22),
+    flyerImageSrc: sekelasImage8,
+    agenda: "Kelas Bahasa Inggris",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 9,
+    date: new Date(2025, 11, 29),
+    flyerImageSrc: sekelasImage9,
+    agenda: "Kelas Kreatif",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 10,
+    date: new Date(2025, 12, 6),
+    flyerImageSrc: sekelasImage10,
+    agenda: "Kelas Berhitung",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 11,
+    date: new Date(2025, 12, 13),
+    flyerImageSrc: sekelasImage11,
+    agenda: "Kelas Membaca dan Menulis",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 12,
+    date: new Date(2025, 12, 20),
+    flyerImageSrc: sekelasImage12,
+    agenda: "Kelas Bahasa Inggris",
+  },
+  {
+    sekelasName: "Kelas Je'ne Ci'nong",
+    location: "Je'ne Ci'nong",
+    locationDetail: "Je'ne Ci'nong",
+    isUpcoming: false,
+    meetingCount: 13,
+    date: new Date(2025, 12, 27),
+    flyerImageSrc: sekelasImage13,
+    agenda: "Kelas Kreatif",
+  },
 ];
-
 
 export const CGalleryPhotos: IGalleryPhoto[] = [
   Imgw1_1,
