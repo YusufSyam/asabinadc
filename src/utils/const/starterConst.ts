@@ -9,6 +9,7 @@ const rifqiImg = "/assets/images/teams-profile/rifqi.png";
 const septiImg = "/assets/images/teams-profile/septi.JPG";
 const shafwanImg = "/assets/images/teams-profile/shafwan.JPG";
 const yusufImg = "/assets/images/teams-profile/yusuf.JPG";
+const aslamImg = "/assets/images/teams-profile/aslam.jpeg";
 
 const flyerWorkshop1 = "/assets/images/workshop-flyer/flyer-workshop1.jpeg";
 const flyerWorkshop2 = "/assets/images/workshop-flyer/flyer-workshop2.jpeg";
@@ -27,7 +28,7 @@ const sekelasImage8 = "/assets/images/sekelas/sekelas8.jpg";
 const sekelasImage9 = "/assets/images/sekelas/sekelas9.jpg";
 const sekelasImage10 = "/assets/images/sekelas/sekelas10.jpg";
 const sekelasImage11 = "/assets/images/sekelas/sekelas11.jpg";
-const sekelasImage12 = "/assets/images/sekelas/sekelas12.jpg";
+const sekelasImage12 = "/assets/images/sekelas/sekelas12.JPG";
 const sekelasImage13 = "/assets/images/sekelas/sekelas13.jpg";
 
 import { IGalleryPhoto } from "./interfaces";
@@ -187,6 +188,12 @@ export const CTeamProfile: ITeamProfile[] = [
     imageSrc: yusufImg,
     cardVariant: "burgundy",
     position: "Head of IT & Digitalization",
+  },
+  {
+    name: "Muhammad Aslam",
+    imageSrc: aslamImg,
+    cardVariant: "magenta",
+    position: "Social development officer",
   },
 ];
 
